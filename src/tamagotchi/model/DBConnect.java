@@ -13,9 +13,8 @@ public class DBConnect {
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Tamagotchi", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tamagotchi", "root", "");
             st = con.createStatement();
-
 
         } catch (Exception ex) {
             System.out.println("Error: " + ex);
@@ -38,6 +37,25 @@ public class DBConnect {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
 
+    public void addUser(String login, String password) {
+        try {
+            String query = "insert into Users (login, password) values ('" + login + "','" + password + "')";
+            st.executeUpdate(query);
+            System.out.println("User " + login + " added to database.");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deleteUser(String login) {
+        try {
+            String query = "delete from Users where login = '" + login + "'";
+            st.executeUpdate(query);
+            System.out.println("User " + login + " deleted from database.");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
