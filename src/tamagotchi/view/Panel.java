@@ -1,12 +1,12 @@
 package tamagotchi.view;
 
-import tamagotchi.controller.AppController;
+import tamagotchi.controller.IController;
 import javax.swing.*;
 
 public class Panel extends JPanel {
-    private AppController baseController;
+    private IController controller;
 
-    public Panel(AppController baseController) {
-        this.baseController = baseController;
+    public Panel(IController controller) {
+        this.controller = controller;
     }
 }

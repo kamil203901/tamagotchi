@@ -1,27 +1,24 @@
-// base frame
-
 package tamagotchi.view;
 
-import javax.swing.BorderFactory;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-
-import tamagotchi.controller.AppController;
+import java.awt.event.ActionListener;
+import tamagotchi.controller.IController;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
     private JMenuBar menuBar;
     private JMenu menu;
-    private JMenuItem menuItem;
+    private JMenuItem loginButton;
+    private JMenuItem registerButton;
+    private JMenuItem closeButton;
 
-    public BaseFrame(AppController baseController) {
+    public BaseFrame(IController baseController) {
         basePanel = new Panel(baseController);
         setupFrame();
     }
@@ -41,13 +38,15 @@ public class BaseFrame extends JFrame {
         menuBar = new JMenuBar();
         menu = new JMenu("Menu");
 
-        menuItem = new JMenuItem("Login");
-        menu.add(menuItem);
-        menuItem = new JMenuItem("Register");
-        menu.add(menuItem);
+        loginButton = new JMenuItem("Login");
+        menu.add(loginButton);
+
+        registerButton = new JMenuItem("Register");
+        menu.add(registerButton);
         menu.addSeparator();
-        menuItem = new JMenuItem("Close");
-        menu.add(menuItem);
+
+        closeButton = new JMenuItem("Close");
+        menu.add(closeButton);
 
 
 
@@ -64,6 +63,18 @@ public class BaseFrame extends JFrame {
         // need to be always on bottom
         this.setVisible(true);
 
+    }
+
+    public void addLoginListener(ActionListener loginListener) {
+        loginButton.addActionListener(loginListener);
+    }
+
+    public void addRegisterListener(ActionListener registerListener) {
+        registerButton.addActionListener(registerListener);
+    }
+
+    public void addCloseListener(ActionListener closeListener) {
+        closeButton.addActionListener(closeListener);
     }
 
 }

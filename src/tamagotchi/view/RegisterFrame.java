@@ -1,39 +1,27 @@
-//lgon frame
 package tamagotchi.view;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-
-
+import tamagotchi.controller.IController;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-import tamagotchi.controller.AppController;
-import tamagotchi.controller.LoginController;
+public class RegisterFrame extends JFrame {
 
-public class LoginFrame extends JFrame {
-    private Panel loginPanel;
-    private JButton loginButton;
+    private Panel registerPanel;
+    private JButton registerButton;
 
-    public LoginFrame(LoginController loginController) {
-        loginPanel = new Panel(null);
-        setupLoginFrame();
+    public RegisterFrame(IController registerController) {
+        registerPanel = new Panel(registerController);
+        setupRegisterFrame();
     }
 
-    private void setupLoginFrame() {
+    private void setupRegisterFrame() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = screenSize.width;
         int height = screenSize.height;
 
-        this.setContentPane(loginPanel);
-        this.setTitle("Login");
+        this.setContentPane(registerPanel);
+        this.setTitle("Register");
         this.setSize(300, 200);
         this.setResizable(false);
         this.setLocation(width / 2 - this.getWidth() / 2, height / 2 - this.getHeight() / 2);
@@ -55,7 +43,7 @@ public class LoginFrame extends JFrame {
         passwordFieldLabel.setLabelFor(passwordField);
 
 
-        this.loginPanel.setLayout(new BoxLayout(loginPanel, BoxLayout.Y_AXIS));
+        this.registerPanel.setLayout(new BoxLayout(registerPanel, BoxLayout.Y_AXIS));
 
         JPanel fields = new JPanel(new FlowLayout(FlowLayout.CENTER));
         fields.add(textFieldLabel);
@@ -63,19 +51,19 @@ public class LoginFrame extends JFrame {
         fields.add(passwordFieldLabel);
         fields.add(passwordField);
 
-        loginButton = new JButton("login");
+        registerButton = new JButton("register");
         JPanel button = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        button.add(loginButton);
+        button.add(registerButton);
 
-        this.loginPanel.add(fields);
-        this.loginPanel.add(button);
+        this.registerPanel.add(fields);
+        this.registerPanel.add(button);
 
         this.pack();
         this.setVisible(true);
     }
 
-    public void addLoginListener(ActionListener loginListener) {
-        loginButton.addActionListener(loginListener);
+    public void addRegisterListener(ActionListener registerListener) {
+        registerButton.addActionListener(registerListener);
     }
 
 

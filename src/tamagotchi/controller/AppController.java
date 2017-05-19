@@ -1,17 +1,54 @@
 package tamagotchi.controller;
 
 import tamagotchi.view.BaseFrame;
-import tamagotchi.view.LoginFrame;
 
-public class AppController {
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class AppController implements IController {
     private BaseFrame appFrame;
-    private LoginFrame loginFrame;
 
     public void start() {
         appFrame = new BaseFrame(this);
+        appFrame.addLoginListener(new LoginListener());
+        appFrame.addRegisterListener(new RegisterListener());
+        appFrame.addCloseListener(new CloseListener(appFrame));
+
+
     }
 
-    public void login() {
-        loginFrame = new LoginFrame(this);
+    class LoginListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            LoginController lc = new LoginController();
+            lc.startLogin();
+        }
     }
+
+    class RegisterListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            RegisterController rc = new RegisterController();
+            rc.startRegister();
+        }
+    }
+
+    class CloseListener implements ActionListener {
+        private BaseFrame baseFrame;
+
+        CloseListener(BaseFrame appFrame) {
+            this.baseFrame = appFrame;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            baseFrame.dispose();
+        }
+    }
+
+
 }
