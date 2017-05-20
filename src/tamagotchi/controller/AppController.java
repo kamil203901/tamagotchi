@@ -1,5 +1,6 @@
 package tamagotchi.controller;
 
+import tamagotchi.model.DBConnect;
 import tamagotchi.view.BaseFrame;
 
 
@@ -9,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class AppController implements IController {
     private BaseFrame appFrame;
+    private DBConnect connection;
 
     public void start() {
         appFrame = new BaseFrame(this);

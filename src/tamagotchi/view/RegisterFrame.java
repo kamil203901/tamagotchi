@@ -10,6 +10,7 @@ public class RegisterFrame extends JFrame {
     private Panel registerPanel;
     private JButton registerButton;
     private JPasswordField passwordField;
+    private JPasswordField confirmPasswordField;
     private JTextField loginTextField;
 
     public RegisterFrame(IController registerController) {
@@ -38,20 +39,29 @@ public class RegisterFrame extends JFrame {
         passwordField = new JPasswordField(10);
         passwordField.setActionCommand("Password");
 
+        // confirm password field
+        confirmPasswordField = new JPasswordField(10);
+        confirmPasswordField.setActionCommand("Confirm password");
+
         // create some labels
         JLabel textFieldLabel = new JLabel("Login:");
         textFieldLabel.setLabelFor(loginTextField);
-        JLabel passwordFieldLabel = new JLabel(" Password:");
+        JLabel passwordFieldLabel = new JLabel("Password:");
         passwordFieldLabel.setLabelFor(passwordField);
+        JLabel confirmPasswordFieldLabel = new JLabel("Confirm password:");
+        confirmPasswordFieldLabel.setLabelFor(confirmPasswordField);
 
 
         this.registerPanel.setLayout(new BoxLayout(registerPanel, BoxLayout.Y_AXIS));
 
-        JPanel fields = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel fields = new JPanel(new GridLayout(0,2));
+        //JPanel fields = new JPanel(new FlowLayout(FlowLayout.LEFT));
         fields.add(textFieldLabel);
         fields.add(loginTextField);
         fields.add(passwordFieldLabel);
         fields.add(passwordField);
+        fields.add(confirmPasswordFieldLabel);
+        fields.add(confirmPasswordField);
 
         registerButton = new JButton("register");
         JPanel button = new JPanel(new FlowLayout(FlowLayout.CENTER));
@@ -60,12 +70,19 @@ public class RegisterFrame extends JFrame {
         this.registerPanel.add(fields);
         this.registerPanel.add(button);
 
+        // to push enter button on confirm
+        this.getRootPane().setDefaultButton(registerButton);
+
         this.pack();
         this.setVisible(true);
     }
 
     public JPasswordField getPasswordField() {
         return passwordField;
+    }
+
+    public JPasswordField getConfirmPasswordField() {
+        return confirmPasswordField;
     }
 
     public JTextField getLoginTextField() {

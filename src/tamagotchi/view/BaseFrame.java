@@ -1,17 +1,14 @@
 package tamagotchi.view;
 
 
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import java.awt.Dimension;
-import java.awt.Toolkit;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import tamagotchi.controller.IController;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
+    private LoginPanel loginPanel;
     private JMenuBar menuBar;
     private JMenu menu;
     private JMenuItem loginButton;
@@ -65,15 +62,24 @@ public class BaseFrame extends JFrame {
 
     }
 
+    public void setupLoginPanel(LoginPanel loginPanel) {
+        this.loginPanel = loginPanel;
+        this.setVisible(true);
+    }
+
+
     public void addLoginListener(ActionListener loginListener) {
+
         loginButton.addActionListener(loginListener);
     }
 
     public void addRegisterListener(ActionListener registerListener) {
+
         registerButton.addActionListener(registerListener);
     }
 
     public void addCloseListener(ActionListener closeListener) {
+
         closeButton.addActionListener(closeListener);
     }
 

@@ -68,6 +68,24 @@ public class DBConnect {
         return false;
     }
 
+    public boolean ifUserExists(String login) {
+        try {
+            String tempLogin = null;
+            String query = "select * from Users where login = '" + login + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                tempLogin = rs.getString("login");
+                if (tempLogin != null) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return false;
+    }
+
     public void deleteUser(String login) {
         try {
             String query = "delete from Users where login = '" + login + "'";
