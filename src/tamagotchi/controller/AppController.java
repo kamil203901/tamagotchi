@@ -14,27 +14,45 @@ public class AppController implements IController {
 
     public void start() {
         appFrame = new BaseFrame(this);
-        appFrame.addLoginListener(new LoginListener());
-        appFrame.addRegisterListener(new RegisterListener());
+        appFrame.addLoginListener(new LoginListener(this));
+        appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));
 
 
     }
 
+    public BaseFrame getAppFrame() {
+        return appFrame;
+    }
+
+    public DBConnect getConnection() {
+        return connection;
+    }
+
     class LoginListener implements ActionListener {
+        AppController appController;
+
+        LoginListener(AppController appController) {
+            this.appController = appController;
+        }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            LoginController lc = new LoginController();
+            LoginController lc = new LoginController(appController);
             lc.start();
         }
     }
 
     class RegisterListener implements ActionListener {
+        AppController appController;
+
+        RegisterListener(AppController appController) {
+            this.appController = appController;
+        }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            RegisterController rc = new RegisterController();
+            RegisterController rc = new RegisterController(appController);
             rc.start();
         }
     }

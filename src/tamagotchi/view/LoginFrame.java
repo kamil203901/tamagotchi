@@ -90,8 +90,4 @@ public class LoginFrame extends JFrame {
         loginTextField.addActionListener(loginListener);
     }
 
-
-
-
-
 }

@@ -2,13 +2,15 @@ package tamagotchi.view;
 
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import tamagotchi.controller.IController;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
-    private LoginPanel loginPanel;
+    private JPanel panel;
+    private JLabel loginLabel;
     private JMenuBar menuBar;
     private JMenu menu;
     private JMenuItem loginButton;
@@ -17,6 +19,9 @@ public class BaseFrame extends JFrame {
 
     public BaseFrame(IController baseController) {
         basePanel = new Panel(baseController);
+        basePanel.setOpaque(true);
+        basePanel.setBackground(Color.lightGray);
+        basePanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
         setupFrame();
     }
 
@@ -46,25 +51,35 @@ public class BaseFrame extends JFrame {
         menu.add(closeButton);
 
 
-
-
-        //menu.add(loginButton);
-        //menu.add(registerButton);
-        ///menu.addSeparator();
-        //menu.add(closeButton);
-
         // set menu bar
         menuBar.add(menu);
         this.setJMenuBar(menuBar);
+        this.setResizable(true);
 
         // need to be always on bottom
         this.setVisible(true);
 
+
+
     }
 
-    public void setupLoginPanel(LoginPanel loginPanel) {
-        this.loginPanel = loginPanel;
+    public void showLoginLabel(String login) {
+        loginLabel = new JLabel("Login: " + login);
+
+        panel = new JPanel();
+        panel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        panel.setSize(new Dimension(200,20));
+        panel.setBorder(new LineBorder(Color.BLACK));
+        panel.add(loginLabel);
+
+        this.getContentPane().add(panel);
         this.setVisible(true);
+    }
+
+    public void removeLoginLabel() {
+        if (panel != null) {
+            this.remove(panel);
+        }
     }
 
 

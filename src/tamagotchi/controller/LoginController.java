@@ -5,25 +5,35 @@ import tamagotchi.view.BaseFrame;
 import tamagotchi.view.LoginFrame;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class LoginController implements IController {
+    private AppController appController;
     private LoginFrame loginFrame;
     private DBConnect connection;
+
+    public LoginController(AppController appController) {
+        this.appController = appController;
+    }
+
 
     public void start() {
         connection = new DBConnect();
         loginFrame = new LoginFrame(this);
-        loginFrame.addLoginListener(new LoginListener(loginFrame));
+        loginFrame.addLoginListener(new LoginListener(loginFrame, appController));
     }
 
 
     class LoginListener implements ActionListener {
         LoginFrame loginFrame;
+        AppController appController;
 
-        LoginListener(LoginFrame loginFrame) {
+        LoginListener(LoginFrame loginFrame, AppController appController) {
             this.loginFrame = loginFrame;
+            this.appController = appController;
+
         }
 
         @Override
@@ -33,8 +43,11 @@ public class LoginController implements IController {
             boolean correctLogin = connection.isCorrectLoggingData(login, password);
 
             if (correctLogin) {
+
                 JOptionPane.showConfirmDialog(loginFrame, "User " + login + " logged in correctly.",
                         "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+                appController.getAppFrame().removeLoginLabel();
+                appController.getAppFrame().showLoginLabel(login);
 
             } else {
                 JOptionPane.showConfirmDialog(loginFrame, "Uncorrect login or password.",

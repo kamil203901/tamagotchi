@@ -9,18 +9,26 @@ import java.awt.event.ActionListener;
 
 public class RegisterController implements IController {
     private RegisterFrame registerFrame;
+    private AppController appController;
     private DBConnect connection;
+
+    public RegisterController(AppController appController) {
+        this.appController = appController;
+    }
+
 
     public void start() {
         connection = new DBConnect();
         registerFrame = new RegisterFrame(this);
-        registerFrame.addRegisterListener(new RegisterListener(registerFrame));
+        registerFrame.addRegisterListener(new RegisterListener(registerFrame, appController));
     }
 
     class RegisterListener implements ActionListener {
         RegisterFrame registerFrame;
+        AppController appController;
 
-        RegisterListener(RegisterFrame registerFrame) {
+        RegisterListener(RegisterFrame registerFrame, AppController appController) {
+            this.appController = appController;
             this.registerFrame = registerFrame;
         }
 
@@ -44,6 +52,8 @@ public class RegisterController implements IController {
             connection.addUser(login, password);
             JOptionPane.showConfirmDialog(registerFrame, "User " + login + " registered successfully.",
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+            appController.getAppFrame().removeLoginLabel();
+            appController.getAppFrame().showLoginLabel(login);
             registerFrame.dispose();
         }
     }

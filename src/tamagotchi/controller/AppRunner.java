@@ -10,6 +10,7 @@ public class AppRunner {
 
 
         AppController baseApp = new AppController();
+        LoginController loginController = new LoginController(baseApp);
         baseApp.start();
         //baseApp.login();
     }
