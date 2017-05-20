@@ -9,6 +9,8 @@ public class RegisterFrame extends JFrame {
 
     private Panel registerPanel;
     private JButton registerButton;
+    private JPasswordField passwordField;
+    private JTextField loginTextField;
 
     public RegisterFrame(IController registerController) {
         registerPanel = new Panel(registerController);
@@ -29,11 +31,11 @@ public class RegisterFrame extends JFrame {
         this.setLayout(new BorderLayout());
 
         // create login field
-        JTextField loginTextField = new JTextField(15);
+        loginTextField = new JTextField(15);
         loginTextField.setActionCommand("Login");
 
         // create password field
-        JPasswordField passwordField = new JPasswordField(10);
+        passwordField = new JPasswordField(10);
         passwordField.setActionCommand("Password");
 
         // create some labels
@@ -62,8 +64,18 @@ public class RegisterFrame extends JFrame {
         this.setVisible(true);
     }
 
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public JTextField getLoginTextField() {
+        return loginTextField;
+    }
+
     public void addRegisterListener(ActionListener registerListener) {
         registerButton.addActionListener(registerListener);
+        loginTextField.addActionListener(registerListener);
+        passwordField.addActionListener(registerListener);
     }
 
 

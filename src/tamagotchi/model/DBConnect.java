@@ -28,9 +28,9 @@ public class DBConnect {
             rs = st.executeQuery(query);
             System.out.println("Records from database");
             while (rs.next()) {
-                String id = rs.getString("ID");
-                String login = rs.getString("Login");
-                String password = rs.getString("Password");
+                String id = rs.getString("id");
+                String login = rs.getString("login");
+                String password = rs.getString("password");
                 System.out.println("Id: " + id + " login: " + login + " password: " + password);
 
             }
@@ -47,6 +47,25 @@ public class DBConnect {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public boolean isCorrectLoggingData(String login, String password) {
+        try {
+            String correctLogin, correctPassword;
+            String query = "select * from Users where login = '" + login + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                correctLogin = rs.getString("login");
+                correctPassword = rs.getString("password");
+                if (login.equals(correctLogin) && password.equals(correctPassword)) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return false;
     }
 
     public void deleteUser(String login) {

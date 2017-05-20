@@ -21,6 +21,8 @@ import tamagotchi.controller.LoginController;
 public class LoginFrame extends JFrame {
     private Panel loginPanel;
     private JButton loginButton;
+    private JPasswordField passwordField;
+    private JTextField loginTextField;
 
     public LoginFrame(LoginController loginController) {
         loginPanel = new Panel(null);
@@ -41,11 +43,11 @@ public class LoginFrame extends JFrame {
         this.setLayout(new BorderLayout());
 
         // create login field
-        JTextField loginTextField = new JTextField(15);
+        loginTextField = new JTextField(15);
         loginTextField.setActionCommand("Login");
 
         // create password field
-        JPasswordField passwordField = new JPasswordField(10);
+        passwordField = new JPasswordField(10);
         passwordField.setActionCommand("Password");
 
         // create some labels
@@ -74,8 +76,18 @@ public class LoginFrame extends JFrame {
         this.setVisible(true);
     }
 
+    public JPasswordField getPasswordField() {
+        return passwordField;
+    }
+
+    public JTextField getLoginTextField() {
+        return loginTextField;
+    }
+
     public void addLoginListener(ActionListener loginListener) {
         loginButton.addActionListener(loginListener);
+        passwordField.addActionListener(loginListener);
+        loginTextField.addActionListener(loginListener);
     }
 
 

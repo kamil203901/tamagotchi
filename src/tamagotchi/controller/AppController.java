@@ -24,7 +24,7 @@ public class AppController implements IController {
         @Override
         public void actionPerformed(ActionEvent e) {
             LoginController lc = new LoginController();
-            lc.startLogin();
+            lc.start();
         }
     }
 
@@ -33,7 +33,7 @@ public class AppController implements IController {
         @Override
         public void actionPerformed(ActionEvent e) {
             RegisterController rc = new RegisterController();
-            rc.startRegister();
+            rc.start();
         }
     }
 
