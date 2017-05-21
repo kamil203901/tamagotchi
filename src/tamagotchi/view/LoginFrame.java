@@ -25,20 +25,14 @@ public class LoginFrame extends JFrame {
     private JTextField loginTextField;
 
     public LoginFrame(LoginController loginController) {
-        loginPanel = new Panel(null);
+        loginPanel = new Panel(loginController);
         setupLoginFrame();
     }
 
     private void setupLoginFrame() {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = screenSize.width;
-        int height = screenSize.height;
-
         this.setContentPane(loginPanel);
         this.setTitle("Login");
-        this.setSize(300, 200);
         this.setResizable(false);
-        this.setLocation(width / 2 - this.getWidth() / 2, height / 2 - this.getHeight() / 2);
         this.setAlwaysOnTop(true);
         this.setLayout(new BorderLayout());
 
@@ -47,7 +41,7 @@ public class LoginFrame extends JFrame {
         loginTextField.setActionCommand("Login");
 
         // create password field
-        passwordField = new JPasswordField(10);
+        passwordField = new JPasswordField(15);
         passwordField.setActionCommand("Password");
 
         // create some labels
@@ -73,6 +67,7 @@ public class LoginFrame extends JFrame {
         this.loginPanel.add(button);
 
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 

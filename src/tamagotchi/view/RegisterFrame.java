@@ -21,15 +21,9 @@ public class RegisterFrame extends JFrame {
     }
 
     private void setupRegisterFrame() {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = screenSize.width;
-        int height = screenSize.height;
-
         this.setContentPane(registerPanel);
         this.setTitle("Register");
-        this.setSize(300, 200);
         this.setResizable(false);
-        this.setLocation(width / 2 - this.getWidth() / 2, height / 2 - this.getHeight() / 2);
         this.setAlwaysOnTop(true);
         this.setLayout(new BorderLayout());
 
@@ -92,6 +86,7 @@ public class RegisterFrame extends JFrame {
         this.getRootPane().setDefaultButton(registerButton);
 
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 

@@ -44,6 +44,7 @@ public class LoginController implements IController {
 
                 JOptionPane.showConfirmDialog(loginFrame, "User " + login + " logged in correctly.",
                         "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+                appController.getAppFrame().setBasePanelAsContentPane();
                 appController.getAppFrame().removeLoginLabel();
                 appController.getAppFrame().showLoginLabel(login);
 

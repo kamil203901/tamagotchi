@@ -56,7 +56,7 @@ public class DBConnect {
             rs = st.executeQuery(query);
             while (rs.next()) {
                 correctLogin = rs.getString("login");
-                correctPassword = rs.getString("password");
+                correctPassword = rs.getString("haslo");
                 if (login.equals(correctLogin) && password.equals(correctPassword)) {
                     return true;
                 }

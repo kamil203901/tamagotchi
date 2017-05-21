@@ -9,36 +9,37 @@ import tamagotchi.controller.IController;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
+    private Panel welcomePanel;
     private JPanel panel;
-    private JLabel loginLabel;
-    private JMenuBar menuBar;
-    private JMenu menu;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
 
     public BaseFrame(IController baseController) {
         basePanel = new Panel(baseController);
-        basePanel.setOpaque(true);
-        basePanel.setBackground(Color.lightGray);
-        basePanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        welcomePanel = new Panel(baseController);
+        welcomePanel.setOpaque(true);
+        welcomePanel.setLayout(new GridLayout(1,1));
+        welcomePanel.setBackground(new Color(194, 223, 160));
         setupFrame();
     }
 
-    private void setupFrame() {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = screenSize.width;
-        int height = screenSize.height;
-
+    public void setBasePanelAsContentPane() {
         this.setContentPane(basePanel);
+        basePanel.setOpaque(true);
+        basePanel.setBackground(new Color(194, 223, 160));
+        basePanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+    }
+
+    private void setupFrame() {
+        this.setContentPane(welcomePanel);
         this.setTitle("Tamagotchi");
         this.setSize(800, 600);
-        this.setLocation(width / 2 - this.getWidth() / 2, height / 2 - this.getHeight() / 2);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // create menus in base frame
-        menuBar = new JMenuBar();
-        menu = new JMenu("Menu");
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Menu");
 
         loginButton = new JMenuItem("Login");
         menu.add(loginButton);
@@ -50,21 +51,25 @@ public class BaseFrame extends JFrame {
         closeButton = new JMenuItem("Close");
         menu.add(closeButton);
 
-
         // set menu bar
         menuBar.add(menu);
         this.setJMenuBar(menuBar);
         this.setResizable(true);
 
+        JLabel welcomeLabel = new JLabel("<html> <center> Welcome in Tamagotchi! </center> <br>" +
+                "<center> Log in or register </center> </html>");
+        welcomeLabel.setSize(300,300);
+        welcomeLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        welcomeLabel.setFont(new Font("Serif", Font.BOLD, 30));
+        welcomePanel.add(welcomeLabel);
+
         // need to be always on bottom
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
-
-
-
     }
 
     public void showLoginLabel(String login) {
-        loginLabel = new JLabel("Login: " + login);
+        JLabel loginLabel = new JLabel("Login: " + login);
 
         panel = new JPanel();
         panel.setLayout(new FlowLayout(FlowLayout.CENTER));
