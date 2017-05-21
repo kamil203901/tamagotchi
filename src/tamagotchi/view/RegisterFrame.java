@@ -11,6 +11,8 @@ public class RegisterFrame extends JFrame {
     private JButton registerButton;
     private JPasswordField passwordField;
     private JPasswordField confirmPasswordField;
+    private JTextField nameTextField;
+    private JTextField surnameTextField;
     private JTextField loginTextField;
 
     public RegisterFrame(IController registerController) {
@@ -35,6 +37,14 @@ public class RegisterFrame extends JFrame {
         loginTextField = new JTextField(15);
         loginTextField.setActionCommand("Login");
 
+        // create name field
+        nameTextField = new JTextField(15);
+        nameTextField.setActionCommand("Name");
+
+        // create surname field
+        surnameTextField = new JTextField(15);
+        surnameTextField.setActionCommand("Surname");
+
         // create password field
         passwordField = new JPasswordField(10);
         passwordField.setActionCommand("Password");
@@ -46,6 +56,10 @@ public class RegisterFrame extends JFrame {
         // create some labels
         JLabel textFieldLabel = new JLabel("Login:");
         textFieldLabel.setLabelFor(loginTextField);
+        JLabel nameFieldLabel = new JLabel("Name:");
+        nameFieldLabel.setLabelFor(nameTextField);
+        JLabel surnameFieldLabel = new JLabel("Surname:");
+        surnameFieldLabel.setLabelFor(surnameTextField);
         JLabel passwordFieldLabel = new JLabel("Password:");
         passwordFieldLabel.setLabelFor(passwordField);
         JLabel confirmPasswordFieldLabel = new JLabel("Confirm password:");
@@ -58,12 +72,16 @@ public class RegisterFrame extends JFrame {
         //JPanel fields = new JPanel(new FlowLayout(FlowLayout.LEFT));
         fields.add(textFieldLabel);
         fields.add(loginTextField);
+        fields.add(nameFieldLabel);
+        fields.add(nameTextField);
+        fields.add(surnameFieldLabel);
+        fields.add(surnameTextField);
         fields.add(passwordFieldLabel);
         fields.add(passwordField);
         fields.add(confirmPasswordFieldLabel);
         fields.add(confirmPasswordField);
 
-        registerButton = new JButton("register");
+        registerButton = new JButton("Register");
         JPanel button = new JPanel(new FlowLayout(FlowLayout.CENTER));
         button.add(registerButton);
 
@@ -87,6 +105,14 @@ public class RegisterFrame extends JFrame {
 
     public JTextField getLoginTextField() {
         return loginTextField;
+    }
+
+    public JTextField getNameTextField() {
+        return nameTextField;
+    }
+
+    public JTextField getSurnameTextField() {
+        return surnameTextField;
     }
 
     public void addRegisterListener(ActionListener registerListener) {

@@ -35,6 +35,8 @@ public class RegisterController implements IController {
         @Override
         public void actionPerformed(ActionEvent e) {
             String login = registerFrame.getLoginTextField().getText();
+            String name = registerFrame.getNameTextField().getText();
+            String surname = registerFrame.getSurnameTextField().getText();
             String password = new String(registerFrame.getPasswordField().getPassword());
             String confirmPassword = new String(registerFrame.getConfirmPasswordField().getPassword());
             if (!password.equals(confirmPassword)) {
@@ -49,7 +51,7 @@ public class RegisterController implements IController {
                 registerFrame.getLoginTextField().setText("");
                 return;
             }
-            connection.addUser(login, password);
+            connection.addUser(login, name, surname, password);
             JOptionPane.showConfirmDialog(registerFrame, "User " + login + " registered successfully.",
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
             appController.getAppFrame().removeLoginLabel();

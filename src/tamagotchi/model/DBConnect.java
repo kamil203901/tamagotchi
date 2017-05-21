@@ -24,13 +24,13 @@ public class DBConnect {
 
     public void getData() {
         try {
-            String query = "select * from Users";
+            String query = "select * from uzytkownik";
             rs = st.executeQuery(query);
             System.out.println("Records from database");
             while (rs.next()) {
                 String id = rs.getString("id");
                 String login = rs.getString("login");
-                String password = rs.getString("password");
+                String password = rs.getString("haslo");
                 System.out.println("Id: " + id + " login: " + login + " password: " + password);
 
             }
@@ -39,9 +39,9 @@ public class DBConnect {
         }
     }
 
-    public void addUser(String login, String password) {
+    public void addUser(String login, String imie, String nazwisko, String haslo) {
         try {
-            String query = "insert into Users (login, password) values ('" + login + "','" + password + "')";
+            String query = "insert into uzytkownik (login, imie, nazwisko, haslo) values ('" + login + "','" + imie + "','" + nazwisko + "','" + haslo + "')";
             st.executeUpdate(query);
             System.out.println("User " + login + " added to database.");
         } catch (Exception e) {
@@ -52,7 +52,7 @@ public class DBConnect {
     public boolean isCorrectLoggingData(String login, String password) {
         try {
             String correctLogin, correctPassword;
-            String query = "select * from Users where login = '" + login + "'";
+            String query = "select * from uzytkownik where login = '" + login + "'";
             rs = st.executeQuery(query);
             while (rs.next()) {
                 correctLogin = rs.getString("login");
@@ -71,7 +71,7 @@ public class DBConnect {
     public boolean ifUserExists(String login) {
         try {
             String tempLogin = null;
-            String query = "select * from Users where login = '" + login + "'";
+            String query = "select * from uzytkownik where login = '" + login + "'";
             rs = st.executeQuery(query);
             while (rs.next()) {
                 tempLogin = rs.getString("login");
@@ -88,7 +88,7 @@ public class DBConnect {
 
     public void deleteUser(String login) {
         try {
-            String query = "delete from Users where login = '" + login + "'";
+            String query = "delete from uzytkownik where login = '" + login + "'";
             st.executeUpdate(query);
             System.out.println("User " + login + " deleted from database.");
         } catch (Exception e) {
