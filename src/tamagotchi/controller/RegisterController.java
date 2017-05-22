@@ -54,6 +54,7 @@ public class RegisterController implements IController {
             connection.addUser(login, name, surname, password);
             JOptionPane.showConfirmDialog(registerFrame, "User " + login + " registered successfully.",
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+            appController.getAppFrame().setBasePanelAsContentPane();
             appController.getAppFrame().removeLoginLabel();
             appController.getAppFrame().showLoginLabel(login);
             registerFrame.dispose();

@@ -14,6 +14,7 @@ public class BaseFrame extends JFrame {
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
+    private GridBagConstraints constraints;
 
     public BaseFrame(IController baseController) {
         basePanel = new Panel(baseController);
@@ -29,6 +30,8 @@ public class BaseFrame extends JFrame {
         basePanel.setOpaque(true);
         basePanel.setBackground(new Color(194, 223, 160));
         basePanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        basePanel.setLayout(new GridBagLayout());
+        constraints = new GridBagConstraints();
     }
 
     private void setupFrame() {
@@ -77,7 +80,72 @@ public class BaseFrame extends JFrame {
         panel.setBorder(new LineBorder(Color.BLACK));
         panel.add(loginLabel);
 
-        this.getContentPane().add(panel);
+        /*
+         * making some constraints to use with gridbaglayout
+
+        JButton button;
+        this.getContentPane().setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        if (true) {
+            //natural height, maximum width
+            c.fill = GridBagConstraints.HORIZONTAL;
+        }
+
+        button = new JButton("Button 1");
+        if (true) {
+            c.weightx = 0.5;
+        }
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 0;
+        c.gridy = 0;
+        this.getContentPane().add(button, c);
+
+        button = new JButton("Button 2");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 0.5;
+        c.gridx = 1;
+        c.gridy = 0;
+        this.getContentPane().add(button, c);
+
+        button = new JButton("Button 3");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 0.5;
+        c.gridx = 2;
+        c.gridy = 0;
+        this.getContentPane().add(button, c);
+
+        button = new JButton("Long-Named Button 4");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.ipady = 0;      //make this component tall
+        c.weightx = 0.0;
+        c.gridwidth = 3;
+        c.gridx = 0;
+        c.gridy = 1;
+        this.getContentPane().add(button, c);
+
+        button = new JButton("5");
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.ipady = 0;       //reset to default
+        c.weighty = 1.0;     //request any extra vertical space
+        c.anchor = GridBagConstraints.PAGE_END; //bottom of space
+        c.insets = new Insets(0,0,0,0);  //top padding
+        c.gridx = 2;       //aligned with button 2
+        c.gridwidth = 1;   //2 columns wide
+        c.gridy = 2;       //third row
+        this.getContentPane().add(button, c);
+        */
+
+        //constraints.fill = GridBagConstraints.VERTICAL;
+        constraints.weightx = 1.0;
+        constraints.weighty = 1.0;
+        constraints.insets = new Insets(10,10,10,10);
+        constraints.gridx = 2;
+        constraints.gridy = 0;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        constraints.anchor = GridBagConstraints.FIRST_LINE_END;
+
+        this.getContentPane().add(panel, constraints);
         this.setVisible(true);
     }
 
