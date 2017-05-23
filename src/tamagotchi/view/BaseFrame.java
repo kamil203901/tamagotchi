@@ -9,26 +9,30 @@ import tamagotchi.controller.IController;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
+    private JButton addAnimalButton;
     private Panel welcomePanel;
+    private Panel animalPanel;
     private JPanel panel;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
     private GridBagConstraints constraints;
 
+
     public BaseFrame(IController baseController) {
         basePanel = new Panel(baseController);
+        animalPanel = new Panel(baseController);
         welcomePanel = new Panel(baseController);
         welcomePanel.setOpaque(true);
         welcomePanel.setLayout(new GridLayout(1,1));
-        welcomePanel.setBackground(new Color(194, 223, 160));
+        welcomePanel.setBackground(new Color(223, 223, 88));
         setupFrame();
     }
 
     public void setBasePanelAsContentPane() {
         this.setContentPane(basePanel);
         basePanel.setOpaque(true);
-        basePanel.setBackground(new Color(194, 223, 160));
+        basePanel.setBackground(new Color(223, 223, 88));
         basePanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
         basePanel.setLayout(new GridBagLayout());
         constraints = new GridBagConstraints();
@@ -37,7 +41,7 @@ public class BaseFrame extends JFrame {
     private void setupFrame() {
         this.setContentPane(welcomePanel);
         this.setTitle("Tamagotchi");
-        this.setSize(800, 600);
+        this.setMinimumSize(new Dimension(800,600));
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // create menus in base frame
@@ -153,6 +157,50 @@ public class BaseFrame extends JFrame {
         if (panel != null) {
             this.remove(panel);
         }
+    }
+
+    public void showAddAnimalComboBox() {
+        addAnimalButton = new JButton("Add new animal");
+        constraints.weightx = 0.0;
+        constraints.weighty = 0.0;
+        constraints.ipadx = 40;
+        constraints.ipady = 30;
+        constraints.insets = new Insets(10,10,10,10);
+        constraints.gridx = 2;
+        constraints.gridy = 2;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        constraints.anchor = GridBagConstraints.LAST_LINE_END;
+
+
+        this.getContentPane().add(addAnimalButton, constraints);
+        this.setVisible(true);
+    }
+
+    public void showAnimalPanel() {
+        animalPanel.setLayout(new BorderLayout());
+        animalPanel.setBorder(new LineBorder(Color.BLACK));
+        constraints.weightx = 0;
+        constraints.weighty = 0;
+        //constraints.ipadx = 400;
+        //constraints.ipady = 400;
+        constraints.insets = new Insets(10,10,10,10);
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 2;
+        constraints.gridheight = 2;
+        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+
+        ImageIcon background = new ImageIcon("/home/kamil/Pulpit/Tamagotchi/tamagotchi/grass.png");
+        JLabel label = new JLabel();
+        label.setBounds(0, 0, 400, 400);
+        label.setIcon(background);
+
+
+        animalPanel.add(label);
+        this.getContentPane().add(animalPanel, constraints);
+        this.setVisible(true);
+
     }
 
 

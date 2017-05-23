@@ -12,15 +12,15 @@ public class RegisterController implements IController {
     private AppController appController;
     private DBConnect connection;
 
-    RegisterController(AppController appController) {
+    public RegisterController(AppController appController) {
         this.appController = appController;
     }
 
 
     public void start() {
-        this.connection = new DBConnect();
-        this.registerFrame = new RegisterFrame(this);
-        this.registerFrame.addRegisterListener(new RegisterListener(registerFrame, appController));
+        connection = new DBConnect();
+        registerFrame = new RegisterFrame(this);
+        registerFrame.addRegisterListener(new RegisterListener(registerFrame, appController));
     }
 
     class RegisterListener implements ActionListener {
@@ -54,10 +54,10 @@ public class RegisterController implements IController {
             connection.addUser(login, name, surname, password);
             JOptionPane.showConfirmDialog(registerFrame, "User " + login + " registered successfully.",
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
-            this.appController.getAppFrame().setBasePanelAsContentPane();
-            this.appController.getAppFrame().removeLoginLabel();
-            this.appController.getAppFrame().showLoginLabel(login);
-            this.registerFrame.dispose();
+            appController.getAppFrame().setBasePanelAsContentPane();
+            appController.getAppFrame().removeLoginLabel();
+            appController.getAppFrame().showLoginLabel(login);
+            registerFrame.dispose();
         }
     }
 
