@@ -61,6 +61,7 @@ public class RegisterController implements IController {
             appController.getAppFrame().showLoginLabel(login);
             appController.getAppFrame().showAnimalPanel();
             appController.getAppFrame().showAddAnimalComboBox();
+            appController.getAppFrame().showHealthHappinessHungerPanel();
             registerFrame.dispose();
         }
     }

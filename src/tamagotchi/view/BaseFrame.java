@@ -14,8 +14,11 @@ import tamagotchi.controller.IController;
 public class BaseFrame extends JFrame {
     private Panel basePanel;
     private JButton addAnimalButton;
+    private JButton feedDogs;
+    private JButton feedCats;
+    private JButton feedFish;
     private Panel welcomePanel;
-    private Panel animalPanel;
+    private ImagePanel animalPanel;
     private Panel healthHappinessHungerPanel;
     private JPanel usernamePanel;
     private JMenuItem loginButton;
@@ -30,12 +33,15 @@ public class BaseFrame extends JFrame {
 
 
     public BaseFrame(IController baseController) {
+        feedDogs = new JButton("Feed dogs");
+        feedCats = new JButton("Feed cats");
+        feedFish = new JButton("Feed fish");
         basePanel = new Panel(baseController);
         healthHappinessHungerPanel = new Panel(baseController);
         healthBar = new JProgressBar(0, 100);
         happinessBar = new JProgressBar(0, 100);
         hungerBar = new JProgressBar(0, 100);
-        animalPanel = new Panel(baseController);
+        animalPanel = new ImagePanel("img/bg.jpg");
         welcomePanel = new Panel(baseController);
         usernamePanel = new JPanel();
         logout = new JPopupMenu();
@@ -56,7 +62,6 @@ public class BaseFrame extends JFrame {
         this.setContentPane(basePanel);
         basePanel.setOpaque(true);
         basePanel.setBackground(new Color(223, 223, 88));
-        basePanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
         basePanel.setLayout(new GridBagLayout());
         constraints = new GridBagConstraints();
     }
@@ -64,7 +69,7 @@ public class BaseFrame extends JFrame {
     private void setupFrame() {
         this.setContentPane(welcomePanel);
         this.setTitle("Tamagotchi");
-        this.setMinimumSize(new Dimension(800,600));
+        this.setSize(new Dimension(800,600));
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // create menus in base frame
@@ -84,7 +89,7 @@ public class BaseFrame extends JFrame {
         // set menu bar
         menuBar.add(menu);
         this.setJMenuBar(menuBar);
-        this.setResizable(true);
+        this.setResizable(false);
 
         JLabel welcomeLabel = new JLabel("<html> <center> Welcome in Tamagotchi! </center> <br>" +
                 "<center> Log in or register </center> </html>");
@@ -107,64 +112,9 @@ public class BaseFrame extends JFrame {
         usernamePanel.add(loginLabel);
         usernamePanel.setComponentPopupMenu(logout);
 
-        /*
-         * making some constraints to use with gridbaglayout
-
-        JButton button;
-        this.getContentPane().setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
-        if (true) {
-            //natural height, maximum width
-            c.fill = GridBagConstraints.HORIZONTAL;
-        }
-
-        button = new JButton("Button 1");
-        if (true) {
-            c.weightx = 0.5;
-        }
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.gridx = 0;
-        c.gridy = 0;
-        this.getContentPane().add(button, c);
-
-        button = new JButton("Button 2");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.weightx = 0.5;
-        c.gridx = 1;
-        c.gridy = 0;
-        this.getContentPane().add(button, c);
-
-        button = new JButton("Button 3");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.weightx = 0.5;
-        c.gridx = 2;
-        c.gridy = 0;
-        this.getContentPane().add(button, c);
-
-        button = new JButton("Long-Named Button 4");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 0;      //make this component tall
-        c.weightx = 0.0;
-        c.gridwidth = 3;
-        c.gridx = 0;
-        c.gridy = 1;
-        this.getContentPane().add(button, c);
-
-        button = new JButton("5");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 0;       //reset to default
-        c.weighty = 1.0;     //request any extra vertical space
-        c.anchor = GridBagConstraints.PAGE_END; //bottom of space
-        c.insets = new Insets(0,0,0,0);  //top padding
-        c.gridx = 2;       //aligned with button 2
-        c.gridwidth = 1;   //2 columns wide
-        c.gridy = 2;       //third row
-        this.getContentPane().add(button, c);
-        */
-
-        //constraints.fill = GridBagConstraints.VERTICAL;
-        constraints.weightx = 1.0;
-        constraints.weighty = 1.0;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.weightx = 0;
+        constraints.weighty = 0;
         constraints.insets = new Insets(10,10,10,10);
         constraints.gridx = 2;
         constraints.gridy = 0;
@@ -191,7 +141,7 @@ public class BaseFrame extends JFrame {
         constraints.ipady = 30;
         constraints.insets = new Insets(10,10,10,10);
         constraints.gridx = 2;
-        constraints.gridy = 2;
+        constraints.gridy = 5;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.LAST_LINE_END;
@@ -201,28 +151,76 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
+    public void showButtonToFeedAnimals() {
+        constraints.weightx = 0.0;
+        constraints.weighty = 0.0;
+        constraints.insets = new Insets(10,10,5,10);
+        constraints.gridx = 2;
+        constraints.gridy = 2;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        this.getContentPane().add(feedDogs, constraints);
+
+        constraints.weightx = 0.0;
+        constraints.weighty = 0.0;
+        constraints.insets = new Insets(5,10,5,10);
+        constraints.gridx = 2;
+        constraints.gridy = 3;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        this.getContentPane().add(feedCats, constraints);
+
+        constraints.weightx = 0.0;
+        constraints.weighty = 0.0;
+        constraints.insets = new Insets(5,10,10,10);
+        constraints.gridx = 2;
+        constraints.gridy = 4;
+        constraints.gridwidth = 1;
+        constraints.gridheight = 1;
+        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        this.getContentPane().add(feedFish, constraints);
+
+        this.setVisible(true);
+    }
+
 
     public void showAnimalPanel() {
-        animalPanel.setLayout(new BorderLayout());
+        animalPanel.setBounds(0,0,600,400);
         animalPanel.setBorder(new LineBorder(Color.BLACK));
-        constraints.weightx = 0;
-        constraints.weighty = 0;
-        //constraints.ipadx = 400;
-        //constraints.ipady = 400;
+        constraints.weightx = 1;
+        constraints.weighty = 1;
         constraints.insets = new Insets(10,10,10,10);
         constraints.gridx = 0;
         constraints.gridy = 0;
         constraints.gridwidth = 2;
-        constraints.gridheight = 2;
-        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        constraints.gridheight = 8;
+        constraints.anchor = GridBagConstraints.NORTHWEST;
 
-        ImageIcon background = new ImageIcon("img/grass.jpg");
-        JLabel label = new JLabel();
-        label.setBounds(0, 0, 400, 400);
-        label.setIcon(background);
+        animalPanel.setLayout(new GridLayout(4,4));
+        ImageIcon dog = new ImageIcon("img/dog.png");
+        JLabel dogLabel = new JLabel();
+        dogLabel.setIcon(dog);
+
+        int i = 3;
+        int j = 3;
+        JPanel[][] panelHolder = new JPanel[i][j];
+        animalPanel.setLayout(new GridLayout(i,j));
+
+        for(int m = 0; m < i; m++) {
+            for(int n = 0; n < j; n++) {
+                panelHolder[m][n] = new JPanel();
+                panelHolder[m][n].setOpaque(false);
+                animalPanel.add(panelHolder[m][n]);
+            }
+        }
+
+        panelHolder[2][2].add(dogLabel);
 
 
-        animalPanel.add(label);
+        animalPanel.add(panelHolder[2][2]);
+
         this.getContentPane().add(animalPanel, constraints);
         this.setVisible(true);
 
@@ -253,7 +251,8 @@ public class BaseFrame extends JFrame {
         happinessBar.setStringPainted(true);
         hungerBar.setStringPainted(true);
 
-        healthHappinessHungerPanel.setBackground(Color.YELLOW);
+
+        healthHappinessHungerPanel.setBorder(new LineBorder(Color.BLACK));
         healthHappinessHungerPanel.setLayout(new GridLayout(3,1));
         healthHappinessHungerPanel.add(healthBar);
         healthHappinessHungerPanel.add(happinessBar);
@@ -261,12 +260,12 @@ public class BaseFrame extends JFrame {
 
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.weightx = 0.0;
-        constraints.weighty = 1.0;
-        //constraints.ipadx = 400;
-        constraints.ipady = 5;
-        constraints.insets = new Insets(45,10,10,10);
+        constraints.weighty = 0.0;
+        constraints.ipadx = 0;
+        constraints.ipady = 0;
+        constraints.insets = new Insets(10,10,10,10);
         constraints.gridx = 2;
-        constraints.gridy = 0;
+        constraints.gridy = 1;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.FIRST_LINE_START;
