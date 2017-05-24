@@ -1,8 +1,12 @@
 package tamagotchi.controller;
 
 import tamagotchi.view.BaseFrame;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 
 public class AppController implements IController {
@@ -14,6 +18,7 @@ public class AppController implements IController {
         appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));
         appFrame.addNewAnimalListener(new AddAnimalListener(this));
+        appFrame.addLogoutListener(new LogoutListener(this));
     }
 
     BaseFrame getAppFrame() {
@@ -74,6 +79,21 @@ public class AppController implements IController {
             animalController.start();
         }
     }
+
+    class LogoutListener implements ActionListener {
+        private AppController appController;
+
+        LogoutListener(AppController appController) {
+            this.appController = appController;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            appController.getAppFrame().removeLoginLabel();
+            appController.getAppFrame().setWelcomePanelAsContenePane();
+        }
+    }
+
 
 
 }

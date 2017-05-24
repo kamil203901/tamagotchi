@@ -48,6 +48,7 @@ public class LoginController implements IController {
                 appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAnimalPanel();
                 appController.getAppFrame().showAddAnimalComboBox();
+                appController.getAppFrame().showHealthHappinessHungerPanel();
 
             } else {
                 JOptionPane.showConfirmDialog(loginFrame, "Uncorrect login or password.",
