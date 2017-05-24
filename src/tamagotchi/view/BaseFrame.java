@@ -12,7 +12,7 @@ public class BaseFrame extends JFrame {
     private JButton addAnimalButton;
     private Panel welcomePanel;
     private Panel animalPanel;
-    private JPanel panel;
+    private JPanel usernamePanel;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
@@ -23,6 +23,7 @@ public class BaseFrame extends JFrame {
         basePanel = new Panel(baseController);
         animalPanel = new Panel(baseController);
         welcomePanel = new Panel(baseController);
+        addAnimalButton = new JButton("Add new animal");
         welcomePanel.setOpaque(true);
         welcomePanel.setLayout(new GridLayout(1,1));
         welcomePanel.setBackground(new Color(223, 223, 88));
@@ -76,13 +77,13 @@ public class BaseFrame extends JFrame {
     }
 
     public void showLoginLabel(String login) {
-        JLabel loginLabel = new JLabel("Login: " + login);
+        JLabel loginLabel = new JLabel(login);
 
-        panel = new JPanel();
-        panel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        panel.setSize(new Dimension(200,20));
-        panel.setBorder(new LineBorder(Color.BLACK));
-        panel.add(loginLabel);
+        usernamePanel = new JPanel();
+        usernamePanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        usernamePanel.setSize(new Dimension(200,20));
+        usernamePanel.setBorder(new LineBorder(Color.BLACK));
+        usernamePanel.add(loginLabel);
 
         /*
          * making some constraints to use with gridbaglayout
@@ -149,18 +150,17 @@ public class BaseFrame extends JFrame {
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.FIRST_LINE_END;
 
-        this.getContentPane().add(panel, constraints);
+        this.getContentPane().add(usernamePanel, constraints);
         this.setVisible(true);
     }
 
     public void removeLoginLabel() {
-        if (panel != null) {
-            this.remove(panel);
+        if (usernamePanel != null) {
+            this.remove(usernamePanel);
         }
     }
 
     public void showAddAnimalComboBox() {
-        addAnimalButton = new JButton("Add new animal");
         constraints.weightx = 0.0;
         constraints.weighty = 0.0;
         constraints.ipadx = 40;
@@ -191,7 +191,7 @@ public class BaseFrame extends JFrame {
         constraints.gridheight = 2;
         constraints.anchor = GridBagConstraints.FIRST_LINE_START;
 
-        ImageIcon background = new ImageIcon("/home/kamil/Pulpit/Tamagotchi/tamagotchi/grass.png");
+        ImageIcon background = new ImageIcon("img/grass.jpg");
         JLabel label = new JLabel();
         label.setBounds(0, 0, 400, 400);
         label.setIcon(background);
@@ -203,6 +203,9 @@ public class BaseFrame extends JFrame {
 
     }
 
+    public JPanel getUsernamePanel() {
+        return usernamePanel;
+    }
 
     public void addLoginListener(ActionListener loginListener) {
 
@@ -217,6 +220,11 @@ public class BaseFrame extends JFrame {
     public void addCloseListener(ActionListener closeListener) {
 
         closeButton.addActionListener(closeListener);
+    }
+
+    public void addNewAnimalListener(ActionListener newAnimalListener) {
+
+        addAnimalButton.addActionListener(newAnimalListener);
     }
 
 }

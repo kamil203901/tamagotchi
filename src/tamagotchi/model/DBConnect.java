@@ -39,11 +39,45 @@ public class DBConnect {
         }
     }
 
+    private String getUserId(String username) {
+        String id = null;
+        try {
+            String query = "select * from uzytkownik where login = '" + username + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            id = rs.getString("id");
+            System.out.println("User id:" + id);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return id;
+    }
+
     public void addUser(String login, String imie, String nazwisko, String haslo) {
         try {
-            String query = "insert into uzytkownik (login, imie, nazwisko, haslo) values ('" + login + "','" + imie + "','" + nazwisko + "','" + haslo + "')";
+            String query = "insert into uzytkownik (login, imie, nazwisko, haslo) " +
+                    "values ('" + login + "','" + imie + "','" + nazwisko + "','" + haslo + "')";
             st.executeUpdate(query);
             System.out.println("User " + login + " added to database.");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void addAnimal(String genre, String name, String username) {
+        try {
+            String query = "select id_rodzaj_podopiecznego from rodzaj_podopiecznego where nazwa = '" + genre + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            String id_genre = rs.getString("id_rodzaj_podopiecznego");
+            String id_user = getUserId(username);
+
+            query = "insert into podopieczny (id_rodzaj, imie, id_uzytkownik) " +
+                    "values ('" + id_genre + "','" + name + "','" + id_user + "')";
+            st.executeUpdate(query);
+            System.out.println(genre + " " + name + " added to user " + username);
+
         } catch (Exception e) {
             System.out.println(e);
         }

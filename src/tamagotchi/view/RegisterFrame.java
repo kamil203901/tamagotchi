@@ -63,7 +63,6 @@ public class RegisterFrame extends JFrame {
         this.registerPanel.setLayout(new BoxLayout(registerPanel, BoxLayout.Y_AXIS));
 
         JPanel fields = new JPanel(new GridLayout(0,2));
-        //JPanel fields = new JPanel(new FlowLayout(FlowLayout.LEFT));
         fields.add(textFieldLabel);
         fields.add(loginTextField);
         fields.add(nameFieldLabel);

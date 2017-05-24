@@ -12,7 +12,7 @@ public class LoginController implements IController {
     private LoginFrame loginFrame;
     private DBConnect connection;
 
-    public LoginController(AppController appController) {
+    LoginController(AppController appController) {
         this.appController = appController;
     }
 
@@ -31,7 +31,6 @@ public class LoginController implements IController {
         LoginListener(LoginFrame loginFrame, AppController appController) {
             this.loginFrame = loginFrame;
             this.appController = appController;
-
         }
 
         @Override

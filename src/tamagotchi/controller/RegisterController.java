@@ -12,10 +12,9 @@ public class RegisterController implements IController {
     private AppController appController;
     private DBConnect connection;
 
-    public RegisterController(AppController appController) {
+    RegisterController(AppController appController) {
         this.appController = appController;
     }
-
 
     public void start() {
         connection = new DBConnect();
@@ -39,6 +38,7 @@ public class RegisterController implements IController {
             String surname = registerFrame.getSurnameTextField().getText();
             String password = new String(registerFrame.getPasswordField().getPassword());
             String confirmPassword = new String(registerFrame.getConfirmPasswordField().getPassword());
+
             if (!password.equals(confirmPassword)) {
                 JOptionPane.showConfirmDialog(registerFrame, "Uncorrect password.",
                         "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
@@ -51,14 +51,15 @@ public class RegisterController implements IController {
                 registerFrame.getLoginTextField().setText("");
                 return;
             }
+
             connection.addUser(login, name, surname, password);
             JOptionPane.showConfirmDialog(registerFrame, "User " + login + " registered successfully.",
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
+
             appController.getAppFrame().setBasePanelAsContentPane();
             appController.getAppFrame().removeLoginLabel();
             appController.getAppFrame().showLoginLabel(login);
             registerFrame.dispose();
         }
     }
-
 }

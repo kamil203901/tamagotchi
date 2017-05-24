@@ -1,32 +1,23 @@
 package tamagotchi.controller;
 
-import tamagotchi.model.DBConnect;
 import tamagotchi.view.BaseFrame;
-
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 public class AppController implements IController {
     private BaseFrame appFrame;
-    private DBConnect connection;
 
     public void start() {
         appFrame = new BaseFrame(this);
         appFrame.addLoginListener(new LoginListener(this));
         appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));
-
-
+        appFrame.addNewAnimalListener(new AddAnimalListener(this));
     }
 
-    public BaseFrame getAppFrame() {
+    BaseFrame getAppFrame() {
         return appFrame;
-    }
-
-    public DBConnect getConnection() {
-        return connection;
     }
 
     class LoginListener implements ActionListener {
@@ -67,6 +58,20 @@ public class AppController implements IController {
         @Override
         public void actionPerformed(ActionEvent e) {
             baseFrame.dispose();
+        }
+    }
+
+    class AddAnimalListener implements ActionListener {
+        private AppController appController;
+
+        AddAnimalListener(AppController appController) {
+            this.appController = appController;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            NewAnimalController animalController = new NewAnimalController(appController);
+            animalController.start();
         }
     }
 
