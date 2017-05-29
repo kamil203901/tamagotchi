@@ -30,6 +30,7 @@ public class BaseFrame extends JFrame {
     private JProgressBar happinessBar;
     private JProgressBar hungerBar;
     private GridBagConstraints constraints;
+    private JPanel[][] panelHolder;
 
 
     public BaseFrame(IController baseController) {
@@ -51,6 +52,7 @@ public class BaseFrame extends JFrame {
         welcomePanel.setOpaque(true);
         welcomePanel.setLayout(new GridLayout(1,1));
         welcomePanel.setBackground(new Color(223, 223, 88));
+        panelHolder = new JPanel[4][4];
         setupFrame();
     }
 
@@ -185,6 +187,10 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
+    public void addAnimalToPanel() {
+
+    }
+
 
     public void showAnimalPanel() {
         animalPanel.setBounds(0,0,600,400);
@@ -203,23 +209,17 @@ public class BaseFrame extends JFrame {
         JLabel dogLabel = new JLabel();
         dogLabel.setIcon(dog);
 
-        int i = 3;
-        int j = 3;
-        JPanel[][] panelHolder = new JPanel[i][j];
-        animalPanel.setLayout(new GridLayout(i,j));
 
-        for(int m = 0; m < i; m++) {
-            for(int n = 0; n < j; n++) {
+        for(int m = 0; m < 4; m++) {
+            for(int n = 0; n < 4; n++) {
                 panelHolder[m][n] = new JPanel();
                 panelHolder[m][n].setOpaque(false);
                 animalPanel.add(panelHolder[m][n]);
             }
         }
 
-        panelHolder[2][2].add(dogLabel);
+        panelHolder[2][0].add(dogLabel);
 
-
-        animalPanel.add(panelHolder[2][2]);
 
         this.getContentPane().add(animalPanel, constraints);
         this.setVisible(true);

@@ -1,6 +1,6 @@
 package tamagotchi.model;
 
-public class Dog {
+public class Dog implements IPet {
     private String name;
     private int happiness;
     private int health;
