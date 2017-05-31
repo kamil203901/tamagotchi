@@ -10,6 +10,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseListener;
 
 import tamagotchi.controller.IController;
+import tamagotchi.model.IPet;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
@@ -21,6 +22,13 @@ public class BaseFrame extends JFrame {
     private ImagePanel animalPanel;
     private Panel healthHappinessHungerPanel;
     private JPanel usernamePanel;
+    private JLabel firstAnimalLabel;
+    private JLabel secondAnimalLabel;
+    private JLabel thirdAnimalLabel;
+    private JLabel forthAnimalLabel;
+    private ImageIcon dog;
+    private ImageIcon cat;
+    private ImageIcon parrot;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
@@ -37,6 +45,14 @@ public class BaseFrame extends JFrame {
         feedDogs = new JButton("Feed dogs");
         feedCats = new JButton("Feed cats");
         feedFish = new JButton("Feed fish");
+        firstAnimalLabel = new JLabel();
+        secondAnimalLabel = new JLabel();
+        thirdAnimalLabel = new JLabel();
+        forthAnimalLabel =  new JLabel();
+        dog = new ImageIcon("img/dog.png");
+        cat = new ImageIcon("img/dog.png");
+        parrot = new ImageIcon("img/dog.png");
+
         basePanel = new Panel(baseController);
         healthHappinessHungerPanel = new Panel(baseController);
         healthBar = new JProgressBar(0, 100);
@@ -187,8 +203,34 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public void addAnimalToPanel() {
-
+    public void addAnimalToPanel(String animalType, int position) {
+        ImageIcon animal;
+        if (animalType.equals("dog")) {
+            animal = dog;
+        } else if (animalType.equals("cat")) {
+            animal = cat;
+        } else {
+            animal = parrot;
+        }
+        switch (position) {
+            case 0:
+                firstAnimalLabel.setIcon(animal);
+                panelHolder[3][0].add(firstAnimalLabel);
+                break;
+            case 1:
+                secondAnimalLabel.setIcon(animal);
+                panelHolder[3][1].add(secondAnimalLabel);
+                break;
+            case 2:
+                thirdAnimalLabel.setIcon(animal);
+                panelHolder[3][2].add(thirdAnimalLabel);
+                break;
+            case 3:
+                forthAnimalLabel.setIcon(animal);
+                panelHolder[3][3].add(forthAnimalLabel);
+                break;
+        }
+        this.setVisible(true);
     }
 
 
@@ -205,10 +247,6 @@ public class BaseFrame extends JFrame {
         constraints.anchor = GridBagConstraints.NORTHWEST;
 
         animalPanel.setLayout(new GridLayout(4,4));
-        ImageIcon dog = new ImageIcon("img/dog.png");
-        JLabel dogLabel = new JLabel();
-        dogLabel.setIcon(dog);
-
 
         for(int m = 0; m < 4; m++) {
             for(int n = 0; n < 4; n++) {
@@ -218,7 +256,6 @@ public class BaseFrame extends JFrame {
             }
         }
 
-        panelHolder[2][0].add(dogLabel);
 
 
         this.getContentPane().add(animalPanel, constraints);

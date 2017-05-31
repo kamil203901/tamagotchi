@@ -22,16 +22,18 @@ public class NewAnimalController implements IController {
     public void start() {
         connection = new DBConnect();
         newAnimalFrame = new NewAnimalFrame(appController);
-        newAnimalFrame.addAddButtonListener(new AddButtonListener(appController, newAnimalFrame));
+        newAnimalFrame.addAddButtonListener(new AddButtonListener(appController, newAnimalFrame, connection));
     }
 
     class AddButtonListener implements ActionListener {
         private AppController appController;
         private NewAnimalFrame newAnimalFrame;
+        private DBConnect connection;
 
-        AddButtonListener(AppController appController, NewAnimalFrame newAnimalFrame) {
+        AddButtonListener(AppController appController, NewAnimalFrame newAnimalFrame, DBConnect connection) {
             this.appController = appController;
             this.newAnimalFrame = newAnimalFrame;
+            this.connection = connection;
         }
 
         @Override
@@ -40,7 +42,14 @@ public class NewAnimalController implements IController {
             String name = newAnimalFrame.getNameAnimalTextField().getText();
             JLabel usernameLabel = (JLabel) appController.getAppFrame().getUsernamePanel().getComponent(0);
             String username = usernameLabel.getText();
+            if (name.equals("")) {
+                JOptionPane.showMessageDialog(newAnimalFrame, "You must enter name");
+                return;
+            }
             connection.addAnimal(genreOfAnimal, name, username);
+            appController.getAppFrame().addAnimalToPanel(genreOfAnimal.toLowerCase(), 3);
+
+
             System.out.println(genreOfAnimal);
             System.out.println(name);
             newAnimalFrame.dispose();

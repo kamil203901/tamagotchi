@@ -10,14 +10,14 @@ public class DBConnect {
     private Connection con;
     private Statement st;
     private ResultSet rs;
-    private ArrayList<User> users;
+    private ArrayList<User> users = new ArrayList<>();
 
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tamagotchi", "root", "");
             st = con.createStatement();
-
+            this.users = readUsersFromDatabase();
         } catch (Exception ex) {
             System.out.println("Error: " + ex);
         }
@@ -34,11 +34,40 @@ public class DBConnect {
                 String login = rs.getString("login");
                 String password = rs.getString("haslo");
                 System.out.println("Id: " + id + " login: " + login + " password: " + password);
-
             }
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    public User getUserByLogin(String login) {
+        User tmp;
+        int i = 0;
+        do {
+            tmp = users.get(i);
+        } while (!tmp.getLogin().equals(login));
+        return tmp;
+    }
+
+    private ArrayList<User> readUsersFromDatabase() {
+        ArrayList<User> listOfUsers = new ArrayList<>();
+        String login, name, surname, password;
+        try {
+            String query = "select * from uzytkownik";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                login = rs.getString("login");
+                name = rs.getString("imie");
+                surname = rs.getString("nazwisko");
+                password = rs.getString("haslo");
+                listOfUsers.add(new User(login, name, surname, password));
+            }
+            System.out.println("List of users loaded from database");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return listOfUsers;
     }
 
     private String getUserId(String username) {
@@ -58,6 +87,8 @@ public class DBConnect {
 
     public void addUser(String login, String imie, String nazwisko, String haslo) {
         try {
+            users.add(new User(login, imie, nazwisko, haslo));
+            System.out.println(users.size());
             String query = "insert into uzytkownik (login, imie, nazwisko, haslo) " +
                     "values ('" + login + "','" + imie + "','" + nazwisko + "','" + haslo + "')";
             st.executeUpdate(query);
