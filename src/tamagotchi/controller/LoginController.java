@@ -7,6 +7,7 @@ import tamagotchi.view.LoginFrame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class LoginController implements IController {
     private AppController appController;
@@ -38,13 +39,6 @@ public class LoginController implements IController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            User oldUser = loginController.connection.getLoggedUser();
-
-            if (oldUser != null) {
-                loginController.connection.logout();
-                System.out.println(oldUser.getLogin() + " is logout");
-            }
-
             String login = loginFrame.getLoginTextField().getText();
             String password = new String(loginFrame.getPasswordField().getPassword());
             boolean correctLogin = connection.isCorrectLoggingData(login, password);
@@ -54,17 +48,15 @@ public class LoginController implements IController {
                         "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
                 appController.getAppFrame().setBasePanelAsContentPane();
                 loginController.connection.login(loginController.connection.getUserByLogin(login));
+                appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
+                appController.getAppFrame().setActions(new Vector<>());
                 appController.getAppFrame().removeLoginLabel();
+                appController.getAppFrame().removeComboBoxes();
                 appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAnimalPanel();
                 appController.getAppFrame().showAddAnimalComboBox();
                 appController.getAppFrame().showHealthHappinessHungerPanel();
-                appController.getAppFrame().showButtonToFeedAnimals();
-
-                if (loginController.connection.getLoggedUser() != null) {
-                    System.out.println(loginController.connection.getLoggedUser().getLogin() + " is logged in.");
-                }
-
+                appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();
             } else {
                 JOptionPane.showConfirmDialog(loginFrame, "Uncorrect login or password.",
                         "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);

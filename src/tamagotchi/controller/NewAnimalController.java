@@ -40,13 +40,11 @@ public class NewAnimalController implements IController {
         public void actionPerformed(ActionEvent e) {
             String genreOfAnimal = (String) newAnimalFrame.getGenreOfAnimal().getSelectedItem();
             String name = newAnimalFrame.getNameAnimalTextField().getText();
-            JLabel usernameLabel = (JLabel) appController.getAppFrame().getUsernamePanel().getComponent(0);
-            String username = usernameLabel.getText();
             if (name.equals("")) {
                 JOptionPane.showMessageDialog(newAnimalFrame, "You must enter name");
                 return;
             }
-            connection.addAnimal(genreOfAnimal, name, username);
+            connection.addAnimalToCurrentUser(genreOfAnimal, name, null);
             appController.getAppFrame().addAnimalToPanel(genreOfAnimal.toLowerCase(), 3);
 
 

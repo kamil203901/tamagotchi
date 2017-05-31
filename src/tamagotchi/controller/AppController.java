@@ -1,5 +1,6 @@
 package tamagotchi.controller;
 
+import tamagotchi.model.DBConnect;
 import tamagotchi.view.BaseFrame;
 
 import java.awt.*;
@@ -11,6 +12,7 @@ import java.awt.event.MouseListener;
 
 public class AppController implements IController {
     private BaseFrame appFrame;
+    private DBConnect connection = new DBConnect();
 
     public void start() {
         appFrame = new BaseFrame(this);
@@ -18,7 +20,7 @@ public class AppController implements IController {
         appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));
         appFrame.addNewAnimalListener(new AddAnimalListener(this));
-        appFrame.addLogoutListener(new LogoutListener(this));
+        appFrame.addLogoutListener(new LogoutListener(this, connection));
     }
 
     BaseFrame getAppFrame() {
@@ -82,14 +84,17 @@ public class AppController implements IController {
 
     class LogoutListener implements ActionListener {
         private AppController appController;
+        private DBConnect connection;
 
-        LogoutListener(AppController appController) {
+        LogoutListener(AppController appController, DBConnect connection) {
             this.appController = appController;
+            this.connection = connection;
         }
 
         @Override
         public void actionPerformed(ActionEvent e) {
             appController.getAppFrame().removeLoginLabel();
+            connection.logout();
             appController.getAppFrame().setWelcomePanelAsContenePane();
         }
     }

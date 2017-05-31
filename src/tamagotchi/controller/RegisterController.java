@@ -1,11 +1,13 @@
 package tamagotchi.controller;
 
 import tamagotchi.model.DBConnect;
+import tamagotchi.model.User;
 import tamagotchi.view.RegisterFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class RegisterController implements IController {
     private RegisterFrame registerFrame;
@@ -19,16 +21,18 @@ public class RegisterController implements IController {
     public void start() {
         connection = new DBConnect();
         registerFrame = new RegisterFrame(this);
-        registerFrame.addRegisterListener(new RegisterListener(registerFrame, appController));
+        registerFrame.addRegisterListener(new RegisterListener(registerFrame, appController, this));
     }
 
     class RegisterListener implements ActionListener {
         RegisterFrame registerFrame;
         AppController appController;
+        RegisterController registerController;
 
-        RegisterListener(RegisterFrame registerFrame, AppController appController) {
+        RegisterListener(RegisterFrame registerFrame, AppController appController, RegisterController registerController) {
             this.appController = appController;
             this.registerFrame = registerFrame;
+            this.registerController = registerController;
         }
 
         @Override
@@ -57,11 +61,15 @@ public class RegisterController implements IController {
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
 
             appController.getAppFrame().setBasePanelAsContentPane();
+            appController.getAppFrame().setGenries(new Vector<>());
+            appController.getAppFrame().setActions(new Vector<>());
             appController.getAppFrame().removeLoginLabel();
+            appController.getAppFrame().removeComboBoxes();
             appController.getAppFrame().showLoginLabel(login);
             appController.getAppFrame().showAnimalPanel();
             appController.getAppFrame().showAddAnimalComboBox();
             appController.getAppFrame().showHealthHappinessHungerPanel();
+            appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();
             registerFrame.dispose();
         }
     }

@@ -42,7 +42,20 @@ public class DBConnect {
     }
 
     public void login(User currentUser) {
+        User oldUser = DBConnect.currentUser;
         DBConnect.currentUser = currentUser;
+        if (oldUser == null) {
+            System.out.println(currentUser.getLogin() + " is logged in");
+        } else if (oldUser.equals(currentUser)) {
+            System.out.println(currentUser.getLogin() + " is already logged in");
+        } else {
+            System.out.println(oldUser.getLogin() + " is logout");
+            System.out.println(currentUser.getLogin() + " is logged in");
+        }
+
+        this.setCurrentUsersPets();
+
+
     }
 
     public User getLoggedUser() {
@@ -50,7 +63,12 @@ public class DBConnect {
     }
 
     public void logout() {
+        if (currentUser == null) {
+            return;
+        }
+        String loggedUser = currentUser.getLogin();
         DBConnect.currentUser = null;
+        System.out.println(loggedUser + " is logout");
     }
 
     public User getUserByLogin(String login) {
@@ -62,6 +80,7 @@ public class DBConnect {
         } while (!tmp.getLogin().equals(login));
         return tmp;
     }
+
 
     private ArrayList<User> readUsersFromDatabase() {
         ArrayList<User> listOfUsers = new ArrayList<>();
@@ -84,6 +103,72 @@ public class DBConnect {
         return listOfUsers;
     }
 
+    private void setCurrentUsersPets() {
+        class TempPetInfo {
+            private String petName;
+            private String idPetGenre;
+            private String weight;
+            private String age;
+            private TempPetInfo(String petName, String idPetGenre, String weight, String age) {
+                this.petName = petName;
+                this.idPetGenre = idPetGenre;
+                this.weight = weight;
+                this.age = age;
+            }
+            private String getPetName() {
+                return petName;
+            }
+            private String getIdPetGenre() {
+                return idPetGenre;
+            }
+            private String getWeight() {
+                return weight;
+            }
+            private String getAge() {
+                return age;
+            }
+        }
+
+        ArrayList<Pet> listOfPets = new ArrayList<>();
+        ArrayList<TempPetInfo> listOfTempPetInfo = new ArrayList<>();
+        String currentUserId = getUserId(currentUser.getLogin());
+        String petName, path, petGenre, idPetGenre, weight, age;
+
+        try {
+            String query = "select * from podopieczny where id_uzytkownik = '" + currentUserId + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                petName = rs.getString("imie");
+                idPetGenre = rs.getString("id_rodzaj");
+                weight = rs.getString("waga");
+                age = rs.getString("wiek");
+                listOfTempPetInfo.add(new TempPetInfo(petName, idPetGenre, weight, age));
+            }
+
+            for (TempPetInfo info : listOfTempPetInfo) {
+                query = "select * from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + info.getIdPetGenre() + "'";
+                rs = st.executeQuery(query);
+                rs.next();
+                petGenre = rs.getString("nazwa");
+                path = rs.getString("sciezka");
+                listOfPets.add(new Pet(info.getPetName(), new Genre(petGenre, path), Integer.parseInt(info.getAge()), Double.parseDouble(info.getWeight())));
+            }
+
+            System.out.println("List of users loaded from database");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        currentUser.setPets(listOfPets);
+
+        listOfPets = currentUser.getPets();
+        for (Pet pet : listOfPets) {
+            System.out.println(pet.getName() + " " + pet.getAge() + " " + pet.getGenre().getName() + " "
+            + pet.getGenre().getPath() + " " + pet.getWeight() + " " + pet.getAge());
+        }
+
+    }
+
     private String getUserId(String username) {
         String id = null;
         try {
@@ -99,9 +184,26 @@ public class DBConnect {
         return id;
     }
 
+//    private String[] getUserAnimals(int id) {
+//        String id = null;
+//        try {
+//            String query = "select * from uzytkownik where login = '" + username + "'";
+//            rs = st.executeQuery(query);
+//            rs.next();
+//            id = rs.getString("id");
+//            System.out.println("User id:" + id);
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//
+//        return id;
+//    }
+
     public void addUser(String login, String imie, String nazwisko, String haslo) {
         try {
-            users.add(new User(login, imie, nazwisko, haslo));
+            User user = new User(login, imie, nazwisko, haslo);
+            users.add(user);
+            this.login(user);
             System.out.println(users.size());
             String query = "insert into uzytkownik (login, imie, nazwisko, haslo) " +
                     "values ('" + login + "','" + imie + "','" + nazwisko + "','" + haslo + "')";
@@ -112,18 +214,19 @@ public class DBConnect {
         }
     }
 
-    public void addAnimal(String genre, String name, String username) {
+    public void addAnimalToCurrentUser(String genre, String name, String path) {
         try {
+            currentUser.addPet(new Pet(name, new Genre(genre, path)));
             String query = "select id_rodzaj_podopiecznego from rodzaj_podopiecznego where nazwa = '" + genre + "'";
             rs = st.executeQuery(query);
             rs.next();
             String id_genre = rs.getString("id_rodzaj_podopiecznego");
-            String id_user = getUserId(username);
+            String id_user = getUserId(currentUser.getLogin());
 
             query = "insert into podopieczny (id_rodzaj, imie, id_uzytkownik) " +
                     "values ('" + id_genre + "','" + name + "','" + id_user + "')";
             st.executeUpdate(query);
-            System.out.println(genre + " " + name + " added to user " + username);
+            System.out.println(genre + " " + name + " added to user " + currentUser.getLogin());
 
         } catch (Exception e) {
             System.out.println(e);
@@ -147,6 +250,10 @@ public class DBConnect {
         }
 
         return false;
+    }
+
+    public static User getCurrentUser() {
+        return currentUser;
     }
 
     public boolean ifUserExists(String login) {

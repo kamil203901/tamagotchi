@@ -8,6 +8,8 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.Vector;
 
 import tamagotchi.controller.IController;
 import tamagotchi.model.IPet;
@@ -15,11 +17,11 @@ import tamagotchi.model.IPet;
 public class BaseFrame extends JFrame {
     private Panel basePanel;
     private JButton addAnimalButton;
-    private JButton feedDogs;
-    private JButton feedCats;
-    private JButton feedFish;
     private Panel welcomePanel;
     private ImagePanel animalPanel;
+    private JComboBox genreOfPet;
+    private JComboBox action;
+    private JButton makeAction;
     private Panel healthHappinessHungerPanel;
     private JPanel usernamePanel;
     private JLabel firstAnimalLabel;
@@ -39,19 +41,19 @@ public class BaseFrame extends JFrame {
     private JProgressBar hungerBar;
     private GridBagConstraints constraints;
     private JPanel[][] panelHolder;
+    private Vector<String> genries;// = { "Dog", "Cat", "Fish" };
+    private Vector<String> actions;// = { "jedzenie", "spanie" };
 
 
     public BaseFrame(IController baseController) {
-        feedDogs = new JButton("Feed dogs");
-        feedCats = new JButton("Feed cats");
-        feedFish = new JButton("Feed fish");
-        firstAnimalLabel = new JLabel();
+        makeAction = new JButton("Make action");
+        firstAnimalLabel =  new JLabel();
         secondAnimalLabel = new JLabel();
-        thirdAnimalLabel = new JLabel();
+        thirdAnimalLabel =  new JLabel();
         forthAnimalLabel =  new JLabel();
         dog = new ImageIcon("img/dog.png");
         cat = new ImageIcon("img/dog.png");
-        parrot = new ImageIcon("img/dog.png");
+        parrot = new ImageIcon("img/arab.png");
 
         basePanel = new Panel(baseController);
         healthHappinessHungerPanel = new Panel(baseController);
@@ -169,36 +171,49 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public void showButtonToFeedAnimals() {
+    public JComboBox getGenreOfPet() {
+        return genreOfPet;
+    }
+
+    public void removeComboBoxes() {
+        if (genreOfPet != null && action != null) {
+            this.remove(genreOfPet);
+            this.remove(action);
+        }
+    }
+
+    public void showBoxesAndButtonToMakeActionOnAllPets() {
         constraints.weightx = 0.0;
         constraints.weighty = 0.0;
-        constraints.insets = new Insets(10,10,5,10);
+        constraints.insets = new Insets(10,10,1,10);
         constraints.gridx = 2;
         constraints.gridy = 2;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.FIRST_LINE_START;
-        this.getContentPane().add(feedDogs, constraints);
+        genreOfPet = new JComboBox(genries);
+        this.getContentPane().add(genreOfPet, constraints);
 
         constraints.weightx = 0.0;
         constraints.weighty = 0.0;
-        constraints.insets = new Insets(5,10,5,10);
+        constraints.insets = new Insets(0,10,1,10);
         constraints.gridx = 2;
         constraints.gridy = 3;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.FIRST_LINE_START;
-        this.getContentPane().add(feedCats, constraints);
+        action = new JComboBox(actions);
+        this.getContentPane().add(action, constraints);
 
         constraints.weightx = 0.0;
         constraints.weighty = 0.0;
-        constraints.insets = new Insets(5,10,10,10);
+        constraints.insets = new Insets(0,10,10,10);
         constraints.gridx = 2;
         constraints.gridy = 4;
         constraints.gridwidth = 1;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.FIRST_LINE_START;
-        this.getContentPane().add(feedFish, constraints);
+        this.getContentPane().add(makeAction, constraints);
 
         this.setVisible(true);
     }
@@ -232,6 +247,8 @@ public class BaseFrame extends JFrame {
         }
         this.setVisible(true);
     }
+
+
 
 
     public void showAnimalPanel() {
@@ -310,6 +327,14 @@ public class BaseFrame extends JFrame {
         this.getContentPane().add(healthHappinessHungerPanel, constraints);
         this.setVisible(true);
 
+    }
+
+    public void setGenries(Vector<String> genries) {
+        this.genries = genries;
+    }
+
+    public void setActions(Vector<String> actions) {
+        this.actions = actions;
     }
 
     public JPanel getUsernamePanel() {

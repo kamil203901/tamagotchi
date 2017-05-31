@@ -11,7 +11,7 @@ public class NewAnimalFrame extends JFrame {
     private JButton addButton;
     private JTextField nameAnimalTextField;
     private JComboBox genreOfAnimal;
-    private String[] genries = { "Dog", "Cat", "Fish" };
+    private String[] genries = { "Dog", "Cat", "Parrot" };
 
     public NewAnimalFrame(IController newAnimalController) {
         newAnimalPanel = new Panel(newAnimalController);
