@@ -184,20 +184,6 @@ public class DBConnect {
         return id;
     }
 
-//    private String[] getUserAnimals(int id) {
-//        String id = null;
-//        try {
-//            String query = "select * from uzytkownik where login = '" + username + "'";
-//            rs = st.executeQuery(query);
-//            rs.next();
-//            id = rs.getString("id");
-//            System.out.println("User id:" + id);
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//
-//        return id;
-//    }
 
     public void addUser(String login, String imie, String nazwisko, String haslo) {
         try {

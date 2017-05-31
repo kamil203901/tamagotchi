@@ -52,8 +52,9 @@ public class LoginController implements IController {
                 appController.getAppFrame().setActions(new Vector<>());
                 appController.getAppFrame().removeLoginLabel();
                 appController.getAppFrame().removeComboBoxes();
-                appController.getAppFrame().showLoginLabel(login);
+                appController.getAppFrame().removeAnimalsFromPanel();
                 appController.getAppFrame().showAnimalPanel();
+                appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAddAnimalComboBox();
                 appController.getAppFrame().showHealthHappinessHungerPanel();
                 appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();

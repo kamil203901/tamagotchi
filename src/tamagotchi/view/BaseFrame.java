@@ -248,6 +248,10 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
+    public void removeAnimalsFromPanel() {
+        animalPanel.removeAll();
+        this.getContentPane().setVisible(true);
+    }
 
 
 

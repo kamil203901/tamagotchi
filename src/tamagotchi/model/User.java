@@ -35,6 +35,9 @@ public class User {
     public void addPet(Pet pet) {
         if (pets.size() < MAX_AMOUNT_OF_PETS) {
             this.pets.add(pet);
+            if (!petGenries.contains(pet.getGenre().getName())) {
+                petGenries.add(pet.getGenre().getName());
+            }
         } else {
             System.out.println("You cannot have more pets");
         }

@@ -6,6 +6,7 @@ import tamagotchi.view.NewAnimalFrame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class NewAnimalController implements IController {
     private AppController appController;
@@ -40,13 +41,18 @@ public class NewAnimalController implements IController {
         public void actionPerformed(ActionEvent e) {
             String genreOfAnimal = (String) newAnimalFrame.getGenreOfAnimal().getSelectedItem();
             String name = newAnimalFrame.getNameAnimalTextField().getText();
+
             if (name.equals("")) {
                 JOptionPane.showMessageDialog(newAnimalFrame, "You must enter name");
                 return;
             }
+
             connection.addAnimalToCurrentUser(genreOfAnimal, name, null);
             appController.getAppFrame().addAnimalToPanel(genreOfAnimal.toLowerCase(), 3);
-
+            appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
+            appController.getAppFrame().setActions(new Vector<>());
+            appController.getAppFrame().removeComboBoxes();
+            appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();
 
             System.out.println(genreOfAnimal);
             System.out.println(name);
