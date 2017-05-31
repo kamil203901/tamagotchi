@@ -10,14 +10,15 @@ public class DBConnect {
     private Connection con;
     private Statement st;
     private ResultSet rs;
-    private ArrayList<User> users = new ArrayList<>();
+    private static ArrayList<User> users = new ArrayList<>();
+    private static User currentUser;
 
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tamagotchi", "root", "");
             st = con.createStatement();
-            this.users = readUsersFromDatabase();
+            DBConnect.users = readUsersFromDatabase();
         } catch (Exception ex) {
             System.out.println("Error: " + ex);
         }
@@ -40,11 +41,24 @@ public class DBConnect {
         }
     }
 
+    public void login(User currentUser) {
+        DBConnect.currentUser = currentUser;
+    }
+
+    public User getLoggedUser() {
+        return currentUser;
+    }
+
+    public void logout() {
+        DBConnect.currentUser = null;
+    }
+
     public User getUserByLogin(String login) {
         User tmp;
         int i = 0;
         do {
             tmp = users.get(i);
+            i++;
         } while (!tmp.getLogin().equals(login));
         return tmp;
     }
