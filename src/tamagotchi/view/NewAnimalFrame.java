@@ -5,6 +5,7 @@ import tamagotchi.controller.IController;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class NewAnimalFrame extends JFrame {
     private Panel newAnimalPanel;
@@ -12,9 +13,13 @@ public class NewAnimalFrame extends JFrame {
     private JTextField nameAnimalTextField;
     private JComboBox genreOfAnimal;
     private String[] genries = { "Dog", "Cat", "Parrot" };
+    private Vector<String> petGenriesNames;
+    private static final int MAX_ANIMAL_NAME_LENGTH = 10;
 
-    public NewAnimalFrame(IController newAnimalController) {
+    public NewAnimalFrame(IController newAnimalController,  Vector<String> petGenriesNames) {
         newAnimalPanel = new Panel(newAnimalController);
+        this.petGenriesNames = new Vector<>(petGenriesNames);
+
         setupNewAnimalFrame();
     }
 
@@ -26,10 +31,10 @@ public class NewAnimalFrame extends JFrame {
         this.setLayout(new BorderLayout());
 
         // create name text field
-        nameAnimalTextField = new JTextField(10);
+        nameAnimalTextField = new JTextField(MAX_ANIMAL_NAME_LENGTH);
 
         // create combo box for type of animal
-        genreOfAnimal = new JComboBox(genries);
+        genreOfAnimal = new JComboBox(petGenriesNames);
 
         // label for a text field name
         JLabel nameAnimalFieldLabel = new JLabel("Name:");
@@ -48,6 +53,7 @@ public class NewAnimalFrame extends JFrame {
         fields.add(genreOfAnimal);
 
         addButton = new JButton("Add");
+        this.getRootPane().setDefaultButton(addButton);
 
         JPanel button = new JPanel(new FlowLayout(FlowLayout.CENTER));
         button.add(addButton);

@@ -23,6 +23,8 @@ public class LoginFrame extends JFrame {
     private JButton loginButton;
     private JPasswordField passwordField;
     private JTextField loginTextField;
+    private static final int LOGIN_MAX_LENGTH = 15;
+    private static final int PASSWORD_MAX_LENGTH = 15;
 
     public LoginFrame(LoginController loginController) {
         loginPanel = new Panel(loginController);
@@ -37,11 +39,11 @@ public class LoginFrame extends JFrame {
         this.setLayout(new BorderLayout());
 
         // create login field
-        loginTextField = new JTextField(15);
+        loginTextField = new JTextField(LOGIN_MAX_LENGTH);
         loginTextField.setActionCommand("Login");
 
         // create password field
-        passwordField = new JPasswordField(15);
+        passwordField = new JPasswordField(PASSWORD_MAX_LENGTH);
         passwordField.setActionCommand("Password");
 
         // create some labels
@@ -59,7 +61,7 @@ public class LoginFrame extends JFrame {
         fields.add(passwordFieldLabel);
         fields.add(passwordField);
 
-        loginButton = new JButton("login");
+        loginButton = new JButton("Login");
         JPanel button = new JPanel(new FlowLayout(FlowLayout.CENTER));
         button.add(loginButton);
 

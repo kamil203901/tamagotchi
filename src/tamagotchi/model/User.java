@@ -10,7 +10,7 @@ public class User {
     private String password;
     private ArrayList<Pet> pets;
     private Vector<String> petGenries;
-    private static final int MAX_AMOUNT_OF_PETS = 4;
+    public static final int MAX_AMOUNT_OF_PETS = 4;
 
     public User(String login, String name, String surname, String password) {
         this.login = login;

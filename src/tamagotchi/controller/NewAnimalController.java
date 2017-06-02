@@ -1,6 +1,8 @@
 package tamagotchi.controller;
 
 import tamagotchi.model.DBConnect;
+import tamagotchi.model.PetGenre;
+import tamagotchi.model.User;
 import tamagotchi.view.NewAnimalFrame;
 
 import javax.swing.*;
@@ -22,8 +24,14 @@ public class NewAnimalController implements IController {
     @Override
     public void start() {
         connection = new DBConnect();
-        newAnimalFrame = new NewAnimalFrame(appController);
-        newAnimalFrame.addAddButtonListener(new AddButtonListener(appController, newAnimalFrame, connection));
+
+        if (connection.getLoggedUser().getPets().size() < User.MAX_AMOUNT_OF_PETS) {
+            newAnimalFrame = new NewAnimalFrame(appController, connection.getGenriesNames());
+            newAnimalFrame.addAddButtonListener(new AddButtonListener(appController, newAnimalFrame, connection));
+        } else {
+            System.out.println("You can't add more pets");
+            JOptionPane.showMessageDialog(appController.getAppFrame() ,"You can't add more pets");
+        }
     }
 
     class AddButtonListener implements ActionListener {
@@ -41,6 +49,7 @@ public class NewAnimalController implements IController {
         public void actionPerformed(ActionEvent e) {
             String genreOfAnimal = (String) newAnimalFrame.getGenreOfAnimal().getSelectedItem();
             String name = newAnimalFrame.getNameAnimalTextField().getText();
+            int amount_of_pets = connection.getLoggedUser().getPets().size();
 
             if (name.equals("")) {
                 JOptionPane.showMessageDialog(newAnimalFrame, "You must enter name");
@@ -48,14 +57,14 @@ public class NewAnimalController implements IController {
             }
 
             connection.addAnimalToCurrentUser(genreOfAnimal, name, null);
-            appController.getAppFrame().addAnimalToPanel(genreOfAnimal.toLowerCase(), 3);
+            appController.getAppFrame().addAnimalToPanel(genreOfAnimal.toLowerCase(), amount_of_pets);
             appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
             appController.getAppFrame().setActions(new Vector<>());
             appController.getAppFrame().removeComboBoxes();
             appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();
 
-            System.out.println(genreOfAnimal);
-            System.out.println(name);
+
+            System.out.println("New animal: " + genreOfAnimal.toLowerCase() + " " + name);
             newAnimalFrame.dispose();
         }
     }

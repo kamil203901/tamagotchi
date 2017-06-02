@@ -5,12 +5,15 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class DBConnect {
     private Connection con;
     private Statement st;
     private ResultSet rs;
     private static ArrayList<User> users = new ArrayList<>();
+    private static Vector<PetGenre> genries = new Vector<>();
+    private static Vector<String> genriesNames = new Vector<>();
     private static User currentUser;
 
     public DBConnect() {
@@ -18,7 +21,9 @@ public class DBConnect {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tamagotchi", "root", "");
             st = con.createStatement();
-            DBConnect.users = readUsersFromDatabase();
+            DBConnect.users = getUsersFromDatabase();
+            DBConnect.genries = getPetGenriesFromDatabase();
+            DBConnect.genriesNames = getGenriesNames();
         } catch (Exception ex) {
             System.out.println("Error: " + ex);
         }
@@ -82,7 +87,7 @@ public class DBConnect {
     }
 
 
-    private ArrayList<User> readUsersFromDatabase() {
+    private ArrayList<User> getUsersFromDatabase() {
         ArrayList<User> listOfUsers = new ArrayList<>();
         String login, name, surname, password;
         try {
@@ -95,12 +100,42 @@ public class DBConnect {
                 password = rs.getString("haslo");
                 listOfUsers.add(new User(login, name, surname, password));
             }
-            System.out.println("List of users loaded from database");
+            System.out.println("List of users read from database");
         } catch (Exception e) {
             System.out.println(e);
         }
 
         return listOfUsers;
+    }
+
+    // return genries
+    private Vector<PetGenre> getPetGenriesFromDatabase() {
+        Vector<PetGenre> vectorOfPetGenries = new Vector<>();
+        String name, path;
+        try {
+            String query = "select * from rodzaj_podopiecznego";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                name = rs.getString("nazwa");
+                path = rs.getString("sciezka");
+                vectorOfPetGenries.add(new PetGenre(name, path));
+            }
+            System.out.println("Genries read from database");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return vectorOfPetGenries;
+    }
+
+    public Vector<String> getGenriesNames() {
+        Vector<String> genriesNames = new Vector<>();
+
+        for (PetGenre petGenre : DBConnect.genries) {
+            genriesNames.add(petGenre.getName());
+        }
+
+        return genriesNames;
     }
 
     private void setCurrentUsersPets() {
@@ -237,10 +272,6 @@ public class DBConnect {
         }
 
         return false;
-    }
-
-    public static User getCurrentUser() {
-        return currentUser;
     }
 
     public boolean ifUserExists(String login) {
