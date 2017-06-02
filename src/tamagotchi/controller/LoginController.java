@@ -25,7 +25,6 @@ public class LoginController implements IController {
         loginFrame.addLoginListener(new LoginListener(loginFrame, appController, this));
     }
 
-
     class LoginListener implements ActionListener {
         LoginFrame loginFrame;
         AppController appController;

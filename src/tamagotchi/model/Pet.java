@@ -2,21 +2,21 @@ package tamagotchi.model;
 
 public class Pet {
     private String name;
-    private Genre genre;
+    private PetGenre petGenre;
     private int age = 0;
     private int health = 100;
     private int hunger = 0;
     private int happiness = 100;
     private double weight;
 
-    public Pet(String name, Genre genre) {
+    public Pet(String name, PetGenre petGenre) {
         this.name = name;
-        this.genre = genre;
+        this.petGenre = petGenre;
     }
 
-    public Pet(String name, Genre genre, int age, double weight) {
+    public Pet(String name, PetGenre petGenre, int age, double weight) {
         this.name = name;
-        this.genre = genre;
+        this.petGenre = petGenre;
         this.age = age;
         this.weight = weight;
     }
@@ -25,8 +25,8 @@ public class Pet {
         return name;
     }
 
-    public Genre getGenre() {
-        return genre;
+    public PetGenre getPetGenre() {
+        return petGenre;
     }
 
     public int getHealth() {

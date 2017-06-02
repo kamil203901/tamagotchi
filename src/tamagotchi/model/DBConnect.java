@@ -151,7 +151,7 @@ public class DBConnect {
                 rs.next();
                 petGenre = rs.getString("nazwa");
                 path = rs.getString("sciezka");
-                listOfPets.add(new Pet(info.getPetName(), new Genre(petGenre, path), Integer.parseInt(info.getAge()), Double.parseDouble(info.getWeight())));
+                listOfPets.add(new Pet(info.getPetName(), new PetGenre(petGenre, path), Integer.parseInt(info.getAge()), Double.parseDouble(info.getWeight())));
             }
 
             System.out.println("List of users loaded from database");
@@ -160,11 +160,12 @@ public class DBConnect {
         }
 
         currentUser.setPets(listOfPets);
+        currentUser.setPetGenries();
 
         listOfPets = currentUser.getPets();
         for (Pet pet : listOfPets) {
-            System.out.println(pet.getName() + " " + pet.getAge() + " " + pet.getGenre().getName() + " "
-            + pet.getGenre().getPath() + " " + pet.getWeight() + " " + pet.getAge());
+            System.out.println(pet.getName() + " " + pet.getAge() + " " + pet.getPetGenre().getName() + " "
+            + pet.getPetGenre().getPath() + " " + pet.getWeight() + " " + pet.getAge());
         }
 
     }
@@ -202,7 +203,7 @@ public class DBConnect {
 
     public void addAnimalToCurrentUser(String genre, String name, String path) {
         try {
-            currentUser.addPet(new Pet(name, new Genre(genre, path)));
+            currentUser.addPet(new Pet(name, new PetGenre(genre, path)));
             String query = "select id_rodzaj_podopiecznego from rodzaj_podopiecznego where nazwa = '" + genre + "'";
             rs = st.executeQuery(query);
             rs.next();

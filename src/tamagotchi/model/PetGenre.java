@@ -1,10 +1,10 @@
 package tamagotchi.model;
 
-public class Genre {
+public class PetGenre {
     private String name;
     private String path;
 
-    public Genre(String name, String path) {
+    public PetGenre(String name, String path) {
         this.name = name;
         this.path = path;
     }

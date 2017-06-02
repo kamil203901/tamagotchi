@@ -36,7 +36,7 @@ public class NewAnimalFrame extends JFrame {
         nameAnimalFieldLabel.setLabelFor(nameAnimalTextField);
 
         // label for a type of animal combo box
-        JLabel typeAnimalFieldLabel = new JLabel("Genre:");
+        JLabel typeAnimalFieldLabel = new JLabel("PetGenre:");
         typeAnimalFieldLabel.setLabelFor(genreOfAnimal);
 
         this.newAnimalPanel.setLayout(new BoxLayout(newAnimalPanel, BoxLayout.Y_AXIS));

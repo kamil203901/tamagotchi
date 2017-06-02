@@ -1,7 +1,6 @@
 package tamagotchi.model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Vector;
 
 public class User {
@@ -9,7 +8,6 @@ public class User {
     private String name;
     private String surname;
     private String password;
-    private ArrayList<IPet> listOfPets;
     private ArrayList<Pet> pets;
     private Vector<String> petGenries;
     private static final int MAX_AMOUNT_OF_PETS = 4;
@@ -19,33 +17,18 @@ public class User {
         this.name = name;
         this.surname = surname;
         this.password = password;
-        this.listOfPets = new ArrayList<>();
         this.pets = new ArrayList<>();
         this.petGenries = new Vector<>();
-    }
-
-    public void addPet(IPet pet) {
-        if (listOfPets.size() < MAX_AMOUNT_OF_PETS) {
-            this.listOfPets.add(pet);
-        } else {
-            System.out.println("You cannot have more pets");
-        }
     }
 
     public void addPet(Pet pet) {
         if (pets.size() < MAX_AMOUNT_OF_PETS) {
             this.pets.add(pet);
-            if (!petGenries.contains(pet.getGenre().getName())) {
-                petGenries.add(pet.getGenre().getName());
+            if (!petGenries.contains(pet.getPetGenre().getName())) {
+                petGenries.add(pet.getPetGenre().getName());
             }
         } else {
             System.out.println("You cannot have more pets");
-        }
-    }
-
-    public void removePet(IPet pet) {
-        if (listOfPets.contains(pet)) {
-            listOfPets.remove(pet);
         }
     }
 
@@ -59,13 +42,13 @@ public class User {
         String genre;
         if (pets != null) {
             for (Pet pet : pets) {
-                genre = pet.getGenre().getName();
+                genre = pet.getPetGenre().getName();
                 if (!petGenries.contains(genre)) {
                     petGenries.add(genre);
                 }
             }
         } else {
-            System.out.println("Pets are empty");
+            System.out.println("Pets are not initialized yet");
         }
     }
 
@@ -80,24 +63,22 @@ public class User {
 
         User user = (User) o;
 
-        if (getLogin() != null ? !getLogin().equals(user.getLogin()) : user.getLogin() != null) return false;
-        if (getName() != null ? !getName().equals(user.getName()) : user.getName() != null) return false;
-        if (getSurname() != null ? !getSurname().equals(user.getSurname()) : user.getSurname() != null) return false;
-        if (getPassword() != null ? !getPassword().equals(user.getPassword()) : user.getPassword() != null)
-            return false;
-        if (getListOfPets() != null ? !getListOfPets().equals(user.getListOfPets()) : user.getListOfPets() != null)
-            return false;
-        return getPets() != null ? getPets().equals(user.getPets()) : user.getPets() == null;
+        if (login != null ? !login.equals(user.login) : user.login != null) return false;
+        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        if (surname != null ? !surname.equals(user.surname) : user.surname != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        if (pets != null ? !pets.equals(user.pets) : user.pets != null) return false;
+        return petGenries != null ? petGenries.equals(user.petGenries) : user.petGenries == null;
     }
 
     @Override
     public int hashCode() {
-        int result = getLogin() != null ? getLogin().hashCode() : 0;
-        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
-        result = 31 * result + (getSurname() != null ? getSurname().hashCode() : 0);
-        result = 31 * result + (getPassword() != null ? getPassword().hashCode() : 0);
-        result = 31 * result + (getListOfPets() != null ? getListOfPets().hashCode() : 0);
-        result = 31 * result + (getPets() != null ? getPets().hashCode() : 0);
+        int result = login != null ? login.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (surname != null ? surname.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (pets != null ? pets.hashCode() : 0);
+        result = 31 * result + (petGenries != null ? petGenries.hashCode() : 0);
         return result;
     }
 
@@ -117,16 +98,11 @@ public class User {
         return password;
     }
 
-    public ArrayList<IPet> getListOfPets() {
-        return listOfPets;
-    }
-
     public ArrayList<Pet> getPets() {
         return pets;
     }
 
     public void setPets(ArrayList<Pet> pets) {
         this.pets = pets;
-        this.setPetGenries();
     }
 }

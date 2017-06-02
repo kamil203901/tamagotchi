@@ -18,6 +18,7 @@ public class RegisterController implements IController {
         this.appController = appController;
     }
 
+    @Override
     public void start() {
         connection = new DBConnect();
         registerFrame = new RegisterFrame(this);

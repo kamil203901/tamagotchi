@@ -6,13 +6,9 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseListener;
-import java.util.ArrayList;
 import java.util.Vector;
 
 import tamagotchi.controller.IController;
-import tamagotchi.model.IPet;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
