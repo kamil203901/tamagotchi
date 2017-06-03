@@ -56,11 +56,12 @@ public class NewAnimalController implements IController {
                 return;
             }
 
-            connection.addAnimalToCurrentUser(genreOfAnimal, name, null);
-            appController.getAppFrame().addAnimalToPanel(genreOfAnimal.toLowerCase(), amount_of_pets);
+            connection.addAnimalToCurrentUser(genreOfAnimal, name);
+            appController.getAppFrame().addAnimalToPanel(connection.getGenrePath(genreOfAnimal), amount_of_pets);
             appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
             appController.getAppFrame().setActions(new Vector<>());
             appController.getAppFrame().removeComboBoxes();
+            appController.getAppFrame().showAnimalPanel();
             appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();
 
 

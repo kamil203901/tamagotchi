@@ -7,6 +7,7 @@ import tamagotchi.view.LoginFrame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class LoginController implements IController {
@@ -46,12 +47,17 @@ public class LoginController implements IController {
                 JOptionPane.showConfirmDialog(loginFrame, "User " + login + " logged in correctly.",
                         "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
                 appController.getAppFrame().setBasePanelAsContentPane();
-                loginController.connection.login(loginController.connection.getUserByLogin(login));
-                appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
-                appController.getAppFrame().setActions(new Vector<>());
+                appController.getAppFrame().removeAnimalsFromPanel();
                 appController.getAppFrame().removeLoginLabel();
                 appController.getAppFrame().removeComboBoxes();
-                appController.getAppFrame().removeAnimalsFromPanel();
+                loginController.connection.login(loginController.connection.getUserByLogin(login));
+                ArrayList<String> genriesNames = new ArrayList<>(connection.getLoggedUserPetGenriesNames());
+                for (int i = 0; i < genriesNames.size(); i++) {
+                    appController.getAppFrame().addAnimalToPanel(connection.getGenrePath(genriesNames.get(i)), i);
+                }
+                appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
+                appController.getAppFrame().setActions(new Vector<>());
+
                 appController.getAppFrame().showAnimalPanel();
                 appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAddAnimalComboBox();

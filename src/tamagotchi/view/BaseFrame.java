@@ -6,6 +6,7 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import tamagotchi.controller.IController;
@@ -24,9 +25,6 @@ public class BaseFrame extends JFrame {
     private JLabel secondAnimalLabel;
     private JLabel thirdAnimalLabel;
     private JLabel forthAnimalLabel;
-    private ImageIcon dog;
-    private ImageIcon cat;
-    private ImageIcon parrot;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
@@ -37,8 +35,8 @@ public class BaseFrame extends JFrame {
     private JProgressBar hungerBar;
     private GridBagConstraints constraints;
     private JPanel[][] panelHolder;
-    private Vector<String> genries;// = { "Dog", "Cat", "Fish" };
-    private Vector<String> actions;// = { "jedzenie", "spanie" };
+    private Vector<String> genries;
+    private Vector<String> actions;
 
 
     public BaseFrame(IController baseController) {
@@ -47,10 +45,6 @@ public class BaseFrame extends JFrame {
         secondAnimalLabel = new JLabel();
         thirdAnimalLabel =  new JLabel();
         forthAnimalLabel =  new JLabel();
-        dog = new ImageIcon("img/dog.png");
-        cat = new ImageIcon("img/dog.png");
-        parrot = new ImageIcon("img/arab.png");
-
         basePanel = new Panel(baseController);
         healthHappinessHungerPanel = new Panel(baseController);
         healthBar = new JProgressBar(0, 100);
@@ -67,6 +61,13 @@ public class BaseFrame extends JFrame {
         welcomePanel.setLayout(new GridLayout(1,1));
         welcomePanel.setBackground(new Color(223, 223, 88));
         panelHolder = new JPanel[4][4];
+        for(int m = 0; m < 3; m++) {
+            for(int n = 0; n < 4; n++) {
+                panelHolder[m][n] = new JPanel();
+                panelHolder[m][n].setOpaque(false);
+                animalPanel.add(panelHolder[m][n]);
+            }
+        }
         setupFrame();
     }
 
@@ -167,10 +168,6 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public JComboBox getGenreOfPet() {
-        return genreOfPet;
-    }
-
     public void removeComboBoxes() {
         if (genreOfPet != null && action != null) {
             this.remove(genreOfPet);
@@ -214,38 +211,38 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public void addAnimalToPanel(String animalType, int position) {
-        ImageIcon animal;
-        if (animalType.equals("dog")) {
-            animal = dog;
-        } else if (animalType.equals("cat")) {
-            animal = cat;
-        } else {
-            animal = parrot;
-        }
+    public void addAnimalToPanel(String path, int position) {
+        ImageIcon animal = new ImageIcon(path);
         switch (position) {
             case 0:
                 firstAnimalLabel.setIcon(animal);
-                panelHolder[3][0].add(firstAnimalLabel);
+                panelHolder[2][0].add(firstAnimalLabel);
                 break;
             case 1:
                 secondAnimalLabel.setIcon(animal);
-                panelHolder[3][1].add(secondAnimalLabel);
+                panelHolder[2][1].add(secondAnimalLabel);
                 break;
             case 2:
                 thirdAnimalLabel.setIcon(animal);
-                panelHolder[3][2].add(thirdAnimalLabel);
+                panelHolder[2][2].add(thirdAnimalLabel);
                 break;
             case 3:
                 forthAnimalLabel.setIcon(animal);
-                panelHolder[3][3].add(forthAnimalLabel);
+                panelHolder[2][3].add(forthAnimalLabel);
                 break;
         }
         this.setVisible(true);
     }
 
     public void removeAnimalsFromPanel() {
-        animalPanel.removeAll();
+        //animalPanel.removeAll();
+
+        for(int m = 0; m < 3; m++) {
+            for(int n = 0; n < 4; n++) {
+                panelHolder[m][n].removeAll();
+            }
+        }
+
         this.getContentPane().setVisible(true);
     }
 
@@ -263,17 +260,15 @@ public class BaseFrame extends JFrame {
         constraints.gridheight = 8;
         constraints.anchor = GridBagConstraints.NORTHWEST;
 
-        animalPanel.setLayout(new GridLayout(4,4));
+        animalPanel.setLayout(new GridLayout(3,4));
 
-        for(int m = 0; m < 4; m++) {
-            for(int n = 0; n < 4; n++) {
-                panelHolder[m][n] = new JPanel();
-                panelHolder[m][n].setOpaque(false);
-                animalPanel.add(panelHolder[m][n]);
-            }
-        }
-
-
+//        for(int m = 0; m < 3; m++) {
+//            for(int n = 0; n < 4; n++) {
+//                panelHolder[m][n] = new JPanel();
+//                panelHolder[m][n].setOpaque(false);
+//                animalPanel.add(panelHolder[m][n]);
+//            }
+//        }
 
         this.getContentPane().add(animalPanel, constraints);
         this.setVisible(true);

@@ -46,6 +46,18 @@ public class DBConnect {
         }
     }
 
+    public String getGenrePath(String genreName) {
+        String path = null;
+
+        for (PetGenre petGenre : this.genries) {
+            if (petGenre.getName().equals(genreName)) {
+                path = petGenre.getPath();
+            }
+        }
+
+        return path;
+    }
+
     public void login(User currentUser) {
         User oldUser = DBConnect.currentUser;
         DBConnect.currentUser = currentUser;
@@ -128,6 +140,38 @@ public class DBConnect {
         return vectorOfPetGenries;
     }
 
+    public ArrayList<String> getLoggedUserPetGenriesNames() {
+        ArrayList<String> genriesId = new ArrayList<>();
+        ArrayList<String> genriesNames = new ArrayList<>();
+        String loggedUserId = getUserId(DBConnect.currentUser.getLogin());
+
+        try {
+            String query = "select id_rodzaj from podopieczny where id_uzytkownik = '" + loggedUserId + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                genriesId.add(rs.getString("id_rodzaj"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        for (String id : genriesId) {
+            try {
+                String query = "select nazwa from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + id + "'";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                    genriesNames.add(rs.getString("nazwa"));
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+
+        return genriesNames;
+
+    }
+
     public Vector<String> getGenriesNames() {
         Vector<String> genriesNames = new Vector<>();
 
@@ -137,6 +181,8 @@ public class DBConnect {
 
         return genriesNames;
     }
+
+
 
     private void setCurrentUsersPets() {
         class TempPetInfo {
@@ -236,15 +282,17 @@ public class DBConnect {
         }
     }
 
-    public void addAnimalToCurrentUser(String genre, String name, String path) {
+    public void addAnimalToCurrentUser(String genre, String name) {
         try {
-            currentUser.addPet(new Pet(name, new PetGenre(genre, path)));
-            String query = "select id_rodzaj_podopiecznego from rodzaj_podopiecznego where nazwa = '" + genre + "'";
+
+            String query = "select * from rodzaj_podopiecznego where nazwa = '" + genre + "'";
             rs = st.executeQuery(query);
             rs.next();
             String id_genre = rs.getString("id_rodzaj_podopiecznego");
+            String path = rs.getString("sciezka");
             String id_user = getUserId(currentUser.getLogin());
 
+            currentUser.addPet(new Pet(name, new PetGenre(genre, path)));
             query = "insert into podopieczny (id_rodzaj, imie, id_uzytkownik) " +
                     "values ('" + id_genre + "','" + name + "','" + id_user + "')";
             st.executeUpdate(query);
