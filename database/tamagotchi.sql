@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 02 Cze 2017, 19:15
+-- Czas generowania: 03 Cze 2017, 18:19
 -- Wersja serwera: 10.1.22-MariaDB
 -- Wersja PHP: 7.1.4
 
@@ -33,6 +33,26 @@ CREATE TABLE `akcja` (
   `id_rodzaj_akcji` int(11) NOT NULL,
   `id_rodzaj_podopieczny` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `akcja`
+--
+
+INSERT INTO `akcja` (`id_akcji`, `id_rodzaj_akcji`, `id_rodzaj_podopieczny`) VALUES
+(1, 2, 3),
+(2, 3, 3),
+(3, 4, 3),
+(4, 5, 3),
+(5, 6, 4),
+(6, 5, 4),
+(7, 9, 4),
+(8, 10, 4),
+(9, 9, 3),
+(10, 10, 3),
+(11, 9, 5),
+(12, 9, 5),
+(13, 7, 5),
+(14, 8, 5);
 
 -- --------------------------------------------------------
 
@@ -68,7 +88,14 @@ CREATE TABLE `podopieczny` (
 --
 
 INSERT INTO `podopieczny` (`id_podopieczny`, `id_rodzaj`, `imie`, `wiek`, `waga`, `data_ostatniego_karmienia`, `id_uzytkownik`) VALUES
-(29, 3, 'h', 1, 1, NULL, 5);
+(93, 3, 'dfgh', 1, 1, NULL, 5),
+(94, 3, 'sdfg', 1, 1, NULL, 1),
+(95, 3, 'dfg', 1, 1, NULL, 5),
+(96, 3, 'asdf', 1, 1, NULL, 1),
+(97, 3, 'dfg', 1, 1, NULL, 5),
+(98, 3, 'sadf', 1, 1, NULL, 1),
+(99, 4, 'ghj', 1, 1, NULL, 1),
+(100, 5, 'fgj', 1, 1, NULL, 5);
 
 -- --------------------------------------------------------
 
@@ -81,6 +108,22 @@ CREATE TABLE `rodzaj_akcji` (
   `nazwa_rodzaju_akcji` varchar(25) NOT NULL,
   `nazwa_akcji` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `rodzaj_akcji`
+--
+
+INSERT INTO `rodzaj_akcji` (`id_rodzaj_akcji`, `nazwa_rodzaju_akcji`, `nazwa_akcji`) VALUES
+(1, 'karmienie', ''),
+(2, 'leczenie', 'odrobaczenie'),
+(3, 'zabawa', 'rzuc kij'),
+(4, 'zabawa', 'spacer'),
+(5, 'zabawa', 'glaskanie'),
+(6, 'zabawa', 'rzuc_klebek'),
+(7, 'zabawa', 'muzyka'),
+(8, 'zabawa', 'rozmowa'),
+(9, 'leczenie', 'szczepienie'),
+(10, 'leczenie', 'czyszczenie');
 
 -- --------------------------------------------------------
 
@@ -99,8 +142,9 @@ CREATE TABLE `rodzaj_podopiecznego` (
 --
 
 INSERT INTO `rodzaj_podopiecznego` (`id_rodzaj_podopiecznego`, `nazwa`, `sciezka`) VALUES
-(3, 'Dog', NULL),
-(4, 'Cat', NULL);
+(3, 'Dog', 'img/psisko.png'),
+(4, 'Cat', 'img/kot.png'),
+(5, 'Parrot', 'img/arab.png');
 
 -- --------------------------------------------------------
 
@@ -215,7 +259,7 @@ ALTER TABLE `waga`
 -- AUTO_INCREMENT dla tabeli `akcja`
 --
 ALTER TABLE `akcja`
-  MODIFY `id_akcji` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_akcji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT dla tabeli `historia_akcji`
 --
@@ -225,17 +269,17 @@ ALTER TABLE `historia_akcji`
 -- AUTO_INCREMENT dla tabeli `podopieczny`
 --
 ALTER TABLE `podopieczny`
-  MODIFY `id_podopieczny` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_podopieczny` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 --
 -- AUTO_INCREMENT dla tabeli `rodzaj_akcji`
 --
 ALTER TABLE `rodzaj_akcji`
-  MODIFY `id_rodzaj_akcji` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rodzaj_akcji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT dla tabeli `rodzaj_podopiecznego`
 --
 ALTER TABLE `rodzaj_podopiecznego`
-  MODIFY `id_rodzaj_podopiecznego` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_rodzaj_podopiecznego` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownik`
 --
