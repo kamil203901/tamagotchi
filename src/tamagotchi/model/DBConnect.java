@@ -14,6 +14,7 @@ public class DBConnect {
     private static ArrayList<User> users = new ArrayList<>();
     private static Vector<PetGenre> genries = new Vector<>();
     private static Vector<String> genriesNames = new Vector<>();
+    private static ArrayList<String> actions = new ArrayList<>();
     private static User currentUser;
 
     public DBConnect() {
@@ -24,6 +25,7 @@ public class DBConnect {
             DBConnect.users = getUsersFromDatabase();
             DBConnect.genries = getPetGenriesFromDatabase();
             DBConnect.genriesNames = getGenriesNames();
+            DBConnect.actions = getActionsFromDatabase();
         } catch (Exception ex) {
             System.out.println("Error: " + ex);
         }
@@ -118,6 +120,24 @@ public class DBConnect {
         }
 
         return listOfUsers;
+    }
+
+    public ArrayList<String> getActionsFromDatabase() {
+        ArrayList<String> actions = new ArrayList<>();
+        String action;
+        try {
+            String query = "select * from rodzaj_akcji";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                action = rs.getString("nazwa_akcji");
+                actions.add(action);
+            }
+            System.out.println("Actions read from database");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actions;
     }
 
     // return genries

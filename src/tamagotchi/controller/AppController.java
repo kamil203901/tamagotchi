@@ -16,6 +16,7 @@ public class AppController implements IController {
 
     public void start() {
         appFrame = new BaseFrame(this);
+        appFrame.setActionsItems(connection.getActionsFromDatabase());
         appFrame.addLoginListener(new LoginListener(this));
         appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));
@@ -98,5 +99,7 @@ public class AppController implements IController {
             appController.getAppFrame().setWelcomePanelAsContenePane();
         }
     }
+
+
 
 }

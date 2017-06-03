@@ -6,6 +6,7 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -30,6 +31,15 @@ public class BaseFrame extends JFrame {
     private JMenuItem closeButton;
     private JMenuItem logoutItem;
     private JPopupMenu logout;
+
+    private JPopupMenu animalPopupMenu;
+    private JMenu healthMenu;
+    private JMenu happinessMenu;
+    private JMenu feedMenu;
+
+    private ArrayList<JMenuItem> actionsItems;
+    private ArrayList<PetInternal> pets;
+
     private JProgressBar healthBar;
     private JProgressBar happinessBar;
     private JProgressBar hungerBar;
@@ -41,6 +51,7 @@ public class BaseFrame extends JFrame {
 
     public BaseFrame(IController baseController) {
         makeAction = new JButton("Make action");
+        actionsItems = new ArrayList<>();
         firstAnimalLabel =  new JLabel();
         secondAnimalLabel = new JLabel();
         thirdAnimalLabel =  new JLabel();
@@ -56,6 +67,20 @@ public class BaseFrame extends JFrame {
         logout = new JPopupMenu();
         logoutItem = new JMenuItem("Logout");
         logout.add(logoutItem);
+
+        animalPopupMenu = new JPopupMenu();
+        healthMenu = new JMenu("Health");
+        happinessMenu = new JMenu("Happiness");
+        feedMenu = new JMenu("Hunger");
+        animalPopupMenu.add(healthMenu);
+        animalPopupMenu.add(happinessMenu);
+        animalPopupMenu.add(feedMenu);
+
+        firstAnimalLabel.setComponentPopupMenu(animalPopupMenu);
+        secondAnimalLabel.setComponentPopupMenu(animalPopupMenu);
+        thirdAnimalLabel.setComponentPopupMenu(animalPopupMenu);
+        forthAnimalLabel.setComponentPopupMenu(animalPopupMenu);
+
         addAnimalButton = new JButton("Add new animal");
         welcomePanel.setOpaque(true);
         welcomePanel.setLayout(new GridLayout(1,1));
@@ -75,12 +100,28 @@ public class BaseFrame extends JFrame {
         this.setContentPane(welcomePanel);
     }
 
+
     public void setBasePanelAsContentPane() {
         this.setContentPane(basePanel);
         basePanel.setOpaque(true);
         basePanel.setBackground(new Color(223, 223, 88));
         basePanel.setLayout(new GridBagLayout());
         constraints = new GridBagConstraints();
+    }
+
+    public void setActionsItems(ArrayList<String> actionNames) {
+        for (String action : actionNames) {
+            this.actionsItems.add(new JMenuItem(action));
+        }
+        setMenuItems(healthMenu, actionsItems);
+        setMenuItems(happinessMenu, actionsItems);
+        setMenuItems(feedMenu, actionsItems);
+    }
+
+    private void setMenuItems(JMenuItem menu, ArrayList<JMenuItem> items) {
+        for (JMenuItem item : items) {
+            menu.add(item);
+        }
     }
 
     private void setupFrame() {
@@ -360,5 +401,30 @@ public class BaseFrame extends JFrame {
 
         logoutItem.addActionListener(logoutListener);
     }
+
+    class PetInternal {
+        String name;
+        String petGenre;
+        int position;
+        JLabel label;
+        ArrayList<JMenuItem> healthItems;
+        ArrayList<JMenuItem> happinessItems;
+        ArrayList<JMenuItem> feedItem;
+
+        public PetInternal(String name, String petGenre, int position, JLabel label, ArrayList<JMenuItem> healthItems,
+                    ArrayList<JMenuItem> happinessItems, ArrayList<JMenuItem> feedItem) {
+            this.name = name;
+            this.petGenre = petGenre;
+            this.position = position;
+            this.label = label;
+            this.healthItems = healthItems;
+            this.happinessItems = happinessItems;
+            this.feedItem = feedItem;
+        }
+    }
+
+
+
+
 
 }
