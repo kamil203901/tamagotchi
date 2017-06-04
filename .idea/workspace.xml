@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d9dd2d9-c674-4699-9ba8-6ebfe5648298" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tamagotchi/model/IPet.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/User.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" afterPath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java" afterPath="$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/Action.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/Action.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/tamagotchi.sql" afterPath="$PROJECT_DIR$/database/tamagotchi.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/Pet.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/Pet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tamagotchi/model/Genre.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/PetGenre.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" afterPath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,79 +36,18 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="49" column="69" lean-forward="true" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+            <state relative-caret-position="688">
+              <caret line="53" column="63" lean-forward="false" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-147">
-              <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-              <folding>
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="class#LoginListener#0;class#AppController#0" expanded="false" />
-                <element signature="class#RegisterListener#0;class#AppController#0" expanded="false" />
-                <element signature="class#CloseListener#0;class#AppController#0" expanded="false" />
-                <element signature="class#AddAnimalListener#0;class#AppController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewAnimalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="63" column="51" lean-forward="false" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PetGenre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/PetGenre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewAnimalFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-              <folding>
-                <element signature="method#addAddButtonListener#0;class#NewAnimalFrame#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/RegisterFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="method#addRegisterListener#0;class#RegisterFrame#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Panel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Panel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="32">
+              <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -124,54 +56,161 @@
       <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+            <state relative-caret-position="448">
+              <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding>
-                <element signature="method#getData#0;class#DBConnect#0" expanded="false" />
-                <element signature="method#getUserId#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getHealthActions#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getHappinessActions#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getFeedActions#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getUsersFromDatabase#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getActionsFromDatabase#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getPetGenriesFromDatabase#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getLoggedUserPetGenriesNames#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getLoggedUserPetGenriesNames#1;class#DBConnect#0" expanded="false" />
+                <element signature="method#getGenriesNames#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#setCurrentUsersPets#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
+                <element signature="method#addUser#0;class#DBConnect#0" expanded="false" />
+                <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#deleteUser#0;class#DBConnect#0" expanded="false" />
-                <marker date="1496496032901" expanded="true" signature="1222:1246" ph="select * fro... uzytkownik" />
-                <marker date="1496496032901" expanded="true" signature="3333:3357" ph="select * fro... uzytkownik" />
-                <marker date="1496496032901" expanded="true" signature="4073:4099" ph="select * fro... rodzaj_akcji" />
-                <marker date="1496496032901" expanded="true" signature="4663:4677" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1496496032901" expanded="true" signature="4663:4697" ph="select * fro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="5426:5459" ph="select * fro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="5426:5481" ph="select * fro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="5426:5483" ph="select * fro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="5426:5504" ph="select id_ro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="5818:5901" ph="select id_ro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="7591:7662" ph="select * fro... podopieczny" />
-                <marker date="1496496032901" expanded="true" signature="8120:8217" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1496496032901" expanded="true" signature="9205:9262" ph="select * fro... uzytkownik" />
-                <marker date="1496496032901" expanded="true" signature="9815:9968" ph="insert into uzytkownik... " />
-                <marker date="1496496032901" expanded="true" signature="10276:10340" ph="select id_ro... rodzaj_podopiecznego" />
-                <marker date="1496496032901" expanded="true" signature="10689:10831" ph="insert into podopieczny... " />
-                <marker date="1496496032901" expanded="true" signature="11218:11272" ph="select * fro... uzytkownik" />
-                <marker date="1496496032901" expanded="true" signature="11844:11898" ph="select * fro... uzytkownik" />
-                <marker date="1496496032901" expanded="true" signature="12323:12375" ph="delete from " />
+                <marker date="1496600138325" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+                <marker date="1496600138325" expanded="true" signature="3222:3289" ph="select * fro... akcja" />
+                <marker date="1496600138325" expanded="true" signature="3870:3937" ph="select * fro... akcja" />
+                <marker date="1496600138325" expanded="true" signature="4159:4195" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="4159:4211" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="4159:4222" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="4626:4645" ph="select * fro... akcja" />
+                <marker date="1496600138325" expanded="true" signature="5053:5102" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="5053:5144" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="5730:5782" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="5730:5792" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="5730:5811" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="5730:5822" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="5730:5827" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="6525:6620" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="7313:7402" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="7313:7411" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="7949:7994" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="7949:8010" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="7949:8014" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="7949:8048" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="7949:8060" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="8485:8509" ph="select * fro... uzytkownik" />
+                <marker date="1496600138325" expanded="true" signature="9225:9251" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="9815:9849" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="10578:10656" ph="select id_ro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="10970:11053" ph="select nazwa... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="11721:11799" ph="select id_ro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="11721:11803" ph="select id_ro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="11721:11851" ph="select id_ro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="11721:11864" ph="select id_ro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="12185:12268" ph="select nazwa... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="12950:12975" ph="select * fro... uzytkownik" />
+                <marker date="1496600138325" expanded="true" signature="14453:14524" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="14982:15079" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="16067:16124" ph="select * fro... uzytkownik" />
+                <marker date="1496600138325" expanded="true" signature="16495:16559" ph="select * fro... ro" />
+                <marker date="1496600138325" expanded="true" signature="16915:16965" ph="select * fro... podopieczny" />
+                <marker date="1496600138325" expanded="true" signature="16915:16979" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="17341:17393" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="17341:17415" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="17838:17893" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="18330:18405" ph="select * fro... rodzaj_akcji" />
+                <marker date="1496600138325" expanded="true" signature="18813:18868" ph="select * fro... akcja" />
+                <marker date="1496600138325" expanded="true" signature="20498:20553" ph="select * fro... akcja" />
+                <marker date="1496600138325" expanded="true" signature="20703:20771" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="20703:20787" ph="select * fro... akcja" />
+                <marker date="1496600138325" expanded="true" signature="21301:21454" ph="insert into uzytkownik... " />
+                <marker date="1496600138325" expanded="true" signature="21762:21826" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1496600138325" expanded="true" signature="22175:22317" ph="insert into podopieczny... " />
+                <marker date="1496600138325" expanded="true" signature="22704:22758" ph="select * fro... uzytkownik" />
+                <marker date="1496600138325" expanded="true" signature="23330:23384" ph="select * fro... uzytkownik" />
+                <marker date="1496600138325" expanded="true" signature="23809:23861" ph="delete from " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImagePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ImagePanel.java">
+      <file leaf-file-name="ActionGenre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="96">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="e#116#117#0" expanded="true" />
+                <element signature="e#148#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewAnimalController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+              <folding>
+                <marker date="1496590555928" expanded="true" signature="3147:3201" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7239">
-              <caret line="413" column="15" lean-forward="false" selection-start-line="413" selection-start-column="15" selection-end-line="413" selection-end-column="15" />
+            <state relative-caret-position="111">
+              <caret line="232" column="47" lean-forward="false" selection-start-line="232" selection-start-column="47" selection-end-line="232" selection-end-column="47" />
+              <folding>
+                <element signature="e#12350#12351#0" expanded="true" />
+                <element signature="e#12388#12389#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Action.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Label.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Label.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,11 +274,13 @@
         <option value="$PROJECT_DIR$/src/tamagotchi/model/User.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/view/Label.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
       </list>
     </option>
   </component>
@@ -251,8 +292,11 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="width" value="1922" />
-    <option name="height" value="1049" />
+    <option name="width" value="1368" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -270,27 +314,27 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -308,11 +352,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -330,11 +374,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tamagotchi" />
+              <option name="myItemId" value="tamagotchi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -398,6 +442,61 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -421,7 +520,180 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -443,6 +715,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
@@ -476,6 +764,62 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
     <list size="1">
@@ -513,11 +857,16 @@
       <workItem from="1496416834921" duration="9120000" />
       <workItem from="1496437300200" duration="13064000" />
       <workItem from="1496488327265" duration="10320000" />
+      <workItem from="1496507454073" duration="674000" />
+      <workItem from="1496508151582" duration="6527000" />
+      <workItem from="1496525051347" duration="13689000" />
+      <workItem from="1496574124518" duration="13639000" />
+      <workItem from="1496595315406" duration="7416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188789000" />
+    <option name="totallyTimeSpent" value="230734000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,37 +878,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1049" extended-state="6" />
+    <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16176471" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18277311" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17962185" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39810926" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16124031" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18139535" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17829457" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2306003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +920,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -579,57 +929,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="71" lean-forward="false" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="62" lean-forward="false" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-          <folding>
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="class#LoginListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#RegisterListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#CloseListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#AddAnimalListener#0;class#AppController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="80" column="31" lean-forward="true" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="55" column="62" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="62" />
-          <folding>
-            <marker date="1496416763234" expanded="true" signature="574:769" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="824:3425" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="1070:1235" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="1306:3419" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
@@ -648,20 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
           <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3167#3168#0" expanded="false" />
-            <element signature="e#3203#3204#0" expanded="false" />
-            <element signature="e#3258#3259#0" expanded="false" />
-            <element signature="e#3301#3302#0" expanded="false" />
-            <element signature="e#3346#3347#0" expanded="false" />
-            <element signature="e#3383#3384#0" expanded="false" />
-            <element signature="e#3427#3428#0" expanded="false" />
-            <element signature="e#3463#3464#0" expanded="false" />
-            <element signature="e#3510#3511#0" expanded="false" />
-            <element signature="e#3549#3550#0" expanded="false" />
-            <element signature="method#addRegisterListener#0;class#RegisterFrame#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -691,14 +976,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding>
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="class#LoginListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#RegisterListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#CloseListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#AddAnimalListener#0;class#AppController#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -714,12 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <marker date="1496416763234" expanded="true" signature="574:769" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="824:3425" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="1070:1235" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="1306:3419" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,20 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3167#3168#0" expanded="false" />
-            <element signature="e#3203#3204#0" expanded="false" />
-            <element signature="e#3258#3259#0" expanded="false" />
-            <element signature="e#3301#3302#0" expanded="false" />
-            <element signature="e#3346#3347#0" expanded="false" />
-            <element signature="e#3383#3384#0" expanded="false" />
-            <element signature="e#3427#3428#0" expanded="false" />
-            <element signature="e#3463#3464#0" expanded="false" />
-            <element signature="e#3510#3511#0" expanded="false" />
-            <element signature="e#3549#3550#0" expanded="false" />
-            <element signature="method#addRegisterListener#0;class#RegisterFrame#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,30 +1028,75 @@
         <state relative-caret-position="418">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="method#getData#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#getUserId#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getHealthActions#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getHappinessActions#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getFeedActions#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getUsersFromDatabase#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getActionsFromDatabase#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getPetGenriesFromDatabase#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getLoggedUserPetGenriesNames#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getLoggedUserPetGenriesNames#1;class#DBConnect#0" expanded="false" />
+            <element signature="method#getGenriesNames#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#setCurrentUsersPets#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
+            <element signature="method#addUser#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
             <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
             <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
             <element signature="method#deleteUser#0;class#DBConnect#0" expanded="false" />
-            <marker date="1496496032901" expanded="true" signature="1222:1246" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="3333:3357" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="4073:4099" ph="select * fro... rodzaj_akcji" />
-            <marker date="1496496032901" expanded="true" signature="4663:4677" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1496496032901" expanded="true" signature="4663:4697" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5459" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5481" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5483" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5504" ph="select id_ro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5818:5901" ph="select id_ro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="7591:7662" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="8120:8217" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1496496032901" expanded="true" signature="9205:9262" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="9815:9968" ph="insert into uzytkownik... " />
-            <marker date="1496496032901" expanded="true" signature="10276:10340" ph="select id_ro... rodzaj_podopiecznego" />
-            <marker date="1496496032901" expanded="true" signature="10689:10831" ph="insert into podopieczny... " />
-            <marker date="1496496032901" expanded="true" signature="11218:11272" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="11844:11898" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="12323:12375" ph="delete from " />
+            <marker date="1496600138325" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="3222:3289" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="3870:3937" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="4159:4195" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="4159:4211" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="4159:4222" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="4626:4645" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="5053:5102" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="5053:5144" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="5730:5782" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5792" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5811" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5822" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5827" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="6525:6620" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="7313:7402" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="7313:7411" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="7949:7994" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8010" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8014" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8048" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8060" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="8485:8509" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="9225:9251" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="9815:9849" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="10578:10656" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="10970:11053" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="11721:11799" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="11721:11803" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="11721:11851" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="11721:11864" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="12185:12268" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="12950:12975" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="14453:14524" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="14982:15079" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="16067:16124" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="16495:16559" ph="select * fro... ro" />
+            <marker date="1496600138325" expanded="true" signature="16915:16965" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="16915:16979" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="17341:17393" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="17341:17415" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="17838:17893" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="18330:18405" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="18813:18868" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="20498:20553" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="20703:20771" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="20703:20787" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="21301:21454" ph="insert into uzytkownik... " />
+            <marker date="1496600138325" expanded="true" signature="21762:21826" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="22175:22317" ph="insert into podopieczny... " />
+            <marker date="1496600138325" expanded="true" signature="22704:22758" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="23330:23384" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="23809:23861" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -816,47 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <marker date="1496416763234" expanded="true" signature="574:769" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="824:3425" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="1070:1235" ph="{...}" />
-            <marker date="1496416763234" expanded="true" signature="1306:3419" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
           <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-          <folding>
-            <element signature="method#addLoginListener#0;class#LoginFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -867,48 +1133,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Pet.java">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/javax/swing/JPanel.java" />
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/RegisterFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="64">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
-            <element signature="e#584#585#0" expanded="false" />
-            <element signature="e#611#612#0" expanded="false" />
-            <element signature="e#648#649#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#709#710#0" expanded="false" />
-            <element signature="e#738#739#0" expanded="false" />
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#815#816#0" expanded="false" />
-            <element signature="e#845#846#0" expanded="false" />
-            <element signature="e#874#875#0" expanded="false" />
-            <element signature="e#1135#1136#0" expanded="false" />
-            <element signature="e#1164#1165#0" expanded="false" />
-            <element signature="e#1208#1209#0" expanded="false" />
-            <element signature="e#1244#1245#0" expanded="false" />
-            <element signature="e#1277#1278#0" expanded="false" />
-            <element signature="e#1309#1310#0" expanded="false" />
-            <element signature="e#1356#1357#0" expanded="false" />
-            <element signature="e#1398#1399#0" expanded="false" />
-            <element signature="e#1425#1426#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1484#1485#0" expanded="false" />
-            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#162#163#0" expanded="false" />
+            <element signature="e#213#214#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/javax/swing/JPanel.java">
+    <entry file="jar://$USER_HOME$/jdk1.8.0_121/src.zip!/javax/swing/JLabel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state relative-caret-position="302">
+          <caret line="223" column="5" lean-forward="true" selection-start-line="221" selection-start-column="4" selection-end-line="223" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/jdk1.8.0_121/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="529" column="16" lean-forward="false" selection-start-line="529" selection-start-column="16" selection-end-line="529" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Pet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/PetGenre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/jdk1.8.0_121/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9296">
+          <caret line="614" column="0" lean-forward="false" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#60784#0" expanded="false" />
+            <element signature="e#6101#6102#0" expanded="false" />
+            <element signature="e#6171#6172#0" expanded="false" />
+            <element signature="e#7967#7968#0" expanded="false" />
+            <element signature="e#8013#8014#0" expanded="false" />
+            <element signature="e#9482#9483#0" expanded="false" />
+            <element signature="e#9528#9529#0" expanded="false" />
+            <element signature="e#10902#10903#0" expanded="false" />
+            <element signature="e#10948#10949#0" expanded="false" />
+            <element signature="e#15724#15725#0" expanded="false" />
+            <element signature="e#15779#15780#0" expanded="false" />
+            <element signature="e#32532#32533#0" expanded="false" />
+            <element signature="e#32566#32567#0" expanded="false" />
+            <element signature="e#33488#33489#0" expanded="false" />
+            <element signature="e#33522#33523#0" expanded="false" />
+            <element signature="e#33736#33737#0" expanded="false" />
+            <element signature="e#33771#33772#0" expanded="false" />
+            <element signature="e#33891#33892#0" expanded="false" />
+            <element signature="e#33919#33920#0" expanded="false" />
+            <element signature="e#34168#34169#0" expanded="false" />
+            <element signature="e#34202#34203#0" expanded="false" />
+            <element signature="e#34414#34415#0" expanded="false" />
+            <element signature="e#34449#34450#0" expanded="false" />
+            <element signature="e#34664#34665#0" expanded="false" />
+            <element signature="e#34700#34701#0" expanded="false" />
+            <element signature="e#35161#35162#0" expanded="false" />
+            <element signature="e#35199#35200#0" expanded="false" />
+            <element signature="e#35486#35487#0" expanded="false" />
+            <element signature="e#35532#35533#0" expanded="false" />
+            <element signature="e#35824#35825#0" expanded="false" />
+            <element signature="e#35852#35853#0" expanded="false" />
+            <element signature="e#37816#37817#0" expanded="false" />
+            <element signature="e#37859#37860#0" expanded="false" />
+            <element signature="e#46394#46395#0" expanded="false" />
+            <element signature="e#46458#46459#0" expanded="false" />
+            <element signature="e#47036#47037#0" expanded="false" />
+            <element signature="e#47092#47093#0" expanded="false" />
+            <element signature="e#47615#47616#0" expanded="false" />
+            <element signature="e#47675#47676#0" expanded="false" />
+            <element signature="e#48444#48445#0" expanded="false" />
+            <element signature="e#48491#48492#0" expanded="false" />
+            <element signature="e#56465#56466#0" expanded="false" />
+            <element signature="e#56523#56524#0" expanded="false" />
+            <element signature="e#57650#57651#0" expanded="false" />
+            <element signature="e#57708#57709#0" expanded="false" />
+            <element signature="e#59796#59797#0" expanded="false" />
+            <element signature="e#59824#59825#0" expanded="false" />
+            <element signature="e#60191#60192#0" expanded="false" />
+            <element signature="e#60228#60229#0" expanded="false" />
+            <element signature="e#60595#60596#0" expanded="false" />
+            <element signature="e#60632#60633#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <marker date="1496590555928" expanded="true" signature="3147:3201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding>
+            <element signature="method#getHealthActions#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getHappinessActions#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getFeedActions#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getUsersFromDatabase#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getActionsFromDatabase#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getPetGenriesFromDatabase#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getLoggedUserPetGenriesNames#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getLoggedUserPetGenriesNames#1;class#DBConnect#0" expanded="false" />
+            <element signature="method#getGenriesNames#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#setCurrentUsersPets#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
+            <element signature="method#addUser#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#DBConnect#0" expanded="false" />
+            <marker date="1496600138325" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="3222:3289" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="3870:3937" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="4159:4195" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="4159:4211" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="4159:4222" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="4626:4645" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="5053:5102" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="5053:5144" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="5730:5782" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5792" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5811" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5822" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="5730:5827" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="6525:6620" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="7313:7402" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="7313:7411" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="7949:7994" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8010" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8014" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8048" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="7949:8060" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="8485:8509" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="9225:9251" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="9815:9849" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="10578:10656" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="10970:11053" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="11721:11799" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="11721:11803" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="11721:11851" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="11721:11864" ph="select id_ro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="12185:12268" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="12950:12975" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="14453:14524" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="14982:15079" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="16067:16124" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="16495:16559" ph="select * fro... ro" />
+            <marker date="1496600138325" expanded="true" signature="16915:16965" ph="select * fro... podopieczny" />
+            <marker date="1496600138325" expanded="true" signature="16915:16979" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="17341:17393" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="17341:17415" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="17838:17893" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="18330:18405" ph="select * fro... rodzaj_akcji" />
+            <marker date="1496600138325" expanded="true" signature="18813:18868" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="20498:20553" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="20703:20771" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="20703:20787" ph="select * fro... akcja" />
+            <marker date="1496600138325" expanded="true" signature="21301:21454" ph="insert into uzytkownik... " />
+            <marker date="1496600138325" expanded="true" signature="21762:21826" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1496600138325" expanded="true" signature="22175:22317" ph="insert into podopieczny... " />
+            <marker date="1496600138325" expanded="true" signature="22704:22758" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="23330:23384" ph="select * fro... uzytkownik" />
+            <marker date="1496600138325" expanded="true" signature="23809:23861" ph="delete from " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="96">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#116#117#0" expanded="true" />
@@ -917,126 +1396,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Food.java">
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Label.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="232" column="47" lean-forward="false" selection-start-line="232" selection-start-column="47" selection-end-line="232" selection-end-column="47" />
+          <folding>
+            <element signature="e#12350#12351#0" expanded="true" />
+            <element signature="e#12388#12389#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="49" column="69" lean-forward="true" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/PetGenre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-          <folding>
-            <element signature="method#addAddButtonListener#0;class#NewAnimalFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/RegisterFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="method#addRegisterListener#0;class#RegisterFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="688">
+          <caret line="53" column="63" lean-forward="false" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
-          <folding>
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="class#LoginListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#RegisterListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#CloseListener#0;class#AppController#0" expanded="false" />
-            <element signature="class#AddAnimalListener#0;class#AppController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="63" column="51" lean-forward="false" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
-          <folding>
-            <element signature="method#getData#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#getUserId#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#deleteUser#0;class#DBConnect#0" expanded="false" />
-            <marker date="1496496032901" expanded="true" signature="1222:1246" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="3333:3357" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="4073:4099" ph="select * fro... rodzaj_akcji" />
-            <marker date="1496496032901" expanded="true" signature="4663:4677" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1496496032901" expanded="true" signature="4663:4697" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5459" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5481" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5483" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5426:5504" ph="select id_ro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="5818:5901" ph="select id_ro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="7591:7662" ph="select * fro... podopieczny" />
-            <marker date="1496496032901" expanded="true" signature="8120:8217" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1496496032901" expanded="true" signature="9205:9262" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="9815:9968" ph="insert into uzytkownik... " />
-            <marker date="1496496032901" expanded="true" signature="10276:10340" ph="select id_ro... rodzaj_podopiecznego" />
-            <marker date="1496496032901" expanded="true" signature="10689:10831" ph="insert into podopieczny... " />
-            <marker date="1496496032901" expanded="true" signature="11218:11272" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="11844:11898" ph="select * fro... uzytkownik" />
-            <marker date="1496496032901" expanded="true" signature="12323:12375" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7239">
-          <caret line="413" column="15" lean-forward="false" selection-start-line="413" selection-start-column="15" selection-end-line="413" selection-end-column="15" />
+        <state relative-caret-position="32">
+          <caret line="20" column="75" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="75" />
           <folding />
         </state>
       </provider>

@@ -1,6 +1,5 @@
 package tamagotchi.view;
 
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
@@ -22,23 +21,17 @@ public class BaseFrame extends JFrame {
     private JButton makeAction;
     private Panel healthHappinessHungerPanel;
     private JPanel usernamePanel;
-    private JLabel firstAnimalLabel;
-    private JLabel secondAnimalLabel;
-    private JLabel thirdAnimalLabel;
-    private JLabel forthAnimalLabel;
+    private Label firstAnimalLabel;
+    private Label secondAnimalLabel;
+    private Label thirdAnimalLabel;
+    private Label forthAnimalLabel;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
     private JMenuItem logoutItem;
     private JPopupMenu logout;
 
-    private JPopupMenu animalPopupMenu;
-    private JMenu healthMenu;
-    private JMenu happinessMenu;
-    private JMenu feedMenu;
-
-    private ArrayList<JMenuItem> actionsItems;
-    private ArrayList<PetInternal> pets;
+    private ArrayList<ActionItem> actionsItems;
 
     private JProgressBar healthBar;
     private JProgressBar happinessBar;
@@ -49,13 +42,11 @@ public class BaseFrame extends JFrame {
     private Vector<String> actions;
 
 
+
     public BaseFrame(IController baseController) {
         makeAction = new JButton("Make action");
         actionsItems = new ArrayList<>();
-        firstAnimalLabel =  new JLabel();
-        secondAnimalLabel = new JLabel();
-        thirdAnimalLabel =  new JLabel();
-        forthAnimalLabel =  new JLabel();
+        initializeLabels();
         basePanel = new Panel(baseController);
         healthHappinessHungerPanel = new Panel(baseController);
         healthBar = new JProgressBar(0, 100);
@@ -67,19 +58,6 @@ public class BaseFrame extends JFrame {
         logout = new JPopupMenu();
         logoutItem = new JMenuItem("Logout");
         logout.add(logoutItem);
-
-        animalPopupMenu = new JPopupMenu();
-        healthMenu = new JMenu("Health");
-        happinessMenu = new JMenu("Happiness");
-        feedMenu = new JMenu("Hunger");
-        animalPopupMenu.add(healthMenu);
-        animalPopupMenu.add(happinessMenu);
-        animalPopupMenu.add(feedMenu);
-
-        firstAnimalLabel.setComponentPopupMenu(animalPopupMenu);
-        secondAnimalLabel.setComponentPopupMenu(animalPopupMenu);
-        thirdAnimalLabel.setComponentPopupMenu(animalPopupMenu);
-        forthAnimalLabel.setComponentPopupMenu(animalPopupMenu);
 
         addAnimalButton = new JButton("Add new animal");
         welcomePanel.setOpaque(true);
@@ -100,6 +78,20 @@ public class BaseFrame extends JFrame {
         this.setContentPane(welcomePanel);
     }
 
+    public void initializeLabels() {
+        firstAnimalLabel = new Label();
+        secondAnimalLabel = new Label();
+        thirdAnimalLabel = new Label();
+        forthAnimalLabel = new Label();
+    }
+
+    public void clearLabels() {
+        firstAnimalLabel = null;
+        secondAnimalLabel = null;
+        thirdAnimalLabel = null;
+        forthAnimalLabel = null;
+    }
+
 
     public void setBasePanelAsContentPane() {
         this.setContentPane(basePanel);
@@ -107,21 +99,6 @@ public class BaseFrame extends JFrame {
         basePanel.setBackground(new Color(223, 223, 88));
         basePanel.setLayout(new GridBagLayout());
         constraints = new GridBagConstraints();
-    }
-
-    public void setActionsItems(ArrayList<String> actionNames) {
-        for (String action : actionNames) {
-            this.actionsItems.add(new JMenuItem(action));
-        }
-        setMenuItems(healthMenu, actionsItems);
-        setMenuItems(happinessMenu, actionsItems);
-        setMenuItems(feedMenu, actionsItems);
-    }
-
-    private void setMenuItems(JMenuItem menu, ArrayList<JMenuItem> items) {
-        for (JMenuItem item : items) {
-            menu.add(item);
-        }
     }
 
     private void setupFrame() {
@@ -252,27 +229,54 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public void addAnimalToPanel(String path, int position) {
+    public void addAnimalToPanel(String path, int position, int petId, int genreId) {
         ImageIcon animal = new ImageIcon(path);
         switch (position) {
             case 0:
                 firstAnimalLabel.setIcon(animal);
+                firstAnimalLabel.setPetId(petId);
+                firstAnimalLabel.setGenreId(genreId);
+                firstAnimalLabel.setActions(actionsItems);
                 panelHolder[2][0].add(firstAnimalLabel);
+                System.out.println(firstAnimalLabel.getPetId());
                 break;
             case 1:
                 secondAnimalLabel.setIcon(animal);
+                secondAnimalLabel.setPetId(petId);
+                secondAnimalLabel.setGenreId(genreId);
+                secondAnimalLabel.setActions(actionsItems);
                 panelHolder[2][1].add(secondAnimalLabel);
+                System.out.println(secondAnimalLabel.getPetId());
                 break;
             case 2:
                 thirdAnimalLabel.setIcon(animal);
+                thirdAnimalLabel.setPetId(petId);
+                thirdAnimalLabel.setGenreId(genreId);
+                thirdAnimalLabel.setActions(actionsItems);
                 panelHolder[2][2].add(thirdAnimalLabel);
+                System.out.println(thirdAnimalLabel.getPetId());
                 break;
             case 3:
                 forthAnimalLabel.setIcon(animal);
+                forthAnimalLabel.setPetId(petId);
+                forthAnimalLabel.setGenreId(genreId);
+                forthAnimalLabel.setActions(actionsItems);
                 panelHolder[2][3].add(forthAnimalLabel);
+                System.out.println(forthAnimalLabel.getPetId());
                 break;
         }
         this.setVisible(true);
+    }
+
+    public void setActionsItems(ArrayList<String> actionName, ArrayList<String> type, ArrayList<String> genreId) {
+        actionsItems = new ArrayList<>();
+        if (actionName.size() == type.size() && type.size() == genreId.size()) {
+            for (int i = 0; i < actionName.size(); i++) {
+                this.actionsItems.add(new ActionItem(actionName.get(i), genreId.get(i), type.get(i)));
+            }
+        } else {
+            System.out.println("ERROR");
+        }
     }
 
     public void removeAnimalsFromPanel() {
@@ -302,14 +306,6 @@ public class BaseFrame extends JFrame {
         constraints.anchor = GridBagConstraints.NORTHWEST;
 
         animalPanel.setLayout(new GridLayout(3,4));
-
-//        for(int m = 0; m < 3; m++) {
-//            for(int n = 0; n < 4; n++) {
-//                panelHolder[m][n] = new JPanel();
-//                panelHolder[m][n].setOpaque(false);
-//                animalPanel.add(panelHolder[m][n]);
-//            }
-//        }
 
         this.getContentPane().add(animalPanel, constraints);
         this.setVisible(true);
@@ -402,29 +398,26 @@ public class BaseFrame extends JFrame {
         logoutItem.addActionListener(logoutListener);
     }
 
-    class PetInternal {
-        String name;
-        String petGenre;
-        int position;
-        JLabel label;
-        ArrayList<JMenuItem> healthItems;
-        ArrayList<JMenuItem> happinessItems;
-        ArrayList<JMenuItem> feedItem;
+    public Label getFirstAnimalLabel() {
+        return firstAnimalLabel;
+    }
 
-        public PetInternal(String name, String petGenre, int position, JLabel label, ArrayList<JMenuItem> healthItems,
-                    ArrayList<JMenuItem> happinessItems, ArrayList<JMenuItem> feedItem) {
-            this.name = name;
-            this.petGenre = petGenre;
-            this.position = position;
-            this.label = label;
-            this.healthItems = healthItems;
-            this.happinessItems = happinessItems;
-            this.feedItem = feedItem;
-        }
+    public Label getSecondAnimalLabel() {
+        return secondAnimalLabel;
+    }
+
+    public Label getThirdAnimalLabel() {
+        return thirdAnimalLabel;
+    }
+
+    public Label getForthAnimalLabel() {
+        return forthAnimalLabel;
+    }
+
     }
 
 
 
 
 
-}
+

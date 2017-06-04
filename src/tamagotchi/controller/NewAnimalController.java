@@ -49,6 +49,8 @@ public class NewAnimalController implements IController {
         public void actionPerformed(ActionEvent e) {
             String genreOfAnimal = (String) newAnimalFrame.getGenreOfAnimal().getSelectedItem();
             String name = newAnimalFrame.getNameAnimalTextField().getText();
+            String idPet = null;
+            String idGenre = null;
             int amount_of_pets = connection.getLoggedUser().getPets().size();
 
             if (name.equals("")) {
@@ -56,8 +58,16 @@ public class NewAnimalController implements IController {
                 return;
             }
 
+            if (!connection.isPetNameUnique(name)) {
+                JOptionPane.showMessageDialog(newAnimalFrame, "Name already exists");
+                return;
+            }
+
             connection.addAnimalToCurrentUser(genreOfAnimal, name);
-            appController.getAppFrame().addAnimalToPanel(connection.getGenrePath(genreOfAnimal), amount_of_pets);
+            idPet = connection.getPetId(genreOfAnimal, name);
+            idGenre = connection.getGenreIdByPetId(idPet);
+            appController.getAppFrame().addAnimalToPanel(connection.getGenrePath(genreOfAnimal), amount_of_pets,
+                    Integer.parseInt(idPet), Integer.parseInt(idGenre));
             appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
             appController.getAppFrame().setActions(new Vector<>());
             appController.getAppFrame().removeComboBoxes();

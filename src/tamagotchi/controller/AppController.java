@@ -1,6 +1,7 @@
 package tamagotchi.controller;
 
 import tamagotchi.model.DBConnect;
+import tamagotchi.view.ActionItem;
 import tamagotchi.view.BaseFrame;
 
 import java.awt.*;
@@ -8,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 
 public class AppController implements IController {
@@ -16,7 +18,8 @@ public class AppController implements IController {
 
     public void start() {
         appFrame = new BaseFrame(this);
-        appFrame.setActionsItems(connection.getActionsFromDatabase());
+        ArrayList<String> ids = new ArrayList<>(connection.getActionsId());
+        appFrame.setActionsItems(connection.getActionName(ids), connection.getTypeOfAction(ids), connection.getGenreFromIdAction(ids));
         appFrame.addLoginListener(new LoginListener(this));
         appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));

@@ -50,14 +50,17 @@ public class LoginController implements IController {
                 appController.getAppFrame().removeAnimalsFromPanel();
                 appController.getAppFrame().removeLoginLabel();
                 appController.getAppFrame().removeComboBoxes();
+                appController.getAppFrame().clearLabels();
+                appController.getAppFrame().initializeLabels();
                 loginController.connection.login(loginController.connection.getUserByLogin(login));
-                ArrayList<String> genriesNames = new ArrayList<>(connection.getLoggedUserPetGenriesNames());
+                ArrayList<String> petsId = new ArrayList<>(connection.getLoggedUserPetsId());
+                ArrayList<String> genriesNames = new ArrayList<>(connection.getLoggedUserPetGenriesNames(petsId));
                 for (int i = 0; i < genriesNames.size(); i++) {
-                    appController.getAppFrame().addAnimalToPanel(connection.getGenrePath(genriesNames.get(i)), i);
+                    appController.getAppFrame().addAnimalToPanel( connection.getGenrePath(genriesNames.get(i)), i,
+                            Integer.parseInt(petsId.get(i)), Integer.parseInt(connection.getGenreIdByPetId(petsId.get(i))) );
                 }
                 appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
                 appController.getAppFrame().setActions(new Vector<>());
-
                 appController.getAppFrame().showAnimalPanel();
                 appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAddAnimalComboBox();

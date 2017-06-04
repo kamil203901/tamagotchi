@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 03 Cze 2017, 18:19
+-- Czas generowania: 04 Cze 2017, 20:57
 -- Wersja serwera: 10.1.22-MariaDB
 -- Wersja PHP: 7.1.4
 
@@ -50,7 +50,6 @@ INSERT INTO `akcja` (`id_akcji`, `id_rodzaj_akcji`, `id_rodzaj_podopieczny`) VAL
 (9, 9, 3),
 (10, 10, 3),
 (11, 9, 5),
-(12, 9, 5),
 (13, 7, 5),
 (14, 8, 5);
 
@@ -88,14 +87,10 @@ CREATE TABLE `podopieczny` (
 --
 
 INSERT INTO `podopieczny` (`id_podopieczny`, `id_rodzaj`, `imie`, `wiek`, `waga`, `data_ostatniego_karmienia`, `id_uzytkownik`) VALUES
-(93, 3, 'dfgh', 1, 1, NULL, 5),
-(94, 3, 'sdfg', 1, 1, NULL, 1),
-(95, 3, 'dfg', 1, 1, NULL, 5),
-(96, 3, 'asdf', 1, 1, NULL, 1),
-(97, 3, 'dfg', 1, 1, NULL, 5),
-(98, 3, 'sadf', 1, 1, NULL, 1),
-(99, 4, 'ghj', 1, 1, NULL, 1),
-(100, 5, 'fgj', 1, 1, NULL, 5);
+(117, 3, 'df', 1, 1, NULL, 5),
+(118, 4, 'sdfg', 1, 1, NULL, 5),
+(119, 4, 'zcv', 1, 1, NULL, 1),
+(120, 3, 'aad', 1, 1, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -114,7 +109,7 @@ CREATE TABLE `rodzaj_akcji` (
 --
 
 INSERT INTO `rodzaj_akcji` (`id_rodzaj_akcji`, `nazwa_rodzaju_akcji`, `nazwa_akcji`) VALUES
-(1, 'karmienie', ''),
+(1, 'karmienie', 'sucha_karma'),
 (2, 'leczenie', 'odrobaczenie'),
 (3, 'zabawa', 'rzuc kij'),
 (4, 'zabawa', 'spacer'),
@@ -174,7 +169,8 @@ INSERT INTO `uzytkownik` (`id`, `login`, `imie`, `nazwisko`, `haslo`) VALUES
 (9, 'l', 'l', 'l', 'l'),
 (10, 'f', 'f', 'f', 'f'),
 (11, 's', 's', 's', 's'),
-(12, 'p', 'p', 'p', 'p');
+(12, 'p', 'p', 'p', 'p'),
+(13, 'a', 'l', 'l', 'l');
 
 -- --------------------------------------------------------
 
@@ -269,7 +265,7 @@ ALTER TABLE `historia_akcji`
 -- AUTO_INCREMENT dla tabeli `podopieczny`
 --
 ALTER TABLE `podopieczny`
-  MODIFY `id_podopieczny` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id_podopieczny` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 --
 -- AUTO_INCREMENT dla tabeli `rodzaj_akcji`
 --
@@ -284,7 +280,7 @@ ALTER TABLE `rodzaj_podopiecznego`
 -- AUTO_INCREMENT dla tabeli `uzytkownik`
 --
 ALTER TABLE `uzytkownik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT dla tabeli `waga`
 --

@@ -1,9 +1,6 @@
 package tamagotchi.model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -54,6 +51,7 @@ public class DBConnect {
         for (PetGenre petGenre : this.genries) {
             if (petGenre.getName().equals(genreName)) {
                 path = petGenre.getPath();
+                break;
             }
         }
 
@@ -100,6 +98,160 @@ public class DBConnect {
         return tmp;
     }
 
+    public ArrayList<String> getActionsId(String genreId) {
+        ArrayList<String> actionsId = new ArrayList<>();
+
+        try {
+            String query = "select * from akcja where id_rodzaj_podopieczny = '" + genreId + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                actionsId.add(rs.getString("id_rodzaj_akcji"));
+            }
+            System.out.println("List of users read from database");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actionsId;
+    }
+
+    public Vector<String> getVectorOfActions(String genre) {
+        Vector<String> actions = new Vector<>();
+        Vector<String> actionsId = new Vector<>();
+        String genreId = getGenreId(genre);
+
+        try {
+            String query = "select * from akcja where id_rodzaj_podopieczny = '" + genreId + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                actionsId.add(rs.getString("id_rodzaj_akcji"));
+            }
+
+            for (String id : actionsId) {
+                query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + id + "'";
+                rs = st.executeQuery(query);
+                rs.next();
+                actions.add(rs.getString("nazwa_akcji"));
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actions;
+
+    }
+
+    public ArrayList<String> getActionsId() {
+        ArrayList<String> actionsId = new ArrayList<>();
+
+        try {
+            String query = "select * from akcja";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                actionsId.add(rs.getString("id_akcji"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actionsId;
+    }
+
+    public ArrayList<String> getLoggedUserPetsId() {
+        ArrayList<String> petsId = new ArrayList<>();
+
+        try {
+            String query = "select * from podopieczny where id_uzytkownik = '" + getUserId(currentUser.getLogin()) + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                petsId.add(rs.getString("id_podopieczny"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return petsId;
+    }
+
+    public ArrayList<String> getHealthActions(String genre) {
+        String genreId = getGenreId(genre);
+        ArrayList<String> actionsId = new ArrayList<>(getActionsId(genreId));
+        ArrayList<String> actions = new ArrayList<>();
+
+        for (String id : actionsId) {
+            try {
+                String query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + id +"' and nazwa_rodzaju_akcji = leczenie";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                    actions.add(rs.getString("nazwa_akcji"));
+                }
+                System.out.println("List of users read from database");
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+        return actions;
+    }
+
+    public ArrayList<String> getHappinessActions(String genre) {
+        String genreId = getGenreId(genre);
+        ArrayList<String> actionsId = new ArrayList<>(getActionsId(genreId));
+        ArrayList<String> actions = new ArrayList<>();
+
+        for (String id : actionsId) {
+            try {
+                String query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + id +"' and nazwa_rodzaju_akcji = zabawa";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                    actions.add(rs.getString("nazwa_akcji"));
+                }
+                System.out.println("List of users read from database");
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+        return actions;
+    }
+
+    public ArrayList<String> getFeedActions(String genre) {
+        String genreId = getGenreId(genre);
+        ArrayList<String> actionsId = new ArrayList<>(getActionsId(genreId));
+        ArrayList<String> actions = new ArrayList<>();
+
+        for (String id : actionsId) {
+            try {
+                String query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + id +"' and nazwa_rodzaju_akcji = karmienie";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                    actions.add(rs.getString("nazwa_akcji"));
+                }
+                System.out.println("List of users read from database");
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+        return actions;
+    }
+
+    public String getPetId(String genre, String name) {
+        String petId = null;
+        String genreId = getGenreId(genre);
+        try {
+            String query = "select * from podopieczny where id_rodzaj = '" + genreId + "' and " +
+                    "imie = '" + name +"'";
+            rs = st.executeQuery(query);
+            rs.next();
+            petId = rs.getString("id_podopieczny");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return petId;
+    }
 
     private ArrayList<User> getUsersFromDatabase() {
         ArrayList<User> listOfUsers = new ArrayList<>();
@@ -192,6 +344,40 @@ public class DBConnect {
 
     }
 
+    public ArrayList<String> getLoggedUserPetGenriesNames(ArrayList<String> petsId) {
+        ArrayList<String> genriesId = new ArrayList<>();
+        ArrayList<String> genriesNames = new ArrayList<>();
+        String loggedUserId = getUserId(DBConnect.currentUser.getLogin());
+
+        for (String petId : petsId) {
+            try {
+                String query = "select id_rodzaj from podopieczny where id_uzytkownik = '" + loggedUserId + "' and " +
+                        "id_podopieczny = '" + petId +"'";
+                rs = st.executeQuery(query);
+                rs.next();
+                genriesId.add(rs.getString("id_rodzaj"));
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+        for (String id : genriesId) {
+            try {
+                String query = "select nazwa from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + id + "'";
+                rs = st.executeQuery(query);
+                while (rs.next()) {
+                    genriesNames.add(rs.getString("nazwa"));
+                }
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
+
+        return genriesNames;
+
+    }
+
     public Vector<String> getGenriesNames() {
         Vector<String> genriesNames = new Vector<>();
 
@@ -202,7 +388,24 @@ public class DBConnect {
         return genriesNames;
     }
 
+    public boolean isPetNameUnique(String petName) {
+        boolean isUnique = true;
 
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                if (petName.equals(rs.getString("imie"))) {
+                    isUnique = false;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return isUnique;
+    }
 
     private void setCurrentUsersPets() {
         class TempPetInfo {
@@ -284,6 +487,167 @@ public class DBConnect {
         }
 
         return id;
+    }
+
+    private String getGenreId(String genre) {
+        String id = null;
+        try {
+            String query = "select * from rodzaj_podopiecznego where nazwa = '" + genre + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            id = rs.getString("id_rodzaj_podopiecznego");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return id;
+    }
+
+
+
+    public String getGenreIdByPetId(String petId) {
+        String genreId = null;
+        try {
+            String query = "select * from podopieczny where id_podopieczny = '" + petId + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            genreId = rs.getString("id_rodzaj");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return genreId;
+    }
+
+    public String getTypeOfAction(String idGenreAction) {
+        String typeOfAction = null;
+        try {
+            String query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + idGenreAction + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            typeOfAction = rs.getString("nazwa_rodzaju_akcji");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return typeOfAction;
+    }
+
+    public String getTypeOfActionByIdAction(String idAction) {
+        String typeOfAction = null;
+        String idGenreAction = null;
+        try {
+            String query = "select * from akcja where id_akcji = '" + idAction + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            idGenreAction = rs.getString("id_rodzaj_akcji");
+            typeOfAction = getTypeOfAction(idGenreAction);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+
+        return typeOfAction;
+    }
+
+
+    public String getActionName(String idAGenreAction) {
+        String actionName = null;
+        try {
+            String query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + idAGenreAction + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            actionName = rs.getString("nazwa_akcji");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actionName;
+    }
+
+    public String getActionNameByIdAction(String idAction) {
+        String actionName = null;
+        String idActionGenre = null;
+
+        try {
+            String query = "select * from akcja where id_akcji = '" + idAction + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            idActionGenre = rs.getString("id_rodzaj_akcji");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        actionName = getActionName(idActionGenre);
+
+        return actionName;
+    }
+
+
+
+    public ArrayList<String> getGenreFromIdAction(ArrayList<String> idAction) {
+        ArrayList<String> genres = new ArrayList<>();
+        ArrayList<String> genresId = new ArrayList<>();
+
+        for (String id : idAction) {
+            genres.add(getGenreFromIdAction(id));
+        }
+
+        genresId = getGenreId(genres);
+
+        return genresId;
+    }
+
+    public ArrayList<String> getGenreId(ArrayList<String> genres) {
+        ArrayList<String> genre = new ArrayList<>();
+        for (String value : genres) {
+            genre.add(getGenreId(value));
+        }
+
+        return genre;
+    }
+
+    public ArrayList<String> getActionName(ArrayList<String> idAction) {
+        ArrayList<String> actionName = new ArrayList<>();
+        for (int i = 0; i < idAction.size(); i++) {
+            actionName.add(getActionNameByIdAction(idAction.get(i)));
+        }
+
+        return actionName;
+    }
+
+    public ArrayList<String> getTypeOfAction(ArrayList<String> idAction) {
+        ArrayList<String> actionType = new ArrayList<>();
+        for (String id : idAction) {
+            actionType.add(getTypeOfActionByIdAction(id));
+        }
+        return actionType;
+    }
+
+
+
+    public String getGenreFromIdAction(String idAction) {
+        String genre = null;
+        String genreId = null;
+
+        try {
+            String query = "select * from akcja where id_akcji = '" + idAction + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            genreId = rs.getString("id_rodzaj_podopieczny");
+
+            query = "select * from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + genreId + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            genre = rs.getString("nazwa");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return genre;
     }
 
 
