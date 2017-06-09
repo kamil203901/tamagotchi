@@ -39,8 +39,8 @@ public class BaseFrame extends JFrame {
     private GridBagConstraints constraints;
     private JPanel[][] panelHolder;
     private Vector<String> genries;
+   // private ArrayList<Vector<String>> actions;
     private Vector<String> actions;
-
 
 
     public BaseFrame(IController baseController) {
@@ -364,6 +364,10 @@ public class BaseFrame extends JFrame {
     public void setGenries(Vector<String> genries) {
         this.genries = genries;
     }
+
+    //public void setActions(ArrayList<Vector<String>> actions) {
+       // this.actions = actions;
+   // }
 
     public void setActions(Vector<String> actions) {
         this.actions = actions;

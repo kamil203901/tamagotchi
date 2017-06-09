@@ -56,16 +56,21 @@ public class RegisterController implements IController {
                 registerFrame.getLoginTextField().setText("");
                 return;
             }
+            appController.getAppFrame().removeAnimalsFromPanel();
+            appController.getAppFrame().removeLoginLabel();
+            appController.getAppFrame().removeComboBoxes();
+            appController.getAppFrame().clearLabels();
+            appController.getAppFrame().initializeLabels();
 
             connection.addUser(login, name, surname, password);
             JOptionPane.showConfirmDialog(registerFrame, "User " + login + " registered successfully.",
                     "Register", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE);
 
             appController.getAppFrame().setBasePanelAsContentPane();
-            appController.getAppFrame().setGenries(new Vector<>());
-            appController.getAppFrame().setActions(new Vector<>());
             appController.getAppFrame().removeLoginLabel();
             appController.getAppFrame().removeComboBoxes();
+            appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
+            appController.getAppFrame().setActions(connection.getVectorOfActions());
             appController.getAppFrame().showLoginLabel(login);
             appController.getAppFrame().showAnimalPanel();
             appController.getAppFrame().showAddAnimalComboBox();

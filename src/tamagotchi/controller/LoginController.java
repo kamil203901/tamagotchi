@@ -60,7 +60,7 @@ public class LoginController implements IController {
                             Integer.parseInt(petsId.get(i)), Integer.parseInt(connection.getGenreIdByPetId(petsId.get(i))) );
                 }
                 appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
-                appController.getAppFrame().setActions(new Vector<>());
+                appController.getAppFrame().setActions(connection.getVectorOfActions());
                 appController.getAppFrame().showAnimalPanel();
                 appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAddAnimalComboBox();

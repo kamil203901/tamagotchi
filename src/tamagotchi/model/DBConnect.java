@@ -98,6 +98,7 @@ public class DBConnect {
         return tmp;
     }
 
+    // zwraca id rodzajow akcji (nie typow) dla danego id zwierzecia
     public ArrayList<String> getActionsId(String genreId) {
         ArrayList<String> actionsId = new ArrayList<>();
 
@@ -107,7 +108,6 @@ public class DBConnect {
             while (rs.next()) {
                 actionsId.add(rs.getString("id_rodzaj_akcji"));
             }
-            System.out.println("List of users read from database");
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -115,6 +115,7 @@ public class DBConnect {
         return actionsId;
     }
 
+    // zwraca wektor nazw akcji dla danego gatunku zwierzecia
     public Vector<String> getVectorOfActions(String genre) {
         Vector<String> actions = new Vector<>();
         Vector<String> actionsId = new Vector<>();
@@ -142,6 +143,27 @@ public class DBConnect {
 
     }
 
+    // zwraca wektor nazw akcji dla wszystkich zwierzat
+    public Vector<String> getVectorOfActions() {
+        Vector<String> actions = new Vector<>();
+
+        try {
+            String query = "select * from rodzaj_akcji";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+               actions.add(rs.getString("nazwa_akcji"));
+            }
+
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actions;
+
+    }
+
+    // zwraca wektor wszystkich id akcji
     public ArrayList<String> getActionsId() {
         ArrayList<String> actionsId = new ArrayList<>();
 
@@ -407,6 +429,70 @@ public class DBConnect {
         return isUnique;
     }
 
+    // zwraca liste wektorow nazw akcji dla wszystkich typow zwierzat
+    public ArrayList<Vector<String>> getActions() {
+        ArrayList<Vector<String>> actions = new ArrayList<>();
+        ArrayList<String> genriesId = new ArrayList<>();
+
+        try {
+            String query = "select * from rodzaj_podopiecznego";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                genriesId.add(rs.getString("id_rodzaj_podopiecznego"));
+            }
+
+            for (String id : genriesId) {
+                actions.add(getActionsNames(id));
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actions;
+    }
+
+    public ArrayList<Vector<String>> getAllActionsId() {
+        ArrayList<Vector<String>> actionsNames = new ArrayList<>(getActions());
+        ArrayList<Vector<String>> actionsId = new ArrayList<>(actionsNames.size());
+
+        for (int i = 0; i < actionsId.size(); i++) {
+            for (int j = 0; j < actionsNames.get(i).size(); j++) {
+                actionsId.get(i).add(getActionGenreId(actionsNames.get(i).get(j)));
+            }
+        }
+
+        return actionsId;
+    }
+
+    // zwraca wektor nazw akcji dla danego typu zwierzecia
+    public Vector<String> getActionsNames(String genreId) {
+        Vector<String> actions = new Vector<>();
+        Vector<String> actionsGenreId = new Vector<>();
+
+        try {
+            String query = "select * from akcja where id_rodzaj_podopieczny = '" + genreId + "'";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                actionsGenreId.add(rs.getString("id_rodzaj_akcji"));
+            }
+
+            for (String actionGenreId : actionsGenreId) {
+                query = "select * from rodzaj_akcji where id_rodzaj_akcji = '" + actionGenreId + "'";
+                rs = st.executeQuery(query);
+                rs.next();
+                actions.add(rs.getString("nazwa_akcji"));
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actions;
+    }
+
+
+
     private void setCurrentUsersPets() {
         class TempPetInfo {
             private String petName;
@@ -503,6 +589,20 @@ public class DBConnect {
         return id;
     }
 
+    private String getGenreName(String genreId) {
+        String genreName = null;
+        try {
+            String query = "select * from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + genreId + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            genreName = rs.getString("nazwa");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return genreName;
+    }
+
 
 
     public String getGenreIdByPetId(String petId) {
@@ -520,6 +620,64 @@ public class DBConnect {
         return genreId;
     }
 
+    public String getActionGenreId(String actionName) {
+        String actionGenreId = null;
+
+        try {
+            String query = "select * from rodzaj_akcji where nazwa_akcji = '" + actionName + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            actionGenreId = rs.getString("id_rodzaj_akcji");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return actionGenreId;
+    }
+
+    public String getPetGenre(Vector<String> actionsGenries) {
+        Vector<String> petGenriesId = new Vector<>();
+        ArrayList<Vector<String>> allActionsNames = new ArrayList<>(getActions());
+        try {
+            String query = "select * from rodzaj_podopiecznego";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                petGenriesId.add(rs.getString("id_rodzaj_podopiecznego"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        boolean isEqual = true;
+        String correctPetGenreId = null;
+
+        for (int i = 0; i < petGenriesId.size(); i++) {
+            Vector<String> actionsNames = new Vector<>(getActionsNames(petGenriesId.get(i)));
+            correctPetGenreId = petGenriesId.get(i);
+
+            for (int j = 0; j < actionsNames.size(); j++) {
+                if (!actionsNames.get(j).equals(actionsGenries.get(j))) {
+                    correctPetGenreId = null;
+                    isEqual = false;
+                    break;
+                }
+            }
+
+            if (isEqual) {
+                break;
+            }
+        }
+
+        if (correctPetGenreId != null) {
+            System.out.println("Znaleziono typ");
+            return getGenreName(correctPetGenreId);
+        }
+
+        return null;
+    }
+
+
+    //zwraca typ akcji na podstawie id rodzaju akcji
     public String getTypeOfAction(String idGenreAction) {
         String typeOfAction = null;
         try {
@@ -534,6 +692,7 @@ public class DBConnect {
         return typeOfAction;
     }
 
+    // zwraca typ akcji na podstawie id akcji
     public String getTypeOfActionByIdAction(String idAction) {
         String typeOfAction = null;
         String idGenreAction = null;
@@ -552,7 +711,7 @@ public class DBConnect {
         return typeOfAction;
     }
 
-
+    // zwraca nazwe akcji na podstawie id rodzaju akcji
     public String getActionName(String idAGenreAction) {
         String actionName = null;
         try {
@@ -567,6 +726,7 @@ public class DBConnect {
         return actionName;
     }
 
+    // zwraca nazwe akcji na podstawie id akcji
     public String getActionNameByIdAction(String idAction) {
         String actionName = null;
         String idActionGenre = null;
@@ -586,7 +746,7 @@ public class DBConnect {
     }
 
 
-
+    // zwraca
     public ArrayList<String> getGenreFromIdAction(ArrayList<String> idAction) {
         ArrayList<String> genres = new ArrayList<>();
         ArrayList<String> genresId = new ArrayList<>();
