@@ -5,11 +5,14 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Vector;
 
 import tamagotchi.controller.IController;
+import tamagotchi.controller.UpdateAnimalController;
+import tamagotchi.model.DBConnect;
 
 public class BaseFrame extends JFrame {
     private Panel basePanel;
@@ -21,10 +24,7 @@ public class BaseFrame extends JFrame {
     private JButton makeAction;
     private Panel healthHappinessHungerPanel;
     private JPanel usernamePanel;
-    private Label firstAnimalLabel;
-    private Label secondAnimalLabel;
-    private Label thirdAnimalLabel;
-    private Label forthAnimalLabel;
+    private Label[] animalLabels;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
     private JMenuItem closeButton;
@@ -33,9 +33,9 @@ public class BaseFrame extends JFrame {
 
     private ArrayList<ActionItem> actionsItems;
 
-    private JProgressBar healthBar;
-    private JProgressBar happinessBar;
-    private JProgressBar hungerBar;
+    private static JProgressBar healthBar;
+    private static JProgressBar happinessBar;
+    private static JProgressBar hungerBar;
     private GridBagConstraints constraints;
     private JPanel[][] panelHolder;
     private Vector<String> genries;
@@ -79,17 +79,76 @@ public class BaseFrame extends JFrame {
     }
 
     public void initializeLabels() {
-        firstAnimalLabel = new Label();
-        secondAnimalLabel = new Label();
-        thirdAnimalLabel = new Label();
-        forthAnimalLabel = new Label();
+        animalLabels = new Label[4];
+
+        for (int i = 0; i < animalLabels.length; i++) {
+            animalLabels[i] = new Label();
+            int finalI = i;
+            animalLabels[i].getDelete().addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    int petId = animalLabels[finalI].getPetId();
+                    new DBConnect().deletePet(String.valueOf(petId));
+                    updateFrame();
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+
+                }
+            });
+        }
+    }
+
+    public void updateFrame() {
+        DBConnect connection = new DBConnect();
+        String login = connection.getLoggedUser().getLogin();
+        this.setBasePanelAsContentPane();
+        this.removeAnimalsFromPanel();
+        this.removeLoginLabel();
+        this.removeComboBoxes();
+        this.clearLabels();
+        this.initializeLabels();
+        connection.login(connection.getUserByLogin(login));
+        ArrayList<String> petsId = new ArrayList<>(connection.getLoggedUserPetsId());
+        ArrayList<String> genriesNames = new ArrayList<>(connection.getLoggedUserPetGenriesNames(petsId));
+        for (int i = 0; i < genriesNames.size(); i++) {
+            this.addAnimalToPanel(connection.getGenrePath(genriesNames.get(i)), i,
+                    Integer.parseInt(petsId.get(i)),
+                    Integer.parseInt(connection.getGenreIdByPetId(petsId.get(i))),
+                    Integer.parseInt(connection.getHealth(petsId.get(i))),
+                    Integer.parseInt(connection.getHappiness(petsId.get(i))),
+                    Integer.parseInt(connection.getHunger(petsId.get(i))));
+        }
+        this.addUpdateAnimalPropertiesListener(new UpdateAnimalController(this, connection));
+        this.setGenries(connection.getLoggedUser().getPetGenries());
+        this.setActions(connection.getVectorOfActions());
+        this.showAnimalPanel();
+        this.showLoginLabel(login);
+        this.showAddAnimalComboBox();
+        this.showHealthHappinessHungerPanel();
+        this.showBoxesAndButtonToMakeActionOnAllPets();
     }
 
     public void clearLabels() {
-        firstAnimalLabel = null;
-        secondAnimalLabel = null;
-        thirdAnimalLabel = null;
-        forthAnimalLabel = null;
+        for (int i = 0; i < animalLabels.length; i++) {
+            animalLabels[i] = null;
+        }
     }
 
 
@@ -229,50 +288,54 @@ public class BaseFrame extends JFrame {
         this.setVisible(true);
     }
 
-    public void addAnimalToPanel(String path, int position, int petId, int genreId) {
+    public void addAnimalToPanel(String path, int position, int petId, int genreId, int health, int happiness, int hunger) {
         ImageIcon animal = new ImageIcon(path);
         switch (position) {
             case 0:
-                firstAnimalLabel.setIcon(animal);
-                firstAnimalLabel.setPetId(petId);
-                firstAnimalLabel.setGenreId(genreId);
-                firstAnimalLabel.setActions(actionsItems);
-                panelHolder[2][0].add(firstAnimalLabel);
-                System.out.println(firstAnimalLabel.getPetId());
+                animalLabels[0].setIcon(animal);
+                animalLabels[0].setPetId(petId);
+                animalLabels[0].setAnimalProperties(health, happiness, hunger);
+                animalLabels[0].setGenreId(genreId);
+                animalLabels[0].setActions(actionsItems);
+                panelHolder[2][0].add(animalLabels[0]);
+                System.out.println(animalLabels[0].getPetId());
                 break;
             case 1:
-                secondAnimalLabel.setIcon(animal);
-                secondAnimalLabel.setPetId(petId);
-                secondAnimalLabel.setGenreId(genreId);
-                secondAnimalLabel.setActions(actionsItems);
-                panelHolder[2][1].add(secondAnimalLabel);
-                System.out.println(secondAnimalLabel.getPetId());
+                animalLabels[1].setIcon(animal);
+                animalLabels[1].setPetId(petId);
+                animalLabels[1].setAnimalProperties(health, happiness, hunger);
+                animalLabels[1].setGenreId(genreId);
+                animalLabels[1].setActions(actionsItems);
+                panelHolder[2][1].add(animalLabels[1]);
+                System.out.println(animalLabels[1].getPetId());
                 break;
             case 2:
-                thirdAnimalLabel.setIcon(animal);
-                thirdAnimalLabel.setPetId(petId);
-                thirdAnimalLabel.setGenreId(genreId);
-                thirdAnimalLabel.setActions(actionsItems);
-                panelHolder[2][2].add(thirdAnimalLabel);
-                System.out.println(thirdAnimalLabel.getPetId());
+                animalLabels[2].setIcon(animal);
+                animalLabels[2].setPetId(petId);
+                animalLabels[2].setAnimalProperties(health, happiness, hunger);
+                animalLabels[2].setGenreId(genreId);
+                animalLabels[2].setActions(actionsItems);
+                panelHolder[2][2].add(animalLabels[2]);
+                System.out.println(animalLabels[2].getPetId());
                 break;
             case 3:
-                forthAnimalLabel.setIcon(animal);
-                forthAnimalLabel.setPetId(petId);
-                forthAnimalLabel.setGenreId(genreId);
-                forthAnimalLabel.setActions(actionsItems);
-                panelHolder[2][3].add(forthAnimalLabel);
-                System.out.println(forthAnimalLabel.getPetId());
+                animalLabels[3].setIcon(animal);
+                animalLabels[3].setPetId(petId);
+                animalLabels[3].setAnimalProperties(health, happiness, hunger);
+                animalLabels[3].setGenreId(genreId);
+                animalLabels[3].setActions(actionsItems);
+                panelHolder[2][3].add(animalLabels[3]);
+                System.out.println(animalLabels[3].getPetId());
                 break;
         }
         this.setVisible(true);
     }
 
-    public void setActionsItems(ArrayList<String> actionName, ArrayList<String> type, ArrayList<String> genreId) {
+    public void setActionsItems(ArrayList<String> actionName, ArrayList<String> type, ArrayList<String> genreId, ArrayList<Integer> points) {
         actionsItems = new ArrayList<>();
-        if (actionName.size() == type.size() && type.size() == genreId.size()) {
+        if (actionName.size() == type.size() && type.size() == genreId.size() && genreId.size() == points.size()) {
             for (int i = 0; i < actionName.size(); i++) {
-                this.actionsItems.add(new ActionItem(actionName.get(i), genreId.get(i), type.get(i)));
+                this.actionsItems.add(new ActionItem(actionName.get(i), genreId.get(i), type.get(i), points.get(i)));
             }
         } else {
             System.out.println("ERROR");
@@ -280,8 +343,6 @@ public class BaseFrame extends JFrame {
     }
 
     public void removeAnimalsFromPanel() {
-        //animalPanel.removeAll();
-
         for(int m = 0; m < 3; m++) {
             for(int n = 0; n < 4; n++) {
                 panelHolder[m][n].removeAll();
@@ -361,6 +422,22 @@ public class BaseFrame extends JFrame {
 
     }
 
+    public Label[] getAnimalLabels() {
+        return animalLabels;
+    }
+
+    public static JProgressBar getHealthBar() {
+        return healthBar;
+    }
+
+    public static JProgressBar getHappinessBar() {
+        return happinessBar;
+    }
+
+    public static JProgressBar getHungerBar() {
+        return hungerBar;
+    }
+
     public void setGenries(Vector<String> genries) {
         this.genries = genries;
     }
@@ -402,23 +479,14 @@ public class BaseFrame extends JFrame {
         logoutItem.addActionListener(logoutListener);
     }
 
-    public Label getFirstAnimalLabel() {
-        return firstAnimalLabel;
+    public void addUpdateAnimalPropertiesListener(MouseListener updateProperties) {
+        for (int i = 0; i < animalLabels.length; i++) {
+            animalLabels[i].addMouseListener(updateProperties);
+        }
     }
 
-    public Label getSecondAnimalLabel() {
-        return secondAnimalLabel;
-    }
 
-    public Label getThirdAnimalLabel() {
-        return thirdAnimalLabel;
-    }
-
-    public Label getForthAnimalLabel() {
-        return forthAnimalLabel;
-    }
-
-    }
+}
 
 
 

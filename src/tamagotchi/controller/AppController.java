@@ -19,7 +19,10 @@ public class AppController implements IController {
     public void start() {
         appFrame = new BaseFrame(this);
         ArrayList<String> ids = new ArrayList<>(connection.getActionsId());
-        appFrame.setActionsItems(connection.getActionName(ids), connection.getTypeOfAction(ids), connection.getGenreFromIdAction(ids));
+        appFrame.setActionsItems(connection.getActionName(ids),
+                connection.getTypeOfAction(ids),
+                connection.getGenreFromIdAction(ids),
+                connection.getPointsFromIdAction(ids));
         appFrame.addLoginListener(new LoginListener(this));
         appFrame.addRegisterListener(new RegisterListener(this));
         appFrame.addCloseListener(new CloseListener(appFrame));
@@ -102,7 +105,5 @@ public class AppController implements IController {
             appController.getAppFrame().setWelcomePanelAsContenePane();
         }
     }
-
-
 
 }

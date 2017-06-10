@@ -67,7 +67,12 @@ public class NewAnimalController implements IController {
             idPet = connection.getPetId(genreOfAnimal, name);
             idGenre = connection.getGenreIdByPetId(idPet);
             appController.getAppFrame().addAnimalToPanel(connection.getGenrePath(genreOfAnimal), amount_of_pets,
-                    Integer.parseInt(idPet), Integer.parseInt(idGenre));
+                    Integer.parseInt(idPet),
+                    Integer.parseInt(idGenre),
+                    Integer.parseInt(connection.getHealth(idPet)),
+                    Integer.parseInt(connection.getHappiness(idPet)),
+                    Integer.parseInt(connection.getHunger(idPet)));
+            appController.getAppFrame().addUpdateAnimalPropertiesListener(new UpdateAnimalController(appController.getAppFrame(), connection));
             appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
             appController.getAppFrame().setActions(connection.getVectorOfActions());
             appController.getAppFrame().removeComboBoxes();

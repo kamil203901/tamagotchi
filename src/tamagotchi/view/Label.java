@@ -3,16 +3,17 @@ package tamagotchi.view;
 import javax.swing.*;
 import java.util.ArrayList;
 
-/**
- * Created by kamil on 03.06.17.
- */
 public class Label extends JLabel {
-    private int petId;
+    private int petId = 0;
     private int genreId;
     private JPopupMenu menu;
     private JMenu health;
     private JMenu happiness;
     private JMenu feed;
+    private int healthValue;
+    private int happinessValue;
+    private int hungerValue;
+    private JMenuItem delete;
     private ArrayList<ActionItem> actions;
 
     public Label(int petId, Icon image) {
@@ -32,6 +33,7 @@ public class Label extends JLabel {
     public Label() {
         super();
 
+        delete = new JMenuItem("Delete pet");
         menu = new JPopupMenu();
         health = new JMenu("Health");
         happiness = new JMenu("Happiness");
@@ -41,6 +43,7 @@ public class Label extends JLabel {
         menu.add(health);
         menu.add(happiness);
         menu.add(feed);
+        menu.add(delete);
         this.setComponentPopupMenu(menu);
     }
 
@@ -135,7 +138,27 @@ public class Label extends JLabel {
         return feed;
     }
 
+    public JMenuItem getDelete() {
+        return delete;
+    }
 
+    public int getHealthValue() {
+        return healthValue;
+    }
+
+    public int getHappinessValue() {
+        return happinessValue;
+    }
+
+    public int getHungerValue() {
+        return hungerValue;
+    }
+
+    public void setAnimalProperties(int healthValue, int happinessValue, int hungerValue) {
+        this.healthValue = healthValue;
+        this.happinessValue = happinessValue;
+        this.hungerValue = hungerValue;
+    }
 
     public int getPetId() {
         return petId;
@@ -152,4 +175,6 @@ public class Label extends JLabel {
     public void setGenreId(int genreId) {
         this.genreId = genreId;
     }
+
+
 }

@@ -57,8 +57,17 @@ public class LoginController implements IController {
                 ArrayList<String> genriesNames = new ArrayList<>(connection.getLoggedUserPetGenriesNames(petsId));
                 for (int i = 0; i < genriesNames.size(); i++) {
                     appController.getAppFrame().addAnimalToPanel( connection.getGenrePath(genriesNames.get(i)), i,
-                            Integer.parseInt(petsId.get(i)), Integer.parseInt(connection.getGenreIdByPetId(petsId.get(i))) );
+                            Integer.parseInt(petsId.get(i)),
+                            Integer.parseInt(connection.getGenreIdByPetId(petsId.get(i))),
+                            Integer.parseInt(connection.getHealth(petsId.get(i))),
+                            Integer.parseInt(connection.getHappiness(petsId.get(i))),
+                            Integer.parseInt(connection.getHunger(petsId.get(i))));
                 }
+               // UpdateAnimalController update =
+                        new UpdateAnimalController(appController.getAppFrame(), new DBConnect()).start();
+                //update.start();
+               // update.addActionListenersToAnimalActions();
+                appController.getAppFrame().addUpdateAnimalPropertiesListener(new UpdateAnimalController(appController.getAppFrame(), connection));
                 appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
                 appController.getAppFrame().setActions(connection.getVectorOfActions());
                 appController.getAppFrame().showAnimalPanel();

@@ -182,6 +182,7 @@ public class DBConnect {
 
     public ArrayList<String> getLoggedUserPetsId() {
         ArrayList<String> petsId = new ArrayList<>();
+        String userId = getUserId(currentUser.getLogin());
 
         try {
             String query = "select * from podopieczny where id_uzytkownik = '" + getUserId(currentUser.getLogin()) + "'";
@@ -524,6 +525,10 @@ public class DBConnect {
         String currentUserId = getUserId(currentUser.getLogin());
         String petName, path, petGenre, idPetGenre, weight, age;
 
+        if (currentUserId == null) {
+            return;
+        }
+
         try {
             String query = "select * from podopieczny where id_uzytkownik = '" + currentUserId + "'";
             rs = st.executeQuery(query);
@@ -692,6 +697,8 @@ public class DBConnect {
         return typeOfAction;
     }
 
+
+
     // zwraca typ akcji na podstawie id akcji
     public String getTypeOfActionByIdAction(String idAction) {
         String typeOfAction = null;
@@ -760,6 +767,31 @@ public class DBConnect {
         return genresId;
     }
 
+    public int getPointsFromIdAction(String idAction) {
+        int points = 0;
+
+        try {
+            String query = "select * from akcja where id_akcji = '" + idAction + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            points = Integer.parseInt(rs.getString("points"));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return points;
+    }
+
+    public ArrayList<Integer> getPointsFromIdAction(ArrayList<String> idAction) {
+        ArrayList<Integer> points = new ArrayList<Integer>();
+
+        for (String id : idAction) {
+            points.add(getPointsFromIdAction(id));
+        }
+
+        return points;
+    }
+
     public ArrayList<String> getGenreId(ArrayList<String> genres) {
         ArrayList<String> genre = new ArrayList<>();
         for (String value : genres) {
@@ -815,12 +847,13 @@ public class DBConnect {
         try {
             User user = new User(login, imie, nazwisko, haslo);
             users.add(user);
-            this.login(user);
             System.out.println(users.size());
             String query = "insert into uzytkownik (login, imie, nazwisko, haslo) " +
                     "values ('" + login + "','" + imie + "','" + nazwisko + "','" + haslo + "')";
             st.executeUpdate(query);
             System.out.println("User " + login + " added to database.");
+
+            this.login(user);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -891,6 +924,94 @@ public class DBConnect {
             System.out.println("User " + login + " deleted from database.");
         } catch (Exception e) {
             System.out.println(e);
+        }
+    }
+
+    public String getHealth(String petId) {
+        String health = null;
+
+        try {
+            String query = "select * from podopieczny where id_podopieczny = '" + petId + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            health = rs.getString("health");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return health;
+    }
+
+    public String getHappiness(String petId) {
+        String happiness = null;
+
+        try {
+            String query = "select * from podopieczny where id_podopieczny = '" + petId + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            happiness = rs.getString("happiness");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return happiness;
+    }
+
+    public String getHunger(String petId) {
+        String hunger = null;
+
+        try {
+            String query = "select * from podopieczny where id_podopieczny = '" + petId + "'";
+            rs = st.executeQuery(query);
+            rs.next();
+            hunger = rs.getString("hunger");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return hunger;
+    }
+
+    public void setHealth(String petId, int value) {
+        String healthValue = String.valueOf(value);
+
+        try {
+            String query = "update podopieczny set health = '" + healthValue + "' where id_podopieczny = '" + petId + "'";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void setHappiness(String petId, int value) {
+        String happinessValue = String.valueOf(value);
+
+        try {
+            String query = "update podopieczny set happiness = '" + happinessValue + "' where id_podopieczny = '" + petId + "'";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void setHunger(String petId, int value) {
+        String hungerValue = String.valueOf(value);
+
+        try {
+            String query = "update podopieczny set hunger = '" + hungerValue + "' where id_podopieczny = '" + petId + "'";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deletePet(String petId) {
+        try {
+            String query = "delete from podopieczny where id_podopieczny = '" + petId + "'";
+            st.executeUpdate(query);
+            System.out.println("Pet " + petId + " deleteed from database.");
+        } catch (Exception e) {
+            System.out.print(e);
         }
     }
 }
