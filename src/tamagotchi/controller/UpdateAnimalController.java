@@ -69,6 +69,7 @@ public class UpdateAnimalController implements IController, MouseListener {
         }
         if (timer != null) {
             timer.cancel();
+            timer.purge();
         }
         timer = new Timer();
         timerTask = new TimerTask() {

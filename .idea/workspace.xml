@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d9dd2d9-c674-4699-9ba8-6ebfe5648298" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" afterPath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,47 +45,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionGenre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-              <folding>
-                <element signature="e#116#117#0" expanded="true" />
-                <element signature="e#148#149#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/IController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaseFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="184" column="47" lean-forward="true" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
+            <state relative-caret-position="-1425">
+              <caret line="140" column="47" lean-forward="true" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
               <folding>
-                <element signature="e#2974#2975#0" expanded="true" />
-                <element signature="e#3004#3005#0" expanded="true" />
-                <element signature="e#3046#3047#0" expanded="true" />
-                <element signature="e#3076#3077#0" expanded="true" />
-                <element signature="method#mouseClicked#0;class#3342:4056" expanded="false" />
-                <element signature="method#mouseReleased#0;class#3342:4056" expanded="false" />
-                <element signature="method#mouseEntered#0;class#3342:4056" expanded="false" />
-                <element signature="method#mouseExited#0;class#3342:4056" expanded="false" />
+                <element signature="method#mouseClicked#0;class#3293:4007" expanded="false" />
+                <element signature="method#mouseReleased#0;class#3293:4007" expanded="false" />
+                <element signature="method#mouseEntered#0;class#3293:4007" expanded="false" />
+                <element signature="method#mouseExited#0;class#3293:4007" expanded="false" />
                 <element signature="method#clearLabels#0;class#BaseFrame#0" expanded="false" />
-                <element signature="e#17449#17450#0" expanded="true" />
-                <element signature="e#17509#17510#0" expanded="true" />
-                <marker date="1497191780846" expanded="true" signature="16175:16177" ph=" }" />
+                <marker date="1497288996844" expanded="true" signature="16126:16128" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -94,18 +65,18 @@
       <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
+            <state relative-caret-position="1197">
               <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminPanelController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminPanelController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1161">
-              <caret line="158" column="17" lean-forward="true" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+            <state relative-caret-position="860">
+              <caret line="158" column="17" lean-forward="false" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,10 +84,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="UpdateAnimalController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewAnimalController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AdminFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="4332">
               <caret line="274" column="0" lean-forward="false" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -177,10 +168,9 @@
       <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="22363">
               <caret line="1261" column="66" lean-forward="false" selection-start-line="1261" selection-start-column="66" selection-end-line="1261" selection-end-column="66" />
               <folding>
-                <element signature="e#25303#25312#0" expanded="true" />
                 <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
                 <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
@@ -275,8 +265,8 @@
       <file leaf-file-name="LoginFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="1102">
+              <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -286,7 +276,7 @@
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1311">
-              <caret line="79" column="88" lean-forward="true" selection-start-line="79" selection-start-column="88" selection-end-line="79" selection-end-column="88" />
+              <caret line="79" column="88" lean-forward="false" selection-start-line="79" selection-start-column="88" selection-end-line="79" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -363,17 +353,17 @@
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/MyTimer.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/Label.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/MakeActionController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/AdminaFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
       </list>
     </option>
   </component>
@@ -406,6 +396,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -486,9 +478,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,12 +650,13 @@
       <workItem from="1497036071321" duration="7584000" />
       <workItem from="1497083603523" duration="4045000" />
       <workItem from="1497094649649" duration="36754000" />
-      <workItem from="1497174969335" duration="43076000" />
+      <workItem from="1497174969335" duration="43680000" />
+      <workItem from="1497286980491" duration="2017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341380000" />
+    <option name="totallyTimeSpent" value="344001000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,7 +682,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39810926" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -708,6 +698,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -792,7 +783,6 @@
         <state relative-caret-position="418">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="e#25303#25312#0" expanded="true" />
             <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
             <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
             <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
@@ -1038,17 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
-          <folding>
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Label.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -1073,16 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="105" column="53" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="105" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/MakeActionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -1095,7 +1064,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="95">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#116#117#0" expanded="true" />
@@ -1114,7 +1083,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
+        <state relative-caret-position="1197">
           <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
           <folding />
         </state>
@@ -1122,8 +1091,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="1102">
+          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1131,7 +1100,7 @@
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
-          <caret line="79" column="88" lean-forward="true" selection-start-line="79" selection-start-column="88" selection-end-line="79" selection-end-column="88" />
+          <caret line="79" column="88" lean-forward="false" selection-start-line="79" selection-start-column="88" selection-end-line="79" selection-end-column="88" />
           <folding />
         </state>
       </provider>
@@ -1144,30 +1113,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="184" column="47" lean-forward="true" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
-          <folding>
-            <element signature="e#2974#2975#0" expanded="true" />
-            <element signature="e#3004#3005#0" expanded="true" />
-            <element signature="e#3046#3047#0" expanded="true" />
-            <element signature="e#3076#3077#0" expanded="true" />
-            <element signature="method#mouseClicked#0;class#3342:4056" expanded="false" />
-            <element signature="method#mouseReleased#0;class#3342:4056" expanded="false" />
-            <element signature="method#mouseEntered#0;class#3342:4056" expanded="false" />
-            <element signature="method#mouseExited#0;class#3342:4056" expanded="false" />
-            <element signature="method#clearLabels#0;class#BaseFrame#0" expanded="false" />
-            <element signature="e#17449#17450#0" expanded="true" />
-            <element signature="e#17509#17510#0" expanded="true" />
-            <marker date="1497191780846" expanded="true" signature="16175:16177" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="4332">
           <caret line="274" column="0" lean-forward="false" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1226,10 +1174,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="22363">
           <caret line="1261" column="66" lean-forward="false" selection-start-line="1261" selection-start-column="66" selection-end-line="1261" selection-end-column="66" />
           <folding>
-            <element signature="e#25303#25312#0" expanded="true" />
             <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
             <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
             <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
@@ -1322,11 +1269,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1161">
-          <caret line="158" column="17" lean-forward="true" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+        <state relative-caret-position="860">
+          <caret line="158" column="17" lean-forward="false" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1425">
+          <caret line="140" column="47" lean-forward="true" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
+          <folding>
+            <element signature="method#mouseClicked#0;class#3293:4007" expanded="false" />
+            <element signature="method#mouseReleased#0;class#3293:4007" expanded="false" />
+            <element signature="method#mouseEntered#0;class#3293:4007" expanded="false" />
+            <element signature="method#mouseExited#0;class#3293:4007" expanded="false" />
+            <element signature="method#clearLabels#0;class#BaseFrame#0" expanded="false" />
+            <marker date="1497288996844" expanded="true" signature="16126:16128" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

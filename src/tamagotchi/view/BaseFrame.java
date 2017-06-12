@@ -42,7 +42,6 @@ public class BaseFrame extends JFrame {
     private GridBagConstraints constraints;
     private JPanel[][] panelHolder;
     private Vector<String> genries;
-   // private ArrayList<Vector<String>> actions;
     private Vector<String> actions;
 
 
