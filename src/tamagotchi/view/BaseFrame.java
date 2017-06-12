@@ -159,6 +159,8 @@ public class BaseFrame extends JFrame {
         }
         UpdateAnimalController update = new UpdateAnimalController(this, connection);
         update.start();
+        update.deleteActionListenersToAnimalAcions();
+        update.addActionListenersToAnimalActions();
         this.addUpdateAnimalPropertiesListener(update);
         this.setGenries(connection.getLoggedUser().getPetGenries());
         this.setActions(connection.getVectorOfActions());
