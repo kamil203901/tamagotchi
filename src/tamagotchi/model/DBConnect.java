@@ -594,7 +594,7 @@ public class DBConnect {
         return id;
     }
 
-    private String getGenreName(String genreId) {
+    public String getGenreName(String genreId) {
         String genreName = null;
         try {
             String query = "select * from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + genreId + "'";
@@ -859,6 +859,324 @@ public class DBConnect {
         }
     }
 
+    public ArrayList<String> getPetTableIdPet() {
+        ArrayList<String> idPet = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idPet.add(rs.getString("id_podopieczny"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idPet;
+    }
+
+    public ArrayList<String> getPetTableidPetGenre() {
+        ArrayList<String> idPetGenre = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idPetGenre.add(rs.getString("id_rodzaj"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idPetGenre;
+    }
+
+    public ArrayList<String> getPetTableName() {
+        ArrayList<String> name = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                name.add(rs.getString("imie"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return name;
+    }
+
+    public ArrayList<String> getPetTableAge() {
+        ArrayList<String> age = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                age.add(rs.getString("wiek"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return age;
+    }
+
+    public ArrayList<String> getPetTableWeight() {
+        ArrayList<String> weight = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                weight.add(rs.getString("waga"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return weight;
+    }
+
+    public ArrayList<String> getPetTableDateLastFeed() {
+        ArrayList<String> dateLastFeed = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                dateLastFeed.add(rs.getString("data_ostatniego_karmienia"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return dateLastFeed;
+    }
+
+    public ArrayList<String> getPetTableIdUser() {
+        ArrayList<String> idUser = new ArrayList<>();
+        try {
+            String query = "select * from podopieczny";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idUser.add(rs.getString("id_uzytkownik"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idUser;
+    }
+
+    public ArrayList<String> getUserTableIdUser() {
+        ArrayList<String> idUser = new ArrayList<>();
+        try {
+            String query = "select * from uzytkownik";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idUser.add(rs.getString("id"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idUser;
+    }
+
+    public ArrayList<String> getUserTableLogin() {
+        ArrayList<String> login = new ArrayList<>();
+        try {
+            String query = "select * from uzytkownik";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                login.add(rs.getString("login"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return login;
+    }
+
+    public ArrayList<String> getUserTableName() {
+        ArrayList<String> name = new ArrayList<>();
+        try {
+            String query = "select * from uzytkownik";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                name.add(rs.getString("imie"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return name;
+    }
+
+    public ArrayList<String> getUserTableSurname() {
+        ArrayList<String> surname = new ArrayList<>();
+        try {
+            String query = "select * from uzytkownik";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                surname.add(rs.getString("nazwisko"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return surname;
+    }
+
+    public ArrayList<String> getUserTablePassword() {
+        ArrayList<String> password = new ArrayList<>();
+        try {
+            String query = "select * from uzytkownik";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                password.add(rs.getString("haslo"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return password;
+    }
+
+    public ArrayList<String> getPetGenreTableIdPetGenre() {
+        ArrayList<String> idPetGenre = new ArrayList<>();
+        try {
+            String query = "select * from rodzaj_podopiecznego";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idPetGenre.add(rs.getString("id_rodzaj_podopiecznego"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idPetGenre;
+    }
+
+    public ArrayList<String> getPetGenreTableGenreName() {
+        ArrayList<String> genreName = new ArrayList<>();
+        try {
+            String query = "select * from rodzaj_podopiecznego";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                genreName.add(rs.getString("nazwa"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return genreName;
+    }
+
+    public ArrayList<String> getPetGenreTablePath() {
+        ArrayList<String> path = new ArrayList<>();
+        try {
+            String query = "select * from rodzaj_podopiecznego";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                path.add(rs.getString("sciezka"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return path;
+    }
+
+    public ArrayList<String> getActionTableIdAction() {
+        ArrayList<String> idAction = new ArrayList<>();
+        try {
+            String query = "select * from akcja";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idAction.add(rs.getString("id_akcji"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idAction;
+    }
+
+    public ArrayList<String> getActionTableIdActionGenre() {
+        ArrayList<String> idActionGenre = new ArrayList<>();
+        try {
+            String query = "select * from akcja";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idActionGenre.add(rs.getString("id_rodzaj_akcji"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idActionGenre;
+    }
+
+    public ArrayList<String> getActionTableIdPetGenre() {
+        ArrayList<String> idPetGenre = new ArrayList<>();
+        try {
+            String query = "select * from akcja";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idPetGenre.add(rs.getString("id_rodzaj_podopieczny"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idPetGenre;
+    }
+
+    public ArrayList<String> getActionTablePoints() {
+        ArrayList<String> points = new ArrayList<>();
+        try {
+            String query = "select * from akcja";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                points.add(rs.getString("points"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return points;
+    }
+
+    public ArrayList<String> getActionGenreTableIdActionGenre() {
+        ArrayList<String> idActionGenre = new ArrayList<>();
+        try {
+            String query = "select * from rodzaj_akcji";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                idActionGenre.add(rs.getString("id_rodzaj_akcji"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return idActionGenre;
+    }
+
+    public ArrayList<String> getActionGenreTableActionGenreName() {
+        ArrayList<String> actionGenreName = new ArrayList<>();
+        try {
+            String query = "select * from rodzaj_akcji";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                actionGenreName.add(rs.getString("nazwa_rodzaju_akcji"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return actionGenreName;
+    }
+
+    public ArrayList<String> getActionGenreTableActionName() {
+        ArrayList<String> actionName = new ArrayList<>();
+        try {
+            String query = "select * from rodzaj_akcji";
+            rs = st.executeQuery(query);
+            while (rs.next()) {
+                actionName.add(rs.getString("nazwa_akcji"));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return actionName;
+    }
+
+
+
+
+
+
+
+
+
+
+
     public void addAnimalToCurrentUser(String genre, String name) {
         try {
 
@@ -917,11 +1235,45 @@ public class DBConnect {
         return false;
     }
 
-    public void deleteUser(String login) {
+    public void deleteUser(String userId) {
         try {
-            String query = "delete from uzytkownik where login = '" + login + "'";
+            String query = "delete from uzytkownik where id = '" + userId + "'";
             st.executeUpdate(query);
-            System.out.println("User " + login + " deleted from database.");
+            System.out.println("User " + userId + " deleted from database.");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deleteAction(String actionId) {
+        try {
+            String query = "delete from akcja where id_akcji = '" + actionId + "'";
+            st.executeUpdate(query);
+            System.out.println("Action " + actionId + " deleted from database.");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deletePetGenre(String petGenreId) {
+        try {
+            String query = "delete from podopieczny where id_rodzaj = '" + petGenreId + "'";
+            st.executeUpdate(query);
+            query = "delete from akcja where id_rodzaj_podopieczny = '" + petGenreId + "'";
+            st.executeUpdate(query);
+            query = "delete from rodzaj_podopiecznego where id_rodzaj_podopiecznego = '" + petGenreId + "'";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deleteActionGenre(String actionGenreId) {
+        try {
+            String query = "delete from akcja where id_rodzaj_akcji = '" + actionGenreId + "'";
+            st.executeUpdate(query);
+            query = "delete from rodzaj_akcji where id_rodzaj_akcji = '" + actionGenreId + "'";
+            st.executeUpdate(query);
         } catch (Exception e) {
             System.out.println(e);
         }

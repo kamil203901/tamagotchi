@@ -63,18 +63,18 @@ public class LoginController implements IController {
                             Integer.parseInt(connection.getHappiness(petsId.get(i))),
                             Integer.parseInt(connection.getHunger(petsId.get(i))));
                 }
-               // UpdateAnimalController update =
-                        new UpdateAnimalController(appController.getAppFrame(), new DBConnect()).start();
-                //update.start();
-               // update.addActionListenersToAnimalActions();
-                appController.getAppFrame().addUpdateAnimalPropertiesListener(new UpdateAnimalController(appController.getAppFrame(), connection));
+                UpdateAnimalController update = new UpdateAnimalController(appController.getAppFrame(), new DBConnect());
+                update.start();
+                update.addActionListenersToAnimalActions();
+                appController.getAppFrame().addUpdateAnimalPropertiesListener(update);
                 appController.getAppFrame().setGenries(loginController.connection.getLoggedUser().getPetGenries());
-                appController.getAppFrame().setActions(connection.getVectorOfActions());
+                appController.getAppFrame().setActions(connection.getVectorOfActions());/////////////
                 appController.getAppFrame().showAnimalPanel();
                 appController.getAppFrame().showLoginLabel(login);
                 appController.getAppFrame().showAddAnimalComboBox();
                 appController.getAppFrame().showHealthHappinessHungerPanel();
                 appController.getAppFrame().showBoxesAndButtonToMakeActionOnAllPets();
+                appController.getAppFrame().addMakeActionListener(new MakeActionController(connection, appController, loginController));
             } else {
                 JOptionPane.showConfirmDialog(loginFrame, "Uncorrect login or password.",
                         "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
@@ -86,3 +86,5 @@ public class LoginController implements IController {
 
 
 }
+
+

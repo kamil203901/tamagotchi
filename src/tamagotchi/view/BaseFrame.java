@@ -19,14 +19,17 @@ public class BaseFrame extends JFrame {
     private JButton addAnimalButton;
     private Panel welcomePanel;
     private ImagePanel animalPanel;
+
     private JComboBox genreOfPet;
     private JComboBox action;
     private JButton makeAction;
+
     private Panel healthHappinessHungerPanel;
     private JPanel usernamePanel;
     private Label[] animalLabels;
     private JMenuItem loginButton;
     private JMenuItem registerButton;
+    private JMenuItem adminPanelButton;
     private JMenuItem closeButton;
     private JMenuItem logoutItem;
     private JPopupMenu logout;
@@ -76,6 +79,26 @@ public class BaseFrame extends JFrame {
 
     public void setWelcomePanelAsContenePane() {
         this.setContentPane(welcomePanel);
+    }
+
+    public JComboBox getGenreOfPet() {
+        return genreOfPet;
+    }
+
+    public JComboBox getAction() {
+        return action;
+    }
+
+    public JButton getMakeAction() {
+        return makeAction;
+    }
+
+    public Vector<String> getGenries() {
+        return genries;
+    }
+
+    public Vector<String> getActions() {
+        return actions;
     }
 
     public void initializeLabels() {
@@ -135,7 +158,9 @@ public class BaseFrame extends JFrame {
                     Integer.parseInt(connection.getHappiness(petsId.get(i))),
                     Integer.parseInt(connection.getHunger(petsId.get(i))));
         }
-        this.addUpdateAnimalPropertiesListener(new UpdateAnimalController(this, connection));
+        UpdateAnimalController update = new UpdateAnimalController(this, connection);
+        update.start();
+        this.addUpdateAnimalPropertiesListener(update);
         this.setGenries(connection.getLoggedUser().getPetGenries());
         this.setActions(connection.getVectorOfActions());
         this.showAnimalPanel();
@@ -175,6 +200,10 @@ public class BaseFrame extends JFrame {
 
         registerButton = new JMenuItem("Register");
         menu.add(registerButton);
+        menu.addSeparator();
+
+        adminPanelButton = new JMenuItem("Admin Panel");
+        menu.add(adminPanelButton);
         menu.addSeparator();
 
         closeButton = new JMenuItem("Close");
@@ -464,6 +493,11 @@ public class BaseFrame extends JFrame {
         registerButton.addActionListener(registerListener);
     }
 
+    public void addAdminPanelListener(ActionListener adminPanelListener) {
+
+        adminPanelButton.addActionListener(adminPanelListener);
+    }
+
     public void addCloseListener(ActionListener closeListener) {
 
         closeButton.addActionListener(closeListener);
@@ -485,6 +519,9 @@ public class BaseFrame extends JFrame {
         }
     }
 
+    public void addMakeActionListener(ActionListener actionListener) {
+        makeAction.addActionListener(actionListener);
+    }
 
 }
 

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6d9dd2d9-c674-4699-9ba8-6ebfe5648298" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" afterPath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" afterPath="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" afterPath="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,21 +35,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
+      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="66" column="105" lean-forward="false" selection-start-line="66" selection-start-column="105" selection-end-line="66" selection-end-column="105" />
+            <state relative-caret-position="342">
+              <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
+      <file leaf-file-name="ActionGenre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="114">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="e#116#117#0" expanded="true" />
+                <element signature="e#148#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/IController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -55,41 +71,104 @@
       <file leaf-file-name="BaseFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="297" column="52" lean-forward="true" selection-start-line="297" selection-start-column="52" selection-end-line="297" selection-end-column="52" />
+            <state relative-caret-position="380">
+              <caret line="184" column="47" lean-forward="true" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
               <folding>
-                <element signature="class#2947:3661" expanded="false" />
-                <element signature="method#mouseClicked#0;class#2947:3661" expanded="false" />
-                <element signature="method#mousePressed#0;class#2947:3661" expanded="false" />
-                <element signature="method#mouseReleased#0;class#2947:3661" expanded="false" />
-                <element signature="method#mouseEntered#0;class#2947:3661" expanded="false" />
-                <element signature="method#mouseExited#0;class#2947:3661" expanded="false" />
+                <element signature="e#2974#2975#0" expanded="true" />
+                <element signature="e#3004#3005#0" expanded="true" />
+                <element signature="e#3046#3047#0" expanded="true" />
+                <element signature="e#3076#3077#0" expanded="true" />
+                <element signature="method#mouseClicked#0;class#3342:4056" expanded="false" />
+                <element signature="method#mouseReleased#0;class#3342:4056" expanded="false" />
+                <element signature="method#mouseEntered#0;class#3342:4056" expanded="false" />
+                <element signature="method#mouseExited#0;class#3342:4056" expanded="false" />
                 <element signature="method#clearLabels#0;class#BaseFrame#0" expanded="false" />
-                <marker date="1497121908857" expanded="true" signature="15585:15587" ph=" }" />
+                <element signature="e#17449#17450#0" expanded="true" />
+                <element signature="e#17509#17510#0" expanded="true" />
+                <marker date="1497191780846" expanded="true" signature="16175:16177" ph=" }" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImagePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ImagePanel.java">
+      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="969">
+              <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateAnimalController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java">
+      <file leaf-file-name="AdminPanelController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+            <state relative-caret-position="1161">
+              <caret line="158" column="17" lean-forward="true" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1739#3400#0" expanded="true" />
-                <element signature="e#3399#3400#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="274" column="0" lean-forward="false" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3304#3305#0" expanded="true" />
+                <element signature="e#3354#3355#0" expanded="true" />
+                <element signature="e#3430#3431#0" expanded="true" />
+                <element signature="e#3480#3481#0" expanded="true" />
+                <element signature="e#3681#3682#0" expanded="true" />
+                <element signature="e#3732#3733#0" expanded="true" />
+                <element signature="e#3808#3809#0" expanded="true" />
+                <element signature="e#3859#3860#0" expanded="true" />
+                <element signature="e#4055#4056#0" expanded="true" />
+                <element signature="e#4111#4112#0" expanded="true" />
+                <element signature="e#4187#4188#0" expanded="true" />
+                <element signature="e#4243#4244#0" expanded="true" />
+                <element signature="e#4449#4450#0" expanded="true" />
+                <element signature="e#4502#4503#0" expanded="true" />
+                <element signature="e#4578#4579#0" expanded="true" />
+                <element signature="e#4631#4632#0" expanded="true" />
+                <element signature="e#4840#4841#0" expanded="true" />
+                <element signature="e#4898#4899#0" expanded="true" />
+                <element signature="e#4974#4975#0" expanded="true" />
+                <element signature="e#5032#5033#0" expanded="true" />
+                <element signature="e#7886#7887#0" expanded="true" />
+                <element signature="e#7940#7941#0" expanded="true" />
+                <element signature="e#8000#8001#0" expanded="true" />
+                <element signature="e#8048#8049#0" expanded="true" />
+                <element signature="e#8090#8091#0" expanded="true" />
+                <element signature="e#8123#8124#0" expanded="true" />
+                <element signature="e#8154#8155#0" expanded="true" />
+                <element signature="e#8181#8182#0" expanded="true" />
+                <element signature="e#8213#8214#0" expanded="true" />
+                <element signature="e#8241#8242#0" expanded="true" />
+                <element signature="e#8275#8276#0" expanded="true" />
+                <element signature="e#8305#8306#0" expanded="true" />
+                <element signature="e#8342#8343#0" expanded="true" />
+                <element signature="e#8375#8376#0" expanded="true" />
+                <element signature="e#8415#8416#0" expanded="true" />
+                <element signature="e#8451#8452#0" expanded="true" />
+                <element signature="e#8491#8492#0" expanded="true" />
+                <element signature="e#8526#8527#0" expanded="true" />
+                <element signature="e#8563#8564#0" expanded="true" />
+                <element signature="e#8595#8596#0" expanded="true" />
+                <element signature="e#8674#8675#0" expanded="true" />
+                <element signature="e#8722#8723#0" expanded="true" />
+                <element signature="e#8755#8756#0" expanded="true" />
+                <element signature="e#8805#8806#0" expanded="true" />
+                <element signature="e#8840#8841#0" expanded="true" />
+                <element signature="e#8893#8894#0" expanded="true" />
+                <element signature="e#8931#8932#0" expanded="true" />
+                <element signature="e#8987#8988#0" expanded="true" />
+                <element signature="e#9028#9029#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,108 +177,116 @@
       <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="784" column="78" lean-forward="false" selection-start-line="784" selection-start-column="78" selection-end-line="784" selection-end-column="78" />
+            <state relative-caret-position="154">
+              <caret line="1261" column="66" lean-forward="false" selection-start-line="1261" selection-start-column="66" selection-end-line="1261" selection-end-column="66" />
               <folding>
-                <element signature="e#25304#25313#0" expanded="true" />
+                <element signature="e#25303#25312#0" expanded="true" />
                 <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
                 <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-                <marker date="1497121942905" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
-                <marker date="1497121942905" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
-                <marker date="1497121942905" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
-                <marker date="1497121942905" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="19718:19802" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="20154:20218" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="20580:20647" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="21132:21166" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="22411:22485" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="22956:23011" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="23503:23578" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="24034:24089" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="24880:24935" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="26422:26477" ph="select * fro... akcja" />
-                <marker date="1497121942905" expanded="true" signature="26627:26711" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="27195:27348" ph="insert into uzytkownik... " />
-                <marker date="1497121942905" expanded="true" signature="27687:27751" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497121942905" expanded="true" signature="28100:28242" ph="insert into podopieczny... " />
-                <marker date="1497121942905" expanded="true" signature="28629:28683" ph="select * fro... uzytkownik" />
-                <marker date="1497121942905" expanded="true" signature="29255:29309" ph="select * fro... uzytkownik" />
-                <marker date="1497121942905" expanded="true" signature="29734:29786" ph="delete from " />
-                <marker date="1497121942905" expanded="true" signature="30104:30168" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497121942905" expanded="true" signature="30511:30575" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="30921:30985" ph="select * fro... podopieczny" />
-                <marker date="1497121942905" expanded="true" signature="31353:31386" ph="update podop... " />
-                <marker date="1497121942905" expanded="true" signature="31353:31445" ph="update podop... " />
-                <marker date="1497121942905" expanded="true" signature="31723:31821" ph="update podop... " />
-                <marker date="1497121942905" expanded="true" signature="32093:32185" ph="update podop... " />
-                <marker date="1497121942905" expanded="true" signature="32393:32455" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="27194:27347" ph="insert into uzytkownik... " />
+                <marker date="1497226703308" expanded="true" signature="27720:27745" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="28155:28180" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="28583:28608" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="28992:29017" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="29405:29430" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="29836:29861" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="30288:30313" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="30717:30741" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="31132:31156" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="31546:31570" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="31963:31987" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="32392:32416" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="32828:32842" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="32828:32862" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="33294:33328" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="33730:33764" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="34164:34178" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="34164:34183" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="34602:34621" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="35051:35070" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="35492:35511" ph="select * fro... akcja" />
+                <marker date="1497226703308" expanded="true" signature="35929:35955" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="36400:36426" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="36869:36895" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="37278:37342" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497226703308" expanded="true" signature="37691:37833" ph="insert into podopieczny... " />
+                <marker date="1497226703308" expanded="true" signature="38220:38274" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="38846:38900" ph="select * fro... uzytkownik" />
+                <marker date="1497226703308" expanded="true" signature="39326:39376" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="39668:39721" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="40021:40064" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="40021:40083" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="40144:40212" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="40273:40358" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="40582:40647" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="40708:40780" ph="delete from " />
+                <marker date="1497226703308" expanded="true" signature="41021:41085" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497226703308" expanded="true" signature="41428:41492" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="41838:41902" ph="select * fro... podopieczny" />
+                <marker date="1497226703308" expanded="true" signature="42270:42303" ph="update podop... " />
+                <marker date="1497226703308" expanded="true" signature="42270:42362" ph="update podop... " />
+                <marker date="1497226703308" expanded="true" signature="42640:42738" ph="update podop... " />
+                <marker date="1497226703308" expanded="true" signature="43010:43102" ph="update podop... " />
+                <marker date="1497226703308" expanded="true" signature="43310:43372" ph="delete from " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Label.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Label.java">
+      <file leaf-file-name="LoginFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+            <state relative-caret-position="652">
+              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewAnimalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="74" column="140" lean-forward="false" selection-start-line="74" selection-start-column="140" selection-end-line="74" selection-end-column="140" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="77" column="82" lean-forward="false" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+            <state relative-caret-position="1311">
+              <caret line="79" column="88" lean-forward="true" selection-start-line="79" selection-start-column="88" selection-end-line="79" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -230,7 +317,10 @@
       <find>login(</find>
       <find>logout</find>
       <find>getActionName</find>
+      <find>actions</find>
+      <find>genreId</find>
       <find>getGenre</find>
+      <find>dele</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -271,15 +361,19 @@
         <option value="$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/MyTimer.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/Label.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/MakeActionController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/view/AdminaFrame.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java" />
       </list>
     </option>
   </component>
@@ -393,8 +487,8 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,12 +659,13 @@
       <workItem from="1496737253516" duration="2239000" />
       <workItem from="1497036071321" duration="7584000" />
       <workItem from="1497083603523" duration="4045000" />
-      <workItem from="1497094649649" duration="26873000" />
+      <workItem from="1497094649649" duration="36754000" />
+      <workItem from="1497174969335" duration="43076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288423000" />
+    <option name="totallyTimeSpent" value="341380000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,7 +689,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15052083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -624,7 +719,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="74" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tamagotchi/controller/MakeActionController.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -633,28 +736,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -711,62 +792,93 @@
         <state relative-caret-position="418">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="e#25304#25313#0" expanded="true" />
+            <element signature="e#25303#25312#0" expanded="true" />
             <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
             <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
             <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
             <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-            <marker date="1497121942905" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="19718:19802" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="20154:20218" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="20580:20647" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="21132:21166" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="22411:22485" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="22956:23011" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="23503:23578" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="24034:24089" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="24880:24935" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="26422:26477" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="26627:26711" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="27195:27348" ph="insert into uzytkownik... " />
-            <marker date="1497121942905" expanded="true" signature="27687:27751" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="28100:28242" ph="insert into podopieczny... " />
-            <marker date="1497121942905" expanded="true" signature="28629:28683" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="29255:29309" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="29734:29786" ph="delete from " />
-            <marker date="1497121942905" expanded="true" signature="30104:30168" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="30511:30575" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="30921:30985" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="31353:31386" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="31353:31445" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="31723:31821" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="32093:32185" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="32393:32455" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="27194:27347" ph="insert into uzytkownik... " />
+            <marker date="1497226703308" expanded="true" signature="27720:27745" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="28155:28180" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="28583:28608" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="28992:29017" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="29405:29430" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="29836:29861" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="30288:30313" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="30717:30741" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="31132:31156" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="31546:31570" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="31963:31987" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="32392:32416" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="32828:32842" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="32828:32862" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="33294:33328" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="33730:33764" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="34164:34178" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="34164:34183" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="34602:34621" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="35051:35070" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="35492:35511" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="35929:35955" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="36400:36426" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="36869:36895" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="37278:37342" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="37691:37833" ph="insert into podopieczny... " />
+            <marker date="1497226703308" expanded="true" signature="38220:38274" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="38846:38900" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="39326:39376" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="39668:39721" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40021:40064" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40021:40083" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40144:40212" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40273:40358" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40582:40647" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40708:40780" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="41021:41085" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="41428:41492" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="41838:41902" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="42270:42303" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="42270:42362" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="42640:42738" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="43010:43102" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="43310:43372" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -781,13 +893,6 @@
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Parrot.java" />
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Cat.java" />
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/IPet.java" />
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.42-bin.jar!/com/mysql/jdbc/ResultSetImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -803,83 +908,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Panel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/jdk1.8.0_121/src.zip!/javax/swing/JLabel.java" />
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/jdk1.8.0_121/src.zip!/javax/swing/JComponent.java" />
     <entry file="jar://$USER_HOME$/jdk1.8.0_121/src.zip!/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/IController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#116#117#0" expanded="false" />
-            <element signature="e#148#149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/PetGenre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="541" column="0" lean-forward="false" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/MyTimer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#419#572#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#821#969#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,9 +930,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Pet.java">
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/MyTimer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-497">
+        <state relative-caret-position="703">
+          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/NewAnimalFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Panel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ImagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
@@ -910,165 +984,348 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/Pet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#611#612#0" expanded="false" />
+            <element signature="e#648#649#0" expanded="false" />
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#709#710#0" expanded="false" />
+            <element signature="e#738#739#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#845#846#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#1135#1136#0" expanded="false" />
+            <element signature="e#1164#1165#0" expanded="false" />
+            <element signature="e#1208#1209#0" expanded="false" />
+            <element signature="e#1244#1245#0" expanded="false" />
+            <element signature="e#1277#1278#0" expanded="false" />
+            <element signature="e#1309#1310#0" expanded="false" />
+            <element signature="e#1356#1357#0" expanded="false" />
+            <element signature="e#1398#1399#0" expanded="false" />
+            <element signature="e#1425#1426#0" expanded="false" />
+            <element signature="e#1451#1452#0" expanded="false" />
+            <element signature="e#1484#1485#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1558">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="e#2878#2879#0" expanded="true" />
+            <element signature="e#2878#2879#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/PetGenre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="784" column="78" lean-forward="false" selection-start-line="784" selection-start-column="78" selection-end-line="784" selection-end-column="78" />
+        <state relative-caret-position="114">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
-            <element signature="e#25304#25313#0" expanded="true" />
-            <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
-            <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-            <marker date="1497121942905" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="19718:19802" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="20154:20218" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="20580:20647" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="21132:21166" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="22411:22485" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="22956:23011" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="23503:23578" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="24034:24089" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="24880:24935" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="26422:26477" ph="select * fro... akcja" />
-            <marker date="1497121942905" expanded="true" signature="26627:26711" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="27195:27348" ph="insert into uzytkownik... " />
-            <marker date="1497121942905" expanded="true" signature="27687:27751" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497121942905" expanded="true" signature="28100:28242" ph="insert into podopieczny... " />
-            <marker date="1497121942905" expanded="true" signature="28629:28683" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="29255:29309" ph="select * fro... uzytkownik" />
-            <marker date="1497121942905" expanded="true" signature="29734:29786" ph="delete from " />
-            <marker date="1497121942905" expanded="true" signature="30104:30168" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497121942905" expanded="true" signature="30511:30575" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="30921:30985" ph="select * fro... podopieczny" />
-            <marker date="1497121942905" expanded="true" signature="31353:31386" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="31353:31445" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="31723:31821" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="32093:32185" ph="update podop... " />
-            <marker date="1497121942905" expanded="true" signature="32393:32455" ph="delete from " />
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#264#265#0" expanded="false" />
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/NewAnimalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="74" column="140" lean-forward="false" selection-start-line="74" selection-start-column="140" selection-end-line="74" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="77" column="82" lean-forward="false" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="264">
+          <caret line="79" column="40" lean-forward="false" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
           <folding>
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="297" column="52" lean-forward="true" selection-start-line="297" selection-start-column="52" selection-end-line="297" selection-end-column="52" />
-          <folding>
-            <element signature="class#2947:3661" expanded="false" />
-            <element signature="method#mouseClicked#0;class#2947:3661" expanded="false" />
-            <element signature="method#mousePressed#0;class#2947:3661" expanded="false" />
-            <element signature="method#mouseReleased#0;class#2947:3661" expanded="false" />
-            <element signature="method#mouseEntered#0;class#2947:3661" expanded="false" />
-            <element signature="method#mouseExited#0;class#2947:3661" expanded="false" />
-            <element signature="method#clearLabels#0;class#BaseFrame#0" expanded="false" />
-            <marker date="1497121908857" expanded="true" signature="15585:15587" ph=" }" />
+            <element signature="e#523#524#0" expanded="false" />
+            <element signature="e#573#574#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/Label.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="738">
+          <caret line="190" column="53" lean-forward="false" selection-start-line="190" selection-start-column="53" selection-end-line="190" selection-end-column="53" />
+          <folding>
+            <element signature="e#5190#5191#0" expanded="true" />
+            <element signature="e#5220#5221#0" expanded="true" />
+            <element signature="e#5392#5393#0" expanded="true" />
+            <element signature="e#5450#5451#0" expanded="true" />
+            <element signature="e#5489#5490#0" expanded="true" />
+            <element signature="e#5544#5545#0" expanded="true" />
+            <element signature="e#5580#5581#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/ActionItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="66" column="105" lean-forward="false" selection-start-line="66" selection-start-column="105" selection-end-line="66" selection-end-column="105" />
+        <state relative-caret-position="171">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+        <state relative-caret-position="423">
+          <caret line="105" column="53" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="105" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/MakeActionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="105" column="22" lean-forward="false" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1739#3400#0" expanded="true" />
-            <element signature="e#3399#3400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/ActionGenre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#116#117#0" expanded="true" />
+            <element signature="e#148#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="72" column="40" lean-forward="false" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/LoginFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="79" column="88" lean-forward="true" selection-start-line="79" selection-start-column="88" selection-end-line="79" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="184" column="47" lean-forward="true" selection-start-line="184" selection-start-column="47" selection-end-line="184" selection-end-column="47" />
+          <folding>
+            <element signature="e#2974#2975#0" expanded="true" />
+            <element signature="e#3004#3005#0" expanded="true" />
+            <element signature="e#3046#3047#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="method#mouseClicked#0;class#3342:4056" expanded="false" />
+            <element signature="method#mouseReleased#0;class#3342:4056" expanded="false" />
+            <element signature="method#mouseEntered#0;class#3342:4056" expanded="false" />
+            <element signature="method#mouseExited#0;class#3342:4056" expanded="false" />
+            <element signature="method#clearLabels#0;class#BaseFrame#0" expanded="false" />
+            <element signature="e#17449#17450#0" expanded="true" />
+            <element signature="e#17509#17510#0" expanded="true" />
+            <marker date="1497191780846" expanded="true" signature="16175:16177" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="274" column="0" lean-forward="false" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3304#3305#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3430#3431#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
+            <element signature="e#3681#3682#0" expanded="true" />
+            <element signature="e#3732#3733#0" expanded="true" />
+            <element signature="e#3808#3809#0" expanded="true" />
+            <element signature="e#3859#3860#0" expanded="true" />
+            <element signature="e#4055#4056#0" expanded="true" />
+            <element signature="e#4111#4112#0" expanded="true" />
+            <element signature="e#4187#4188#0" expanded="true" />
+            <element signature="e#4243#4244#0" expanded="true" />
+            <element signature="e#4449#4450#0" expanded="true" />
+            <element signature="e#4502#4503#0" expanded="true" />
+            <element signature="e#4578#4579#0" expanded="true" />
+            <element signature="e#4631#4632#0" expanded="true" />
+            <element signature="e#4840#4841#0" expanded="true" />
+            <element signature="e#4898#4899#0" expanded="true" />
+            <element signature="e#4974#4975#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
+            <element signature="e#7886#7887#0" expanded="true" />
+            <element signature="e#7940#7941#0" expanded="true" />
+            <element signature="e#8000#8001#0" expanded="true" />
+            <element signature="e#8048#8049#0" expanded="true" />
+            <element signature="e#8090#8091#0" expanded="true" />
+            <element signature="e#8123#8124#0" expanded="true" />
+            <element signature="e#8154#8155#0" expanded="true" />
+            <element signature="e#8181#8182#0" expanded="true" />
+            <element signature="e#8213#8214#0" expanded="true" />
+            <element signature="e#8241#8242#0" expanded="true" />
+            <element signature="e#8275#8276#0" expanded="true" />
+            <element signature="e#8305#8306#0" expanded="true" />
+            <element signature="e#8342#8343#0" expanded="true" />
+            <element signature="e#8375#8376#0" expanded="true" />
+            <element signature="e#8415#8416#0" expanded="true" />
+            <element signature="e#8451#8452#0" expanded="true" />
+            <element signature="e#8491#8492#0" expanded="true" />
+            <element signature="e#8526#8527#0" expanded="true" />
+            <element signature="e#8563#8564#0" expanded="true" />
+            <element signature="e#8595#8596#0" expanded="true" />
+            <element signature="e#8674#8675#0" expanded="true" />
+            <element signature="e#8722#8723#0" expanded="true" />
+            <element signature="e#8755#8756#0" expanded="true" />
+            <element signature="e#8805#8806#0" expanded="true" />
+            <element signature="e#8840#8841#0" expanded="true" />
+            <element signature="e#8893#8894#0" expanded="true" />
+            <element signature="e#8931#8932#0" expanded="true" />
+            <element signature="e#8987#8988#0" expanded="true" />
+            <element signature="e#9028#9029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="1261" column="66" lean-forward="false" selection-start-line="1261" selection-start-column="66" selection-end-line="1261" selection-end-column="66" />
+          <folding>
+            <element signature="e#25303#25312#0" expanded="true" />
+            <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
+            <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
+            <marker date="1497226703308" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="27194:27347" ph="insert into uzytkownik... " />
+            <marker date="1497226703308" expanded="true" signature="27720:27745" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="28155:28180" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="28583:28608" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="28992:29017" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="29405:29430" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="29836:29861" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="30288:30313" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="30717:30741" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="31132:31156" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="31546:31570" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="31963:31987" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="32392:32416" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="32828:32842" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="32828:32862" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="33294:33328" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="33730:33764" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="34164:34178" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="34164:34183" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="34602:34621" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="35051:35070" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="35492:35511" ph="select * fro... akcja" />
+            <marker date="1497226703308" expanded="true" signature="35929:35955" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="36400:36426" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="36869:36895" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="37278:37342" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497226703308" expanded="true" signature="37691:37833" ph="insert into podopieczny... " />
+            <marker date="1497226703308" expanded="true" signature="38220:38274" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="38846:38900" ph="select * fro... uzytkownik" />
+            <marker date="1497226703308" expanded="true" signature="39326:39376" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="39668:39721" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40021:40064" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40021:40083" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40144:40212" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40273:40358" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40582:40647" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="40708:40780" ph="delete from " />
+            <marker date="1497226703308" expanded="true" signature="41021:41085" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497226703308" expanded="true" signature="41428:41492" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="41838:41902" ph="select * fro... podopieczny" />
+            <marker date="1497226703308" expanded="true" signature="42270:42303" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="42270:42362" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="42640:42738" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="43010:43102" ph="update podop... " />
+            <marker date="1497226703308" expanded="true" signature="43310:43372" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="158" column="17" lean-forward="true" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

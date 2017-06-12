@@ -25,6 +25,7 @@ public class AppController implements IController {
                 connection.getPointsFromIdAction(ids));
         appFrame.addLoginListener(new LoginListener(this));
         appFrame.addRegisterListener(new RegisterListener(this));
+        appFrame.addAdminPanelListener(new AdminPanelListener());
         appFrame.addCloseListener(new CloseListener(appFrame));
         appFrame.addNewAnimalListener(new AddAnimalListener(this));
         appFrame.addLogoutListener(new LogoutListener(this, connection));
@@ -59,6 +60,15 @@ public class AppController implements IController {
         public void actionPerformed(ActionEvent e) {
             RegisterController rc = new RegisterController(appController);
             rc.start();
+        }
+    }
+
+    class AdminPanelListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            AdminPanelController apc = new AdminPanelController();
+            apc.start();
         }
     }
 

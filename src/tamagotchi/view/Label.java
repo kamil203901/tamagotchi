@@ -1,5 +1,8 @@
 package tamagotchi.view;
 
+import tamagotchi.model.*;
+import tamagotchi.model.Action;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
@@ -15,6 +18,9 @@ public class Label extends JLabel {
     private int hungerValue;
     private JMenuItem delete;
     private ArrayList<ActionItem> actions;
+    private ArrayList<ActionItem> healthActions;
+    private ArrayList<ActionItem> happinessActions;
+    private ArrayList<ActionItem> hungerActions;
 
     public Label(int petId, Icon image) {
         super(null, image, CENTER);
@@ -33,6 +39,9 @@ public class Label extends JLabel {
     public Label() {
         super();
 
+        healthActions = new ArrayList<>();
+        happinessActions = new ArrayList<>();
+        hungerActions = new ArrayList<>();
         delete = new JMenuItem("Delete pet");
         menu = new JPopupMenu();
         health = new JMenu("Health");
@@ -57,16 +66,19 @@ public class Label extends JLabel {
                 case "leczenie":
                     if (this.getGenreId() == Integer.parseInt(action.getGenreId())) {
                         health.add(action);
+                        healthActions.add(new ActionItem(action));
                     }
                     break;
                 case "zabawa":
                     if (this.getGenreId() == Integer.parseInt(action.getGenreId())) {
                         happiness.add(action);
+                        happinessActions.add(new ActionItem(action));
                     }
                     break;
                 case "karmienie":
                     if (this.getGenreId() == Integer.parseInt(action.getGenreId())) {
                         feed.add(action);
+                        hungerActions.add(new ActionItem(action));
                     }
                     break;
                 default:
@@ -176,5 +188,15 @@ public class Label extends JLabel {
         this.genreId = genreId;
     }
 
+    public ArrayList<ActionItem> getHealthActions() {
+        return healthActions;
+    }
 
+    public ArrayList<ActionItem> getHappinessActions() {
+        return happinessActions;
+    }
+
+    public ArrayList<ActionItem> getHungerActions() {
+        return hungerActions;
+    }
 }

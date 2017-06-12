@@ -19,8 +19,8 @@ public class UpdateAnimalController implements IController, MouseListener {
     private String petID;
     private Label label;
     private Label[] labels;
-    private Timer timer;
-    private TimerTask timerTask;
+    private static Timer timer;
+    private static TimerTask timerTask;
 
     public UpdateAnimalController(BaseFrame appFrame, DBConnect connect) {
         this.appFrame = appFrame;
@@ -64,6 +64,12 @@ public class UpdateAnimalController implements IController, MouseListener {
 
     @Override
     public void start() {
+        if (timerTask != null) {
+            timerTask.cancel();
+        }
+        if (timer != null) {
+            timer.cancel();
+        }
         timer = new Timer();
         timerTask = new TimerTask() {
             @Override
@@ -100,69 +106,80 @@ public class UpdateAnimalController implements IController, MouseListener {
                     connect.setHunger(petId, hunger);
 
                     if (petId.equals(petID)) {
-//                        appFrame.setHealth(health);
-//                        appFrame.setHappiness(happiness);
-//                        appFrame.sethunger(hunger);
-                        appFrame.getHealthBar().setValue(health);
-                        appFrame.getHappinessBar().setValue(happiness);
-                        appFrame.getHungerBar().setValue(hunger);
+                        appFrame.setHealth(health);
+                        appFrame.setHappiness(happiness);
+                        appFrame.sethunger(hunger);
+
                     }
 
                 }
             }
         };
 
-        timer.schedule(timerTask, 0, 1500);
+        timer.schedule(timerTask, 0, 10000);
     }
 
-//    public void addActionListenersToAnimalActions() {
-//        DBConnect connect = this.connect;
-//        for (int i = 0; i < labels.length; i++) {
-//            ArrayList<ActionItem> actions = labels[i].getActions();
-//            int finalI = i;
-//            for (int j = 0; j < actions.size(); j++) {
-//                String petId = String.valueOf(labels[finalI].getPetId());
-//                int finalJ = j;
-//                switch (actions.get(j).getType()) {
-//                    case "karmienie":
-//                        actions.get(j).addActionListener(new ActionListener() {
-//                            @Override
-//                            public void actionPerformed(ActionEvent e) {
-//                                int hunger = Integer.parseInt(connect.getHunger(petId));
-//                                int points = actions.get(finalJ).getPoints();
-//                                int hungerSubtractPoints = hunger - points;
-//                                int last = hungerSubtractPoints >= 0 ? hungerSubtractPoints : 0;
-//                                connect.setHunger(petId, last);
-//                            }
-//                        });
-//                        break;
-//                    case "leczenie":
-//                        actions.get(j).addActionListener(new ActionListener() {
-//                            @Override
-//                            public void actionPerformed(ActionEvent e) {
-//                                int health = Integer.parseInt(connect.getHealth(petId));
-//                                int points = actions.get(finalJ).getPoints();
-//                                int healthAddPoints = health + points;
-//                                int last = healthAddPoints <= 100 ? healthAddPoints : 100;
-//                                connect.setHealth(petId, last);
-//                            }
-//                        });
-//                        break;
-//                    case "zabawa":
-//                        actions.get(j).addActionListener(new ActionListener() {
-//                            @Override
-//                            public void actionPerformed(ActionEvent e) {
-//                                int happiness = Integer.parseInt(connect.getHappiness(petId));
-//                                int points = actions.get(finalJ).getPoints();
-//                                int happinessAddPoints = happiness + points;
-//                                int last = happinessAddPoints <= 100 ? happinessAddPoints : 100;
-//                                connect.setHappiness(petId, last);
-//                            }
-//                        });
-//                        break;
-//                }
-//            }
-//        }
-//    }
+    public void deleteActionListenersToAnimalAcions() {
+        for (int i = 0; i < labels.length; i++) {
+            ArrayList<ActionItem> actions = labels[i].getActions();
+            for (int j = 0; j < actions.size(); j++) {
+                for (ActionListener al : actions.get(j).getActionListeners()) {
+                    actions.get(j).removeActionListener(al);
+                }
+            }
+        }
+
+
+    }
+
+    public void addActionListenersToAnimalActions() {
+        DBConnect connect = this.connect;
+        for (int i = 0; i < labels.length; i++) {
+            ArrayList<ActionItem> actions = labels[i].getActions();
+            int finalI = i;
+            for (int j = 0; j < actions.size(); j++) {
+                String petId = String.valueOf(labels[finalI].getPetId());
+                int finalJ = j;
+                switch (actions.get(j).getType()) {
+                    case "karmienie":
+                        actions.get(j).addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                int hunger = Integer.parseInt(connect.getHunger(petId));
+                                int points = actions.get(finalJ).getPoints();
+                                int hungerSubtractPoints = hunger - points;
+                                int last = hungerSubtractPoints >= 0 ? hungerSubtractPoints : 0;
+                                connect.setHunger(petId, last);
+                            }
+                        });
+                        break;
+                    case "leczenie":
+                        actions.get(j).addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                int health = Integer.parseInt(connect.getHealth(petId));
+                                int points = actions.get(finalJ).getPoints();
+                                int healthAddPoints = health + points;
+                                int last = healthAddPoints <= 100 ? healthAddPoints : 100;
+                                connect.setHealth(petId, last);
+                            }
+                        });
+                        break;
+                    case "zabawa":
+                        actions.get(j).addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                int happiness = Integer.parseInt(connect.getHappiness(petId));
+                                int points = actions.get(finalJ).getPoints();
+                                int happinessAddPoints = happiness + points;
+                                int last = happinessAddPoints <= 100 ? happinessAddPoints : 100;
+                                connect.setHappiness(petId, last);
+                            }
+                        });
+                        break;
+                }
+            }
+        }
+    }
 
 }

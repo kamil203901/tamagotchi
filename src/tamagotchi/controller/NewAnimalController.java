@@ -18,7 +18,6 @@ public class NewAnimalController implements IController {
 
     NewAnimalController(AppController appController) {
         this.appController = appController;
-
     }
 
     @Override
@@ -72,7 +71,11 @@ public class NewAnimalController implements IController {
                     Integer.parseInt(connection.getHealth(idPet)),
                     Integer.parseInt(connection.getHappiness(idPet)),
                     Integer.parseInt(connection.getHunger(idPet)));
-            appController.getAppFrame().addUpdateAnimalPropertiesListener(new UpdateAnimalController(appController.getAppFrame(), connection));
+            UpdateAnimalController update = new UpdateAnimalController(appController.getAppFrame(), new DBConnect());
+            update.start();
+            update.deleteActionListenersToAnimalAcions();
+            update.addActionListenersToAnimalActions();
+            appController.getAppFrame().addUpdateAnimalPropertiesListener(update);
             appController.getAppFrame().setGenries(connection.getLoggedUser().getPetGenries());
             appController.getAppFrame().setActions(connection.getVectorOfActions());
             appController.getAppFrame().removeComboBoxes();
