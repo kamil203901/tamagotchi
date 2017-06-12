@@ -58,7 +58,11 @@ public class AdminPanelController implements IController {
         ArrayList<String> idActionGenreName = new ArrayList<>(connection.getActionGenreTableActionGenreName());
         ArrayList<String> actionName        = new ArrayList<>(connection.getActionGenreTableActionName());
         adminFrame.addActionGenresRows(idActionGenre, idActionGenreName, actionName);
-        adminFrame.getPetsModel().addTableModelListener(new PetsTableChangeListener());
+        adminFrame.getPetsModel().addTableModelListener(new TableChangeListener());
+        adminFrame.getUsersModel().addTableModelListener(new TableChangeListener());
+        adminFrame.getActionsModel().addTableModelListener(new TableChangeListener());
+        adminFrame.getActionsGenresModel().addTableModelListener(new TableChangeListener());
+        adminFrame.getPetsGenresModel().addTableModelListener(new TableChangeListener());
 
 
     }
@@ -162,37 +166,94 @@ public class AdminPanelController implements IController {
         }
     }
 
-    class PetsTableChangeListener implements TableModelListener {
+    class TableChangeListener implements TableModelListener {
+        private DBConnect connect = new DBConnect();
 
         @Override
         public void tableChanged(TableModelEvent e) {
             int row = e.getFirstRow();
             int column = e.getColumn();
+
             if (column == -1)
                 return;
             DefaultTableModel model = (DefaultTableModel)e.getSource();
-            String columnName = model.getColumnName(column);
-            Object data = model.getValueAt(row, column);
-            System.out.println(columnName);
 
             int selectedIndex = adminFrame.getTabbedPane().getSelectedIndex();
             switch (selectedIndex) {
-                case 0:
-                    int rows0 = adminFrame.getPetsModel().getRowCount();
-                    //Object obj = adminFrame.getPetsModel().ge
-                    //System.out.println(obj);
+                case 0: {
+                    int columnCount = adminFrame.getPetsModel().getColumnCount();
+                    Vector<Object> pet = new Vector<>();
+                    for (int i = 0; i < columnCount; i++) {
+                        Object obj = ((Vector) model.getDataVector().get(row)).get(i);
+                        if (obj == null)
+                            break;
+                        pet.add(obj);
+                        if (i == columnCount-1) {
+                            connect.addPet(pet);
+                            System.out.println("Success");
+                        }
+                    }
+                }
                     break;
-                case 1:
-                    int rows1 = adminFrame.getUsersModel().getRowCount();
+                case 1: {
+                    int columnCount = adminFrame.getUsersModel().getColumnCount();
+                    Vector<Object> user = new Vector<>();
+                    for (int i = 0; i < columnCount; i++) {
+                        Object obj = ((Vector) model.getDataVector().get(row)).get(i);
+                        if (obj == null)
+                            break;
+                        user.add(obj);
+                        if (i == columnCount-1) {
+                            connect.addUser(user);
+                            System.out.println("Success");
+                        }
+                    }
+                }
                     break;
-                case 2:
-                    int rows2 = adminFrame.getActionsModel().getRowCount();
+                case 2: {
+                    int columnCount = adminFrame.getActionsModel().getColumnCount();
+                    Vector<Object> action = new Vector<>();
+                    for (int i = 0; i < columnCount; i++) {
+                        Object obj = ((Vector) model.getDataVector().get(row)).get(i);
+                        if (obj == null)
+                            break;
+                        action.add(obj);
+                        if (i == columnCount-1) {
+                            connect.addAction(action);
+                            System.out.println("Success");
+                        }
+                    }
+                }
                     break;
-                case 3:
-                    int rows3 = adminFrame.getPetsGenresModel().getRowCount();
+                case 3: {
+                    int columnCount = adminFrame.getActionsGenresModel().getColumnCount();
+                    Vector<Object> actionGenre = new Vector<>();
+                    for (int i = 0; i < columnCount; i++) {
+                        Object obj = ((Vector) model.getDataVector().get(row)).get(i);
+                        if (obj == null)
+                            break;
+                        actionGenre.add(obj);
+                        if (i == columnCount-1) {
+                            connect.addActionGenre(actionGenre);
+                            System.out.println("Success");
+                        }
+                    }
+                }
                     break;
-                case 4:
-                    int rows4 = adminFrame.getActionsGenresModel().getRowCount();
+                case 4: {
+                    int columnCount = adminFrame.getPetsGenresModel().getColumnCount();
+                    Vector<Object> petGenre = new Vector<>();
+                    for (int i = 0; i < columnCount; i++) {
+                        Object obj = ((Vector) model.getDataVector().get(row)).get(i);
+                        if (obj == null)
+                            break;
+                        petGenre.add(obj);
+                        if (i == columnCount-1) {
+                            connect.addPetGenre(petGenre);
+                            System.out.println("Success");
+                        }
+                    }
+                }
                     break;
             }
 

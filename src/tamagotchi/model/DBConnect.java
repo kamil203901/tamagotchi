@@ -843,6 +843,65 @@ public class DBConnect {
     }
 
 
+    public void addPet(Vector<Object> vec) {
+        try {
+            String query = "insert into podopieczny (id_podopieczny, id_rodzaj, imie, wiek, waga, data_ostatniego_karmienia, id_uzytkownik) " +
+                    "values ('" + vec.get(0).toString() + "','"
+                    + vec.get(1).toString() + "','" + vec.get(2).toString()
+                    + "','" + vec.get(3).toString() + "','" + vec.get(4).toString()
+                    + "','" + vec.get(5).toString() + "','" + vec.get(6).toString() + "')";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void addUser(Vector<Object> vec) {
+        try {
+            String query = "insert into uzytkownik (id, login, imie, nazwisko, haslo) " +
+                    "values ('" + vec.get(0).toString() + "','"
+                    + vec.get(1).toString() + "','" + vec.get(2).toString()
+                    + "','" + vec.get(3).toString() + "','" + vec.get(4).toString() + "')";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void addAction(Vector<Object> vec) {
+        try {
+            String query = "insert into akcja (id_akcji, id_rodzaj_akcji, id_rodzaj_podopieczny, points) " +
+                    "values ('" + vec.get(0).toString() + "','"
+                    + vec.get(1).toString() + "','" + vec.get(2).toString()
+                    + "','" + vec.get(3).toString() + "')";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void addActionGenre(Vector<Object> vec) {
+        try {
+            String query = "insert into rodzaj_akcji (id_rodzaj_akcji, nazwa_rodzaju_akcji, nazwa_akcji) " +
+                    "values ('" + vec.get(0).toString() + "','"
+                    + vec.get(1).toString() + "','" + vec.get(2).toString() + "')";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void addPetGenre(Vector<Object> vec) {
+        try {
+            String query = "insert into rodzaj_podopieczny (id_rodzaj_podopiecznego, nazwa, sciezka) " +
+                    "values ('" + vec.get(0).toString() + "','"
+                    + vec.get(1).toString() + "','" + vec.get(2).toString() + "')";
+            st.executeUpdate(query);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
     public void addUser(String login, String imie, String nazwisko, String haslo) {
         try {
             User user = new User(login, imie, nazwisko, haslo);
@@ -1237,6 +1296,7 @@ public class DBConnect {
 
     public void deleteUser(String userId) {
         try {
+            deletePetByUserId(userId);
             String query = "delete from uzytkownik where id = '" + userId + "'";
             st.executeUpdate(query);
             System.out.println("User " + userId + " deleted from database.");
@@ -1361,7 +1421,16 @@ public class DBConnect {
         try {
             String query = "delete from podopieczny where id_podopieczny = '" + petId + "'";
             st.executeUpdate(query);
-            System.out.println("Pet " + petId + " deleteed from database.");
+            System.out.println("Pet " + petId + " deleted from database.");
+        } catch (Exception e) {
+            System.out.print(e);
+        }
+    }
+
+    public void deletePetByUserId(String userId) {
+        try {
+            String query = "delete from podopieczny where id_uzytkownik = '" + userId + "'";
+            st.executeUpdate(query);
         } catch (Exception e) {
             System.out.print(e);
         }

@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminPanelController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminPanelController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="182" column="22" lean-forward="false" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="22" />
+            <state relative-caret-position="539">
+              <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,99 +163,109 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="1306" column="0" lean-forward="true" selection-start-line="1306" selection-start-column="0" selection-end-line="1306" selection-end-column="0" />
               <folding>
+                <element signature="e#2559#2560#0" expanded="true" />
                 <element signature="e#2593#2594#0" expanded="true" />
                 <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
                 <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
                 <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-                <marker date="1497226703308" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="27194:27347" ph="insert into uzytkownik... " />
-                <marker date="1497226703308" expanded="true" signature="27720:27745" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="28155:28180" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="28583:28608" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="28992:29017" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="29405:29430" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="29836:29861" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="30288:30313" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="30717:30741" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="31132:31156" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="31546:31570" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="31963:31987" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="32392:32416" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="32828:32842" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="32828:32862" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="33294:33328" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="33730:33764" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="34164:34178" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="34164:34183" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="34602:34621" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="35051:35070" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="35492:35511" ph="select * fro... akcja" />
-                <marker date="1497226703308" expanded="true" signature="35929:35955" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="36400:36426" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="36869:36895" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="37278:37342" ph="select * fro... rodzaj_podopiecznego" />
-                <marker date="1497226703308" expanded="true" signature="37691:37833" ph="insert into podopieczny... " />
-                <marker date="1497226703308" expanded="true" signature="38220:38274" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="38846:38900" ph="select * fro... uzytkownik" />
-                <marker date="1497226703308" expanded="true" signature="39326:39376" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="39668:39721" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="40021:40064" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="40021:40083" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="40144:40212" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="40273:40358" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="40582:40647" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="40708:40780" ph="delete from " />
-                <marker date="1497226703308" expanded="true" signature="41021:41085" ph="select * fro... rodzaj_akcji" />
-                <marker date="1497226703308" expanded="true" signature="41428:41492" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="41838:41902" ph="select * fro... podopieczny" />
-                <marker date="1497226703308" expanded="true" signature="42270:42303" ph="update podop... " />
-                <marker date="1497226703308" expanded="true" signature="42270:42362" ph="update podop... " />
-                <marker date="1497226703308" expanded="true" signature="42640:42738" ph="update podop... " />
-                <marker date="1497226703308" expanded="true" signature="43010:43102" ph="update podop... " />
-                <marker date="1497226703308" expanded="true" signature="43310:43372" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="27016:27330" ph="insert into podopieczny... " />
+                <marker date="1497310516374" expanded="true" signature="27016:27382" ph="insert into podopieczny... " />
+                <marker date="1497310516374" expanded="true" signature="27016:27414" ph="insert into podopieczny... " />
+                <marker date="1497310516374" expanded="true" signature="27016:27445" ph="insert into uzytkownik... " />
+                <marker date="1497310516374" expanded="true" signature="27657:27948" ph="insert into uzytkownik... " />
+                <marker date="1497310516374" expanded="true" signature="28162:28440" ph="insert into akcja... " />
+                <marker date="1497310516374" expanded="true" signature="28659:28885" ph="insert into rodzaj_akcji... " />
+                <marker date="1497310516374" expanded="true" signature="29101:29323" ph="insert into rodzaj_akcji... " />
+                <marker date="1497310516374" expanded="true" signature="29712:29865" ph="insert into uzytkownik... " />
+                <marker date="1497310516374" expanded="true" signature="30238:30263" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="30673:30698" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="31101:31126" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="31510:31535" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="31923:31948" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="32354:32379" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="32806:32831" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="33235:33259" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="33650:33674" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="34064:34088" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="34481:34505" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="34910:34934" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="35346:35360" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="35346:35380" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="35812:35846" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="36248:36282" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="36682:36696" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="36682:36701" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="37120:37139" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="37569:37588" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="38010:38029" ph="select * fro... akcja" />
+                <marker date="1497310516374" expanded="true" signature="38447:38473" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="38918:38944" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="39387:39413" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="39796:39860" ph="select * fro... rodzaj_podopiecznego" />
+                <marker date="1497310516374" expanded="true" signature="40209:40351" ph="insert into podopieczny... " />
+                <marker date="1497310516374" expanded="true" signature="40738:40792" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="41364:41418" ph="select * fro... uzytkownik" />
+                <marker date="1497310516374" expanded="true" signature="41883:41933" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="42225:42278" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="42578:42621" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="42578:42640" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="42701:42769" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="42830:42915" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="43139:43204" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="43265:43337" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="43578:43642" ph="select * fro... rodzaj_akcji" />
+                <marker date="1497310516374" expanded="true" signature="43985:44049" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="44395:44459" ph="select * fro... podopieczny" />
+                <marker date="1497310516374" expanded="true" signature="44827:44860" ph="update podop... " />
+                <marker date="1497310516374" expanded="true" signature="44827:44919" ph="update podop... " />
+                <marker date="1497310516374" expanded="true" signature="45197:45295" ph="update podop... " />
+                <marker date="1497310516374" expanded="true" signature="45567:45659" ph="update podop... " />
+                <marker date="1497310516374" expanded="true" signature="45867:45929" ph="delete from " />
+                <marker date="1497310516374" expanded="true" signature="46220:46282" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -280,7 +290,6 @@
       <find>u</find>
       <find>genreOf</find>
       <find>getActionsId</find>
-      <find>addU</find>
       <find>delete</find>
       <find>login</find>
       <find>login(</find>
@@ -290,6 +299,8 @@
       <find>genreId</find>
       <find>getGenre</find>
       <find>dele</find>
+      <find>addU</find>
+      <find>deletePet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -336,13 +347,13 @@
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/AdminaFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/AdminFrame.java" />
-        <option value="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/BaseFrame.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/view/Label.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/UpdateAnimalController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/MakeActionController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/AppController.java" />
         <option value="$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java" />
+        <option value="$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java" />
       </list>
     </option>
   </component>
@@ -630,12 +641,12 @@
       <workItem from="1497083603523" duration="4045000" />
       <workItem from="1497094649649" duration="36754000" />
       <workItem from="1497174969335" duration="43680000" />
-      <workItem from="1497286980491" duration="14966000" />
+      <workItem from="1497286980491" duration="21101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="356950000" />
+    <option name="totallyTimeSpent" value="363085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -655,7 +666,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16071428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18139535" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24789916" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37710086" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -757,93 +768,103 @@
         <state relative-caret-position="418">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
+            <element signature="e#2559#2560#0" expanded="true" />
             <element signature="e#2593#2594#0" expanded="true" />
             <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
             <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
             <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
             <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-            <marker date="1497226703308" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="27194:27347" ph="insert into uzytkownik... " />
-            <marker date="1497226703308" expanded="true" signature="27720:27745" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="28155:28180" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="28583:28608" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="28992:29017" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="29405:29430" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="29836:29861" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="30288:30313" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="30717:30741" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="31132:31156" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="31546:31570" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="31963:31987" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="32392:32416" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="32828:32842" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="32828:32862" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="33294:33328" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="33730:33764" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="34164:34178" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="34164:34183" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="34602:34621" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="35051:35070" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="35492:35511" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="35929:35955" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="36400:36426" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="36869:36895" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="37278:37342" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="37691:37833" ph="insert into podopieczny... " />
-            <marker date="1497226703308" expanded="true" signature="38220:38274" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="38846:38900" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="39326:39376" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="39668:39721" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40021:40064" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40021:40083" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40144:40212" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40273:40358" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40582:40647" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40708:40780" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="41021:41085" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="41428:41492" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="41838:41902" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="42270:42303" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="42270:42362" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="42640:42738" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="43010:43102" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="43310:43372" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="27016:27330" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="27016:27382" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="27016:27414" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="27016:27445" ph="insert into uzytkownik... " />
+            <marker date="1497310516374" expanded="true" signature="27657:27948" ph="insert into uzytkownik... " />
+            <marker date="1497310516374" expanded="true" signature="28162:28440" ph="insert into akcja... " />
+            <marker date="1497310516374" expanded="true" signature="28659:28885" ph="insert into rodzaj_akcji... " />
+            <marker date="1497310516374" expanded="true" signature="29101:29323" ph="insert into rodzaj_akcji... " />
+            <marker date="1497310516374" expanded="true" signature="29712:29865" ph="insert into uzytkownik... " />
+            <marker date="1497310516374" expanded="true" signature="30238:30263" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="30673:30698" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="31101:31126" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="31510:31535" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="31923:31948" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="32354:32379" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="32806:32831" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="33235:33259" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="33650:33674" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="34064:34088" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="34481:34505" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="34910:34934" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="35346:35360" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="35346:35380" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="35812:35846" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="36248:36282" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="36682:36696" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="36682:36701" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="37120:37139" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="37569:37588" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="38010:38029" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="38447:38473" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="38918:38944" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="39387:39413" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="39796:39860" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="40209:40351" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="40738:40792" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="41364:41418" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="41883:41933" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42225:42278" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42578:42621" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42578:42640" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42701:42769" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42830:42915" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="43139:43204" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="43265:43337" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="43578:43642" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="43985:44049" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="44395:44459" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="44827:44860" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="44827:44919" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="45197:45295" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="45567:45659" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="45867:45929" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="46220:46282" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -1136,102 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="e#2593#2594#0" expanded="true" />
-            <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
-            <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
-            <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
-            <marker date="1497226703308" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="27194:27347" ph="insert into uzytkownik... " />
-            <marker date="1497226703308" expanded="true" signature="27720:27745" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="28155:28180" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="28583:28608" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="28992:29017" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="29405:29430" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="29836:29861" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="30288:30313" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="30717:30741" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="31132:31156" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="31546:31570" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="31963:31987" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="32392:32416" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="32828:32842" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="32828:32862" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="33294:33328" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="33730:33764" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="34164:34178" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="34164:34183" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="34602:34621" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="35051:35070" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="35492:35511" ph="select * fro... akcja" />
-            <marker date="1497226703308" expanded="true" signature="35929:35955" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="36400:36426" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="36869:36895" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="37278:37342" ph="select * fro... rodzaj_podopiecznego" />
-            <marker date="1497226703308" expanded="true" signature="37691:37833" ph="insert into podopieczny... " />
-            <marker date="1497226703308" expanded="true" signature="38220:38274" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="38846:38900" ph="select * fro... uzytkownik" />
-            <marker date="1497226703308" expanded="true" signature="39326:39376" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="39668:39721" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40021:40064" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40021:40083" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40144:40212" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40273:40358" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40582:40647" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="40708:40780" ph="delete from " />
-            <marker date="1497226703308" expanded="true" signature="41021:41085" ph="select * fro... rodzaj_akcji" />
-            <marker date="1497226703308" expanded="true" signature="41428:41492" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="41838:41902" ph="select * fro... podopieczny" />
-            <marker date="1497226703308" expanded="true" signature="42270:42303" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="42270:42362" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="42640:42738" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="43010:43102" ph="update podop... " />
-            <marker date="1497226703308" expanded="true" signature="43310:43372" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
@@ -1245,10 +1170,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tamagotchi/controller/AdminPanelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="182" column="22" lean-forward="false" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="22" />
+        <state relative-caret-position="539">
+          <caret line="60" column="60" lean-forward="true" selection-start-line="60" selection-start-column="60" selection-end-line="60" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tamagotchi/model/DBConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="1306" column="0" lean-forward="true" selection-start-line="1306" selection-start-column="0" selection-end-line="1306" selection-end-column="0" />
+          <folding>
+            <element signature="e#2559#2560#0" expanded="true" />
+            <element signature="e#2593#2594#0" expanded="true" />
+            <element signature="method#getGenreFromIdAction#1;class#DBConnect#0" expanded="false" />
+            <element signature="method#addAnimalToCurrentUser#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#isCorrectLoggingData#0;class#DBConnect#0" expanded="false" />
+            <element signature="method#ifUserExists#0;class#DBConnect#0" expanded="false" />
+            <marker date="1497310516374" expanded="true" signature="1128:1152" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="3291:3358" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="3933:4000" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="4222:4285" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="4740:4766" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="5212:5231" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="5698:5789" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="6375:6472" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="7170:7265" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="7958:8056" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="8594:8705" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="9130:9154" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="9870:9896" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="10460:10494" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="11223:11301" ph="select id_ro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="11615:11698" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="12366:12509" ph="select id_ro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="12830:12913" ph="select nazwa... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="13595:13620" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="14248:14282" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="15412:15479" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="15722:15796" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="17258:17329" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="17787:17884" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="18872:18929" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="19300:19364" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="19717:19801" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="20153:20217" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="20579:20646" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="21131:21165" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="22410:22484" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="22955:23010" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="23502:23577" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="24033:24088" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="24879:24934" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="26421:26476" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="26626:26710" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="27016:27330" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="27016:27382" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="27016:27414" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="27016:27445" ph="insert into uzytkownik... " />
+            <marker date="1497310516374" expanded="true" signature="27657:27948" ph="insert into uzytkownik... " />
+            <marker date="1497310516374" expanded="true" signature="28162:28440" ph="insert into akcja... " />
+            <marker date="1497310516374" expanded="true" signature="28659:28885" ph="insert into rodzaj_akcji... " />
+            <marker date="1497310516374" expanded="true" signature="29101:29323" ph="insert into rodzaj_akcji... " />
+            <marker date="1497310516374" expanded="true" signature="29712:29865" ph="insert into uzytkownik... " />
+            <marker date="1497310516374" expanded="true" signature="30238:30263" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="30673:30698" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="31101:31126" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="31510:31535" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="31923:31948" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="32354:32379" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="32806:32831" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="33235:33259" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="33650:33674" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="34064:34088" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="34481:34505" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="34910:34934" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="35346:35360" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="35346:35380" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="35812:35846" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="36248:36282" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="36682:36696" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="36682:36701" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="37120:37139" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="37569:37588" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="38010:38029" ph="select * fro... akcja" />
+            <marker date="1497310516374" expanded="true" signature="38447:38473" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="38918:38944" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="39387:39413" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="39796:39860" ph="select * fro... rodzaj_podopiecznego" />
+            <marker date="1497310516374" expanded="true" signature="40209:40351" ph="insert into podopieczny... " />
+            <marker date="1497310516374" expanded="true" signature="40738:40792" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="41364:41418" ph="select * fro... uzytkownik" />
+            <marker date="1497310516374" expanded="true" signature="41883:41933" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42225:42278" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42578:42621" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42578:42640" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42701:42769" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="42830:42915" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="43139:43204" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="43265:43337" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="43578:43642" ph="select * fro... rodzaj_akcji" />
+            <marker date="1497310516374" expanded="true" signature="43985:44049" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="44395:44459" ph="select * fro... podopieczny" />
+            <marker date="1497310516374" expanded="true" signature="44827:44860" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="44827:44919" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="45197:45295" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="45567:45659" ph="update podop... " />
+            <marker date="1497310516374" expanded="true" signature="45867:45929" ph="delete from " />
+            <marker date="1497310516374" expanded="true" signature="46220:46282" ph="delete from " />
           </folding>
         </state>
       </provider>
