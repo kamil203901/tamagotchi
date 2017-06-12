@@ -179,23 +179,20 @@ public class AdminPanelController implements IController {
             switch (selectedIndex) {
                 case 0:
                     int rows0 = adminFrame.getPetsModel().getRowCount();
-                    adminFrame.getPetsModel().addRow(new Object[] {null, null, null, null, null, null, null});
+                    //Object obj = adminFrame.getPetsModel().ge
+                    //System.out.println(obj);
                     break;
                 case 1:
                     int rows1 = adminFrame.getUsersModel().getRowCount();
-                    adminFrame.getUsersModel().addRow(new Object[] {null, null, null, null, null, null, null});
                     break;
                 case 2:
                     int rows2 = adminFrame.getActionsModel().getRowCount();
-                    adminFrame.getActionsModel().addRow(new Object[] {null, null, null, null, null, null, null});
                     break;
                 case 3:
                     int rows3 = adminFrame.getPetsGenresModel().getRowCount();
-                    adminFrame.getPetsGenresModel().addRow(new Object[] {null, null, null, null, null, null, null});
                     break;
                 case 4:
                     int rows4 = adminFrame.getActionsGenresModel().getRowCount();
-                    adminFrame.getActionsGenresModel().addRow(new Object[] {null, null, null, null, null, null, null});
                     break;
             }
 

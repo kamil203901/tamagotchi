@@ -1,6 +1,7 @@
 package tamagotchi.controller;
 
 import tamagotchi.model.DBConnect;
+import tamagotchi.model.User;
 import tamagotchi.view.ActionItem;
 import tamagotchi.view.BaseFrame;
 
@@ -25,7 +26,7 @@ public class AppController implements IController {
                 connection.getPointsFromIdAction(ids));
         appFrame.addLoginListener(new LoginListener(this));
         appFrame.addRegisterListener(new RegisterListener(this));
-        appFrame.addAdminPanelListener(new AdminPanelListener());
+        appFrame.addAdminPanelListener(new AdminPanelListener(connection));
         appFrame.addCloseListener(new CloseListener(appFrame));
         appFrame.addNewAnimalListener(new AddAnimalListener(this));
         appFrame.addLogoutListener(new LogoutListener(this, connection));
@@ -64,9 +65,16 @@ public class AppController implements IController {
     }
 
     class AdminPanelListener implements ActionListener {
+        private DBConnect connection;
+
+        public AdminPanelListener(DBConnect connection) {
+            this.connection = connection;
+        }
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            if (connection.getLoggedUser() == null || !connection.getLoggedUser().getLogin().equals("h"))
+                return;
             AdminPanelController apc = new AdminPanelController();
             apc.start();
         }

@@ -7,6 +7,7 @@ import tamagotchi.view.Label;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Timestamp;
 import java.util.Vector;
 
 
@@ -84,18 +85,42 @@ public class MakeActionController implements ActionListener {
                 continue;
 
             if (health) {
+                long lastActionTimestamp = label.getLastCureTimestampInMilis();
+                long currentTimestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+
+                long difference = currentTimestamp - lastActionTimestamp;
+                if (difference <= label.getCurePausePeriod())
+                    break;
+                label.setLastCureTimestamp(new Timestamp(currentTimestamp));
+
                 int healthValue = Integer.parseInt(connect.getHealth(petId));
                 healthValue += points;
                 if (healthValue >= 100)
                     healthValue = 100;
                 connect.setHealth(petId, healthValue);
             } else if (happiness) {
+                long lastActionTimestamp = label.getLastPlayTimestampInMilis();
+                long currentTimestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+
+                long difference = currentTimestamp - lastActionTimestamp;
+                if (difference <= label.getPlayPausePeriod())
+                    break;
+                label.setLastPlayTimestamp(new Timestamp(currentTimestamp));
+
                 int happinessValue = Integer.parseInt(connect.getHappiness(petId));
                 happinessValue += points;
                 if (happinessValue >= 100)
                     happinessValue = 100;
                 connect.setHappiness(petId, happinessValue);
             } else if (hunger) {
+                long lastActionTimestamp = label.getLastFeedTimestampInMilis();
+                long currentTimestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+
+                long difference = currentTimestamp - lastActionTimestamp;
+                if (difference <= label.getFeedPausePeriod())
+                    break;
+                label.setLastFeedTimestamp(new Timestamp(currentTimestamp));
+
                 int hungerValue = Integer.parseInt(connect.getHunger(petId));
                 hungerValue -= points;
                 if (hungerValue <= 0)

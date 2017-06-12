@@ -4,6 +4,7 @@ import tamagotchi.model.*;
 import tamagotchi.model.Action;
 
 import javax.swing.*;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public class Label extends JLabel {
@@ -21,6 +22,12 @@ public class Label extends JLabel {
     private ArrayList<ActionItem> healthActions;
     private ArrayList<ActionItem> happinessActions;
     private ArrayList<ActionItem> hungerActions;
+    private Timestamp lastFeedTimestamp;
+    private Timestamp lastCureTimestamp;
+    private Timestamp lastPlayTimestamp;
+    private long feedPausePeriod = 5000;
+    private long playPausePeriod = 5000;
+    private long curePausePeriod = 5000;
 
     public Label(int petId, Icon image) {
         super(null, image, CENTER);
@@ -39,6 +46,9 @@ public class Label extends JLabel {
     public Label() {
         super();
 
+        lastCureTimestamp = new Timestamp(System.currentTimeMillis() - curePausePeriod);
+        lastFeedTimestamp = new Timestamp(System.currentTimeMillis() - feedPausePeriod);
+        lastPlayTimestamp = new Timestamp(System.currentTimeMillis() - playPausePeriod);
         healthActions = new ArrayList<>();
         happinessActions = new ArrayList<>();
         hungerActions = new ArrayList<>();
@@ -54,6 +64,42 @@ public class Label extends JLabel {
         menu.add(feed);
         menu.add(delete);
         this.setComponentPopupMenu(menu);
+    }
+
+    public void setLastFeedTimestamp(Timestamp timestamp) {
+        this.lastFeedTimestamp = timestamp;
+    }
+
+    public long getLastFeedTimestampInMilis() {
+        return lastFeedTimestamp.getTime();
+    }
+
+    public void setLastCureTimestamp(Timestamp timestamp) {
+        this.lastCureTimestamp = timestamp;
+    }
+
+    public long getLastCureTimestampInMilis() {
+        return lastCureTimestamp.getTime();
+    }
+
+    public void setLastPlayTimestamp(Timestamp timestamp) {
+        this.lastPlayTimestamp = timestamp;
+    }
+
+    public long getLastPlayTimestampInMilis() {
+        return lastPlayTimestamp.getTime();
+    }
+
+    public long getFeedPausePeriod() {
+        return feedPausePeriod;
+    }
+
+    public long getPlayPausePeriod() {
+        return playPausePeriod;
+    }
+
+    public long getCurePausePeriod() {
+        return curePausePeriod;
     }
 
     public void setActions(ArrayList<ActionItem> actionsToCopy) {

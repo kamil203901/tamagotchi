@@ -5,10 +5,12 @@ import tamagotchi.view.ActionItem;
 import tamagotchi.view.BaseFrame;
 import tamagotchi.view.Label;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -135,6 +137,7 @@ public class UpdateAnimalController implements IController, MouseListener {
 
     public void addActionListenersToAnimalActions() {
         DBConnect connect = this.connect;
+
         for (int i = 0; i < labels.length; i++) {
             ArrayList<ActionItem> actions = labels[i].getActions();
             int finalI = i;
@@ -146,6 +149,15 @@ public class UpdateAnimalController implements IController, MouseListener {
                         actions.get(j).addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
+                                long lastActionTimestamp = labels[finalI].getLastFeedTimestampInMilis();
+                                long currentTimestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+
+                                long difference = currentTimestamp - lastActionTimestamp;
+                                if (difference <= labels[finalI].getFeedPausePeriod()) {
+                                    JOptionPane.showMessageDialog(appFrame, "You cannot feed them all time");
+                                    return;
+                                }
+
                                 int hunger = Integer.parseInt(connect.getHunger(petId));
                                 int points = actions.get(finalJ).getPoints();
                                 int hungerSubtractPoints = hunger - points;
@@ -158,6 +170,8 @@ public class UpdateAnimalController implements IController, MouseListener {
                                 appFrame.setHealth(health);
                                 appFrame.setHappiness(happiness);
                                 appFrame.sethunger(last);
+
+                                labels[finalI].setLastFeedTimestamp(new Timestamp(currentTimestamp));
                             }
                         });
                         break;
@@ -165,6 +179,15 @@ public class UpdateAnimalController implements IController, MouseListener {
                         actions.get(j).addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
+                                long lastActionTimestamp = labels[finalI].getLastCureTimestampInMilis();
+                                long currentTimestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+
+                                long difference = currentTimestamp - lastActionTimestamp;
+                                if (difference <= labels[finalI].getCurePausePeriod()) {
+                                    JOptionPane.showMessageDialog(appFrame, "You cannot cure them all time");
+                                    return;
+                                }
+
                                 int health = Integer.parseInt(connect.getHealth(petId));
                                 int points = actions.get(finalJ).getPoints();
                                 int healthAddPoints = health + points;
@@ -177,6 +200,8 @@ public class UpdateAnimalController implements IController, MouseListener {
                                 appFrame.setHealth(last);
                                 appFrame.setHappiness(happiness);
                                 appFrame.sethunger(hunger);
+
+                                labels[finalI].setLastCureTimestamp(new Timestamp(currentTimestamp));
                             }
                         });
                         break;
@@ -184,6 +209,15 @@ public class UpdateAnimalController implements IController, MouseListener {
                         actions.get(j).addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
+                                long lastActionTimestamp = labels[finalI].getLastPlayTimestampInMilis();
+                                long currentTimestamp = (new Timestamp(System.currentTimeMillis())).getTime();
+
+                                long difference = currentTimestamp - lastActionTimestamp;
+                                if (difference <= labels[finalI].getPlayPausePeriod()) {
+                                    JOptionPane.showMessageDialog(appFrame, "You cannot play with them all time");
+                                    return;
+                                }
+
                                 int happiness = Integer.parseInt(connect.getHappiness(petId));
                                 int points = actions.get(finalJ).getPoints();
                                 int happinessAddPoints = happiness + points;
@@ -196,6 +230,8 @@ public class UpdateAnimalController implements IController, MouseListener {
                                 appFrame.setHealth(health);
                                 appFrame.setHappiness(last);
                                 appFrame.sethunger(hunger);
+
+                                labels[finalI].setLastPlayTimestamp(new Timestamp(currentTimestamp));
                             }
                         });
                         break;
