@@ -117,7 +117,7 @@ public class UpdateAnimalController implements IController, MouseListener {
             }
         };
 
-        timer.schedule(timerTask, 0, 10000);
+        timer.schedule(timerTask, 3000, 10000);
     }
 
     public void deleteActionListenersToAnimalAcions() {
@@ -151,6 +151,13 @@ public class UpdateAnimalController implements IController, MouseListener {
                                 int hungerSubtractPoints = hunger - points;
                                 int last = hungerSubtractPoints >= 0 ? hungerSubtractPoints : 0;
                                 connect.setHunger(petId, last);
+
+                                int health = Integer.parseInt(connect.getHealth(petId));
+                                int happiness = Integer.parseInt(connect.getHappiness(petId));
+
+                                appFrame.setHealth(health);
+                                appFrame.setHappiness(happiness);
+                                appFrame.sethunger(last);
                             }
                         });
                         break;
@@ -163,6 +170,13 @@ public class UpdateAnimalController implements IController, MouseListener {
                                 int healthAddPoints = health + points;
                                 int last = healthAddPoints <= 100 ? healthAddPoints : 100;
                                 connect.setHealth(petId, last);
+
+                                int happiness = Integer.parseInt(connect.getHappiness(petId));
+                                int hunger = Integer.parseInt(connect.getHunger(petId));
+
+                                appFrame.setHealth(last);
+                                appFrame.setHappiness(happiness);
+                                appFrame.sethunger(hunger);
                             }
                         });
                         break;
@@ -175,6 +189,13 @@ public class UpdateAnimalController implements IController, MouseListener {
                                 int happinessAddPoints = happiness + points;
                                 int last = happinessAddPoints <= 100 ? happinessAddPoints : 100;
                                 connect.setHappiness(petId, last);
+
+                                int health = Integer.parseInt(connect.getHealth(petId));
+                                int hunger = Integer.parseInt(connect.getHunger(petId));
+
+                                appFrame.setHealth(health);
+                                appFrame.setHappiness(last);
+                                appFrame.sethunger(hunger);
                             }
                         });
                         break;
